@@ -320,13 +320,23 @@
         }
       }
 
-      /* Libelles (hero, et badge de la page Communaute). */
+      /* Libelles (hero, et badge de la page Communaute).
+         Quand les deux chiffres sont connus, on isole "N en ligne" dans un
+         span insecable : le libelle peut passer a la ligne apres le point
+         median, mais jamais au milieu de "5 013 en ligne". */
       labelSlots.forEach(function (slot) {
         if (slot === valueSlot) return;
-        /* Dans le badge, il n'y a pas de valeur separee : on ecrit tout. */
-        slot.textContent = valueSlot
-          ? libelle
-          : principal.toLocaleString("fr-FR") + " " + libelle;
+
+        var prefixe = valueSlot ? "" : principal.toLocaleString("fr-FR") + " ";
+
+        if (total !== null && enLigne !== null) {
+          slot.textContent = prefixe + "membres · ";
+          slot.appendChild(
+            el("span", "stat__online", enLigne.toLocaleString("fr-FR") + " en ligne")
+          );
+        } else {
+          slot.textContent = prefixe + libelle;
+        }
       });
 
       /* Mention en pleine phrase du bandeau CTA final :
@@ -362,8 +372,62 @@
     return thumb;
   }
 
+  /**
+   * CODE COULEUR DES OBJETS DE LA BOUTIQUE
+   *
+   * Convertit le type brut envoye par la source ("Goal Explosion",
+   * "Bundle · 5 items", "Roues"...) en un identifiant court qui sert de
+   * classe CSS : item--explosion, item--bundle, item--wheels...
+   * La couleur elle-meme est definie UNE SEULE FOIS en CSS
+   * (assets/css/style.css, section 19 bis), jamais ici.
+   *
+   * >>> POUR AJOUTER UN TYPE : ajoute ses mots-cles dans la table ci-dessous
+   *     ET la classe .item--<slug> correspondante dans le CSS. Un type
+   *     inconnu retombe sur item--autre, gris neutre : rien ne casse.
+   */
+  var TYPES_OBJET = [
+    { slug: "body",      motsCles: ["body", "corps", "voiture", "car"] },
+    { slug: "wheels",    motsCles: ["wheel", "roue"] },
+    { slug: "decal",     motsCles: ["decal", "sticker", "autocollant"] },
+    { slug: "explosion", motsCles: ["goal explosion", "explosion"] },
+    { slug: "trail",     motsCles: ["trail", "trainee", "sillage"] },
+    { slug: "anthem",    motsCles: ["anthem", "hymne", "musique"] },
+    { slug: "bundle",    motsCles: ["bundle", "pack", "lot"] },
+    { slug: "boost",     motsCles: ["boost", "propulseur"] },
+    { slug: "topper",    motsCles: ["topper", "chapeau", "couvre-chef"] },
+    { slug: "antenna",   motsCles: ["antenna", "antenne"] },
+    { slug: "banner",    motsCles: ["banner", "banniere"] },
+    { slug: "border",    motsCles: ["border", "bordure", "avatar"] },
+    { slug: "finish",    motsCles: ["finish", "peinture", "paint"] },
+    { slug: "audio",     motsCles: ["engine audio", "audio", "moteur"] },
+  ];
+
+  function slugDuType(type) {
+    if (typeof type !== "string" || !type.trim()) return "autre";
+
+    /* On compare en minuscules et sans accents. On ne garde que la partie
+       avant un separateur : "Bundle · 5 items" -> "bundle". */
+    var propre = type
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[̀-ͯ]/g, "")
+      .split(/[·|(]/)[0]
+      .trim();
+
+    for (var i = 0; i < TYPES_OBJET.length; i += 1) {
+      var regle = TYPES_OBJET[i];
+      for (var j = 0; j < regle.motsCles.length; j += 1) {
+        if (propre.indexOf(regle.motsCles[j]) !== -1) return regle.slug;
+      }
+    }
+    return "autre";
+  }
+
   function buildShopCard(item, index) {
-    var article = el("article", "item reveal");
+    /* La classe de type est posee sur la CARD, pas sur le badge : elle y
+       definit une variable CSS --item-color dont heritent a la fois le badge
+       et le lisere de la vignette. Une seule classe, deux usages. */
+    var article = el("article", "item reveal item--" + slugDuType(item.type));
     if (index < 6) article.setAttribute("data-delay", String(index));
 
     /* Vignette : image officielle du site source, ou forme CSS de repli */
