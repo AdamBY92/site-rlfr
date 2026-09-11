@@ -708,3 +708,103 @@ Dans le workflow, la ligne `- cron: "5 * * * *"` :
 La boutique tourne à 00:00 UTC et les actus sortent rarement : une fréquence
 plus basse suffirait pour ces deux-là. C'est le compteur de membres qui
 profite le plus du rythme horaire.
+
+---
+
+## 16. Actualités du jeu : mise à jour depuis ta machine
+
+### Pourquoi ce n'est plus sur GitHub Actions
+
+`rocketleague.com` bloque les adresses IP des serveurs GitHub (403, puis page
+de challenge anti-robot). Le filtrage porte sur **l'origine de la requête**,
+pas sur les en-têtes : aucun ajustement de code ne le contourne depuis le
+cloud. Depuis ta connexion personnelle, la requête passe sans problème.
+
+Répartition actuelle :
+
+| Donnée | Où ça tourne | Fréquence |
+|---|---|---|
+| Compteur de membres | GitHub Actions | Toutes les heures |
+| Boutique | GitHub Actions | Toutes les heures |
+| **Actualités du jeu** | **Ta machine** (Planificateur de tâches) | **1 fois par jour** |
+
+Les deux automatisations ne touchent **jamais aux mêmes fichiers** : Actions
+gère `stats.json` et `shop.json`, ta machine gère `updates.json`. Aucun
+conflit possible, même si elles tournent en même temps.
+
+### Le script
+
+`scripts/maj-actualites.ps1` enchaîne : récupération → commit → `pull
+--rebase` → push, et journalise tout dans `logs/maj-actualites.log`
+(archivé automatiquement au-delà de 2 Mo, et ignoré par Git).
+
+Test manuel avant de planifier quoi que ce soit :
+
+```powershell
+cd "C:\Users\User\Desktop\dsc\site_rlfr"
+powershell -ExecutionPolicy Bypass -File "scripts\maj-actualites.ps1"
+```
+
+### Créer la tâche planifiée (interface Windows)
+
+1. Touche **Windows**, tape **Planificateur de tâches**, ouvre-le.
+2. Menu de droite : **Créer une tâche…** (surtout pas *Créer une tâche de
+   base*, qui n'offre pas les options nécessaires).
+3. Onglet **Général** :
+   - *Nom* : `Maj actualites Rocket League France`
+   - Coche **Exécuter même si l'utilisateur n'est pas connecté**
+   - Coche **Exécuter avec les autorisations maximales**
+   - *Configurer pour* : **Windows 10** (valable pour Windows 11)
+4. Onglet **Déclencheurs** → **Nouveau…** :
+   - *Lancer la tâche* : **Selon une planification** → **Tous les jours**
+   - *Démarrer* : aujourd'hui à **10:00:00**
+   - Coche **Activé** → **OK**
+5. Onglet **Actions** → **Nouveau…** :
+   - *Action* : **Démarrer un programme**
+   - *Programme/script* :
+     ```
+     powershell.exe
+     ```
+   - *Ajouter des arguments* :
+     ```
+     -NoProfile -ExecutionPolicy Bypass -File "C:\Users\User\Desktop\dsc\site_rlfr\scripts\maj-actualites.ps1"
+     ```
+   - *Commencer dans* :
+     ```
+     C:\Users\User\Desktop\dsc\site_rlfr
+     ```
+   - **OK**
+6. Onglet **Conditions** :
+   - **Décoche** *Ne démarrer la tâche que si l'ordinateur est alimenté par
+     le secteur* (sinon rien ne se lance sur batterie)
+   - Coche **Démarrer seulement si la connexion réseau suivante est
+     disponible** → *N'importe quelle connexion*
+7. Onglet **Paramètres** :
+   - Coche **Exécuter la tâche dès que possible si un démarrage planifié est
+     manqué** (rattrape les jours où le PC était éteint à 10h)
+   - *Arrêter la tâche si elle s'exécute plus de* : **1 heure**
+8. **OK**. Windows demande ton mot de passe Windows : c'est normal, il en a
+   besoin pour lancer la tâche sans session ouverte.
+
+### Vérifier que ça marche
+
+Dans le Planificateur, clic droit sur la tâche → **Exécuter**. Puis :
+
+- La colonne **Résultat de la dernière exécution** doit afficher
+  `L'opération a réussi (0x0)`.
+- Ouvre `logs\maj-actualites.log` : la dernière ligne doit être
+  `Termine (succes)` ou `Termine (aucun changement)`.
+
+### Lire le journal en cas de problème
+
+| Dernière ligne du journal | Cause | Correction |
+|---|---|---|
+| `Termine (aucun changement)` | Aucune nouvelle actualité | Normal, rien à faire |
+| `BLOCAGE ANTI-ROBOT` | Trop d'appels rapprochés | Attendre une heure, relancer |
+| `git push a echoue` | Identifiants GitHub expirés | Faire un `git push` manuel une fois dans un terminal |
+| `Conflit lors de la synchronisation` | Les deux côtés ont modifié le même fichier | `git pull --rebase origin main` dans un terminal |
+| `Introuvable : ...` | Projet déplacé | Corriger la section CONFIGURATION en haut du `.ps1` |
+
+Le code `0x1` dans le Planificateur signifie que le script a échoué : le
+journal en donne toujours la raison exacte. Dans tous les cas,
+`data/updates.json` n'est **jamais** écrasé par des données invalides.
