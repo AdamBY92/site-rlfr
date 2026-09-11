@@ -993,3 +993,69 @@ du contenu de chaque fichier (`?v=a3f2c1`) pour ne recharger que ce qui a
 réellement bougé. C'est une trentaine de lignes dans le même script — mais
 tant que tu déploies CSS et JS ensemble, le numéro simple suffit et reste
 plus lisible.
+
+---
+
+## 19. Données structurées (JSON-LD) et synchronisation de la FAQ
+
+Le `<head>` de `index.html` contient deux blocs `application/ld+json`. Ils
+ne changent rien à l'affichage : ils décrivent le site à Google, qui peut
+alors afficher le logo du serveur à côté du résultat et dérouler les
+questions de la FAQ directement dans la page de résultats.
+
+### Bloc 1 — Organization
+
+Écrit à la main, il bouge rarement. Il déclare le nom, l'URL, la
+description, le lien Discord et, depuis peu, le **logo** :
+
+```json
+"logo": "https://rocketleaguefrancediscord.fr/assets/img/logo.png"
+```
+
+Google exige une **URL absolue** accessible publiquement : si tu renommes
+ou déplaces le logo, corrige cette ligne, sinon la donnée est ignorée.
+
+### Bloc 2 — FAQPage : ne l'édite jamais à la main
+
+Ce bloc répétait les questions et les réponses de la section FAQ. Deux
+copies du même texte finissent toujours par diverger — et c'était **déjà le
+cas** : le JSON-LD annonçait « C'est quoi Rocket League France ? » quand la
+page affichait « C'est quoi Rocket League France exactement ? », avec cinq
+réponses raccourcies qui ne correspondaient plus au site.
+
+Désormais le HTML est la seule source de vérité, et une commande régénère
+le JSON-LD à partir de lui :
+
+```bash
+npm run sync-faq
+```
+
+**La règle : tu modifies la FAQ en HTML, puis tu lances cette commande.**
+
+Le script affiche les questions qu'il a lues pour que tu vérifies d'un coup
+d'œil, et te dit si le JSON-LD était déjà à jour.
+
+### Ce que le script protège
+
+Le bloc généré est encadré dans `index.html` par deux repères :
+
+```html
+<!-- FAQ-JSONLD:DEBUT -->
+...
+<!-- FAQ-JSONLD:FIN -->
+```
+
+Ne les supprime pas. S'ils manquent, ou si aucune question n'est trouvée
+(structure HTML modifiée), le script **s'arrête sans rien écrire** et
+explique quoi vérifier — il ne peut pas corrompre la page.
+
+Si tu changes un jour les classes CSS de la FAQ (`.faq__item`,
+`.faq__question`, `.faq__answer`), mets à jour l'objet `SELECTEURS` en haut
+de `scripts/sync-faq-jsonld.js`.
+
+### Vérifier le résultat
+
+Colle l'URL du site dans le **test des résultats enrichis** de Google
+(`search.google.com/test/rich-results`). Il doit détecter « FAQ » et
+« Organisation » sans erreur. À faire après chaque mise en ligne qui touche
+à la FAQ.

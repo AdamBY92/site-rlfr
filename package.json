@@ -8,7 +8,8 @@
     "update-updates": "node scripts/fetch-updates.js",
     "update-shop": "node scripts/fetch-shop.js",
     "update-stats": "node scripts/fetch-member-count.js",
-    "version-assets": "node scripts/version-assets.js"
+    "version-assets": "node scripts/version-assets.js",
+    "sync-faq": "node scripts/sync-faq-jsonld.js"
   },
   "engines": {
     "node": ">=18"
