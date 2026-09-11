@@ -61,23 +61,53 @@
     # ------------------------------------------------------------------------
     Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://cdn.locker.gg; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'"
 
-    # HSTS : force le HTTPS pendant un an.
-    # >>> NE DECOMMENTE QU'APRES avoir verifie que ton certificat SSL OVH est
-    #     actif et que https://ton-domaine.fr fonctionne. Une fois envoye, le
-    #     navigateur refusera le HTTP pendant un an, meme en cas de probleme.
-    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    # ------------------------------------------------------------------------
+    # HSTS - certificat SSL verifie actif, en-tete ACTIVE.
+    #
+    # Ce que fait cet en-tete : une fois qu'un navigateur l'a recu, il refuse
+    # de contacter le site en HTTP pendant toute la duree de max-age. Meme si
+    # le certificat expirait, le visiteur verrait une page d'erreur et ne
+    # pourrait PAS passer outre. C'est voulu, mais c'est irreversible cote
+    # visiteur : retirer l'en-tete plus tard ne l'efface pas des navigateurs
+    # qui l'ont deja memorise.
+    #
+    # max-age=31536000 = 1 an, la valeur recommandee en regime etabli.
+    # >>> Si tu preferes une montee en charge prudente, mets d'abord
+    #     max-age=86400 (24 h), verifie le site pendant quelques jours, puis
+    #     repasse a 31536000. Le reste de la ligne ne change pas.
+    #
+    # includeSubDomains est VOLONTAIREMENT ABSENT : il imposerait le HTTPS a
+    # TOUS les sous-domaines (webmail, ftp, un eventuel test.rocketleague...),
+    # y compris ceux qui n'ont pas de certificat, et les rendrait
+    # inaccessibles. Ne l'ajoute que si tu es certain que chaque sous-domaine
+    # existant et futur est en HTTPS.
+    # ------------------------------------------------------------------------
+    Header always set Strict-Transport-Security "max-age=31536000"
 
 </IfModule>
 
 # ----------------------------------------------------------------------------
-# 2. REDIRECTION VERS HTTPS
-# >>> A activer une fois le certificat SSL OVH en place.
+# 2. REDIRECTION VERS HTTPS - ACTIVE (certificat SSL en place)
+#
+# Toute visite en http:// est renvoyee vers la meme adresse en https://,
+# avec un code 301 (redirection permanente) : les moteurs de recherche
+# transferent alors le referencement de l'ancienne adresse vers la nouvelle.
+#
+# La condition sur X-Forwarded-Proto est necessaire chez OVH mutualise : le
+# serveur qui execute PHP/Apache se trouve derriere un repartiteur de charge
+# qui termine le TLS. Vu d'Apache, la requete arrive en clair et %{HTTPS}
+# vaut "off" MEME en https. Sans cette condition, le site partirait en
+# boucle de redirection infinie (erreur "trop de redirections").
 # ----------------------------------------------------------------------------
-# <IfModule mod_rewrite.c>
-#     RewriteEngine On
-#     RewriteCond %{HTTPS} off
-#     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-# </IfModule>
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # On ne redirige que si la requete n'est PAS deja en HTTPS, que ce soit
+    # vu directement (%{HTTPS}) ou via l'en-tete du repartiteur OVH.
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
 
 # ----------------------------------------------------------------------------
 # 3. COMPRESSION (gain immediat sur le temps de chargement)

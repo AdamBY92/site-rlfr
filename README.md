@@ -556,8 +556,21 @@ Il contient : `Content-Security-Policy`, `X-Content-Type-Options: nosniff`,
 `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`, plus la
 compression et le cache.
 
-Deux blocs sont **commentés volontairement**, à activer une fois ton
-certificat SSL OVH actif : la redirection HTTPS et `Strict-Transport-Security`.
+La **redirection HTTPS** et **HSTS** sont actives (certificat SSL en place).
+Deux points à connaître :
+
+- La redirection teste `%{HTTPS}` **et** `X-Forwarded-Proto`. Chez OVH
+  mutualisé, le TLS est terminé par un répartiteur de charge en amont :
+  vu d'Apache, `%{HTTPS}` vaut `off` même en HTTPS. Sans la seconde
+  condition, le site partirait en boucle de redirection infinie.
+- HSTS est envoyé **sans `includeSubDomains`**, volontairement : cette option
+  imposerait le HTTPS à tous les sous-domaines (webmail, ftp…), y compris
+  ceux sans certificat, et les rendrait inaccessibles.
+
+HSTS est **irréversible côté visiteur** pendant `max-age` (1 an) : retirer
+l'en-tête plus tard ne l'efface pas des navigateurs qui l'ont mémorisé. Pour
+une montée en charge prudente, mets d'abord `max-age=86400`, vérifie quelques
+jours, puis repasse à `31536000`.
 
 La CSP a été testée dans Chrome sur les 5 pages : **aucune violation**. Si tu
 ajoutes un service externe (statistiques, widget embarqué, YouTube), il sera
