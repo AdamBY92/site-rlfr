@@ -63,17 +63,34 @@ jobs:
       # L'etape reste marquee en echec dans l'interface, et le recapitulatif
       # final (derniere etape) reprend le detail.
       # ----------------------------------------------------------------------
-      - name: "1/3 - Compteur de membres Discord"
+      - name: "1/2 - Compteur de membres Discord"
         id: membres
         continue-on-error: true
         run: node scripts/fetch-member-count.js
 
-      - name: "2/3 - Actualites officielles du jeu"
-        id: actus
-        continue-on-error: true
-        run: node scripts/fetch-updates.js
+      # ----------------------------------------------------------------------
+      # ETAPE DESACTIVEE : actualites officielles (scripts/fetch-updates.js)
+      #
+      # POURQUOI : www.rocketleague.com bloque les adresses IP des serveurs
+      # GitHub (403, puis page de challenge anti-robot). Ce n'est pas reparable
+      # par du code : le filtrage porte sur l'origine de la requete, pas sur
+      # les en-tetes envoyes.
+      #
+      # OU TOURNE-T-ELLE MAINTENANT : sur la machine de l'auteur, une fois par
+      # jour, via le Planificateur de taches Windows qui lance
+      # scripts/maj-actualites.ps1. Ce script recupere les actualites PUIS
+      # commit et pousse data/updates.json tout seul.
+      #
+      # SI LE BLOCAGE DISPARAIT UN JOUR : decommente les quatre lignes
+      # ci-dessous, rajoute data/updates.json dans le "git add" plus bas, et
+      # remets steps.actus dans le recapitulatif final.
+      # ----------------------------------------------------------------------
+      # - name: "Actualites officielles du jeu"
+      #   id: actus
+      #   continue-on-error: true
+      #   run: node scripts/fetch-updates.js
 
-      - name: "3/3 - Rotation de la boutique"
+      - name: "2/2 - Rotation de la boutique"
         id: boutique
         continue-on-error: true
         run: node scripts/fetch-shop.js
@@ -90,7 +107,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add data/stats.json data/updates.json data/shop.json
+          # On ne stage QUE les fichiers produits par ce workflow.
+          # data/updates.json est gere par la machine locale : l'inclure ici
+          # ferait se marcher dessus les deux automatisations.
+          git add data/stats.json data/shop.json
 
           if git diff --staged --quiet; then
             echo "Aucun changement dans data/ : rien a publier."
@@ -122,14 +142,15 @@ jobs:
             echo "| Script | Resultat |"
             echo "|---|---|"
             echo "| Compteur de membres | ${{ steps.membres.outcome }} |"
-            echo "| Actualites du jeu | ${{ steps.actus.outcome }} |"
             echo "| Boutique | ${{ steps.boutique.outcome }} |"
+            echo ""
+            echo "_Les actualites du jeu sont mises a jour depuis la machine de"
+            echo "l'auteur (voir l'etape desactivee dans le workflow)._"
             echo ""
             echo "Donnees modifiees et publiees : ${{ steps.publication.outputs.modifie || 'non determine' }}"
           } >> "$GITHUB_STEP_SUMMARY"
 
           if [ "${{ steps.membres.outcome }}" != "success" ] || \
-             [ "${{ steps.actus.outcome }}" != "success" ] || \
              [ "${{ steps.boutique.outcome }}" != "success" ]; then
             {
               echo ""
