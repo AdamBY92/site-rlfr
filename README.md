@@ -874,12 +874,39 @@ fréquentes :
 | Message | Cause | Correction |
 |---|---|---|
 | `530 Login incorrect` | Mot de passe ou identifiant erroné | Recrée le secret `FTP_PASSWORD` |
-| Erreur TLS / certificat | FTPS refusé par le serveur | Passe `protocol: ftps` à `protocol: ftp` dans le workflow |
+| `500 This security scheme is not implemented` | FTPS refusé par cet hébergement OVH | Déjà traité : le workflow utilise `protocol: ftp` |
 | `550 ... No such file` | `/www/data/` n'existe pas | Crée le dossier via l'explorateur FTP d'OVH |
 
 Un échec FTP **ne perd aucune donnée** : elles sont déjà commitées sur
 GitHub. Seul le site en ligne reste sur les données précédentes, jusqu'au
 prochain run réussi.
+
+### Le transfert n'est pas chiffré : ce que ça implique
+
+Cet hébergement OVH **refuse FTPS** : une tentative avec `protocol: ftps`
+renvoie `500 This security scheme is not implemented`. Le workflow utilise
+donc du FTP simple, et le **mot de passe circule en clair** à chaque
+connexion.
+
+Le contenu envoyé n'est pas le problème — ces JSON sont publics de toute
+façon. Le problème est l'identifiant : qui le capte obtient un **accès en
+écriture au serveur**, donc la possibilité de modifier le site.
+
+**Mesure recommandée, à faire une fois :** crée dans l'espace client OVH un
+**utilisateur FTP dédié** dont la racine est `/www/data`, et mets ses
+identifiants dans les secrets à la place de `rocketj`. Même si son mot de
+passe fuitait, l'attaquant ne pourrait écrire que dans ce dossier — jamais
+dans le reste du site.
+
+OVH mutualisé → onglet **FTP - SSH** → **Ajouter un utilisateur** → renseigne
+le dossier racine `/www/data`.
+
+Si ton offre inclut SSH, `protocol: sftp` serait chiffré de bout en bout et
+réglerait la question à la source.
+
+Enfin, un fichier `data/*.json` altéré ne permettrait pas d'exécuter du code
+chez les visiteurs : `content.js` injecte tout via `textContent` et ne rend
+que des URL `http(s)` validées.
 
 ### Deux points de fonctionnement
 

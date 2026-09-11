@@ -169,19 +169,28 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
 
-          # FTPS = FTP chiffre (les identifiants ne circulent pas en clair).
-          # OVH mutualise l'accepte sur le port 21.
-          # >>> Si la connexion echoue avec une erreur TLS, remplace par
-          #     protocol: ftp  (non chiffre : a n'utiliser qu'en dernier
-          #     recours, et pense alors a changer ton mot de passe FTP
-          #     regulierement).
-          protocol: ftps
+          # FTP SIMPLE, NON CHIFFRE.
+          #
+          # POURQUOI PAS FTPS : cet hebergement OVH le refuse explicitement.
+          # Tentative du 11/09/2026 avec protocol: ftps ->
+          #   "FTPError: 500 This security scheme is not implemented"
+          #
+          # CE QUE CELA IMPLIQUE : le mot de passe FTP circule en clair sur
+          # le reseau a chaque connexion. Ce ne sont pas les fichiers envoyes
+          # qui posent probleme (ces JSON sont publics de toute facon), c'est
+          # l'IDENTIFIANT lui-meme : qui le capte obtient un acces en
+          # ECRITURE au serveur.
+          #
+          # >>> MESURE RECOMMANDEE : cree dans l'espace client OVH un
+          #     utilisateur FTP dedie dont la racine est /www/data/, et
+          #     utilise-le ici. Meme si son mot de passe fuitait, l'attaquant
+          #     ne pourrait ecrire que dans ce dossier, jamais dans le reste
+          #     du site. Voir README section 17.
+          #
+          # >>> SI TON OFFRE OVH INCLUT SSH : protocol: sftp serait chiffre
+          #     de bout en bout et reglerait le probleme a la source.
+          protocol: ftp
           port: 21
-
-          # "loose" tolere le certificat TLS d'OVH, qui ne correspond pas
-          # toujours exactement au nom d'hote. Sans cela, la connexion
-          # echouerait sur une erreur de validation de certificat.
-          security: loose
 
           # Les deux chemins DOIVENT se terminer par un slash.
           local-dir: ./data/
@@ -228,9 +237,8 @@ jobs:
               echo "1. les trois secrets FTP_SERVER, FTP_USERNAME et FTP_PASSWORD"
               echo "   existent bien dans Settings > Secrets and variables > Actions ;"
               echo "2. le mot de passe FTP est toujours valide (espace client OVH) ;"
-              echo "3. le dossier /www/data/ existe sur le serveur ;"
-              echo "4. si l'erreur mentionne TLS ou un certificat, passe"
-              echo "   'protocol: ftps' a 'protocol: ftp' dans le workflow."
+              echo "3. le dossier /www/data/ existe sur le serveur, et que"
+              echo "   l'utilisateur FTP a le droit d'y ecrire."
             } >> "$GITHUB_STEP_SUMMARY"
           fi
 
