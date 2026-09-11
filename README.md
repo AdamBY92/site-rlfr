@@ -642,3 +642,69 @@ fetch('data/stats.json').then(r => r.json()).then(console.log)
 Onglet **Réseau (Network)** : recharge la page, filtre sur `stats`. La ligne
 `stats.json` doit être en **200**. Un **404** confirme que le fichier n'est
 pas en ligne.
+
+---
+
+## 15. GitHub Actions : mise à jour automatique des données
+
+Le fichier `.github/workflows/update-content.yml` relance les trois scripts
+**toutes les heures** (à la minute 5) et publie `data/*.json` si — et
+seulement si — leur contenu a changé.
+
+**Aucun secret à configurer.** Les trois scripts n'utilisent que des API et
+des pages publiques. Rien à mettre dans *Settings > Secrets*.
+
+### Déclencher une mise à jour manuellement
+
+1. Sur GitHub, onglet **Actions**.
+2. Dans la colonne de gauche, clique sur **Mise a jour des donnees**.
+3. Bouton **Run workflow** à droite → choisis la branche `main` → **Run workflow**.
+4. Le run apparaît en quelques secondes. Clique dessus pour suivre l'exécution.
+
+> Le bouton *Run workflow* n'apparaît que si le fichier de workflow est
+> présent sur la **branche par défaut**. Si tu ne le vois pas, vérifie que
+> le push sur `main` est bien passé.
+
+### Lire les logs quand un run échoue
+
+Sur la page du run :
+
+- **Summary** (en haut) : un tableau récapitule les trois scripts et indique
+  si les données ont été publiées. C'est le premier endroit à regarder.
+- **Clique sur le job** « Recuperer et publier les donnees » pour dérouler les
+  étapes. Celle en rouge porte l'erreur ; déplie-la pour lire le message.
+
+Messages les plus fréquents et ce qu'ils veulent dire :
+
+| Message dans les logs | Cause | Correction |
+|---|---|---|
+| `HTTP 403` sur rocketleague.com | Le site refuse les requêtes du serveur GitHub | Lance le script depuis chez toi (`npm run update-updates`) |
+| `moins de 4 objets exploitables` | itemshop.gg a changé son HTML | Ajuste `SELECTORS.card` dans `scripts/fetch-shop.js` |
+| `Discord repond 404` | Le lien d'invitation a expiré | Recrée un lien permanent, mets à jour `INVITE_CODE` |
+| `Discord repond 403` | Le widget est désactivé | Active-le, ou laisse : la source invitation suffit |
+
+**Un échec ne casse jamais le site.** Le script concerné laisse son fichier
+JSON inchangé, les deux autres s'exécutent quand même, et les pages
+continuent d'afficher les dernières données valides.
+
+### Pourquoi il n'y a pas de commit à chaque heure
+
+Le workflow compare les fichiers avant de publier (`git diff --staged
+--quiet`). Si aucune donnée n'a bougé — cas fréquent la nuit — il n'y a
+simplement pas de commit. Un historique sans commit pendant plusieurs heures
+est donc normal, pas un signe de panne : vérifie l'onglet Actions, les runs
+y apparaissent même quand ils ne publient rien.
+
+### Changer la fréquence
+
+Dans le workflow, la ligne `- cron: "5 * * * *"` :
+
+| Valeur | Fréquence |
+|---|---|
+| `5 * * * *` | Toutes les heures (actuel) |
+| `5 */6 * * *` | Toutes les 6 heures |
+| `5 0 * * *` | Une fois par jour à 00h05 UTC |
+
+La boutique tourne à 00:00 UTC et les actus sortent rarement : une fréquence
+plus basse suffirait pour ces deux-là. C'est le compteur de membres qui
+profite le plus du rythme horaire.
