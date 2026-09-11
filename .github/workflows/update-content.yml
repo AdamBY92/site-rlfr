@@ -1,21 +1,26 @@
 # ============================================================================
 # Regeneration automatique des donnees du site
 # ----------------------------------------------------------------------------
-# Ce workflow relance les trois scripts de recuperation, puis commit les
-# fichiers data/*.json UNIQUEMENT s'ils ont reellement change.
+# Ce workflow relance les scripts de recuperation, commit les fichiers
+# data/*.json s'ils ont reellement change, puis les televerse sur OVH.
 #
-# AUCUN SECRET N'EST NECESSAIRE : les trois scripts n'utilisent que des API
-# publiques (Discord widget/invitations) et des pages web publiques. Il n'y a
-# rien a configurer dans Settings > Secrets.
+# Il ne lance que DEUX scripts : les actualites officielles tournent sur la
+# machine de l'auteur (voir l'etape desactivee plus bas).
 #
 # QUAND :
 #   - automatiquement toutes les heures (a la minute 5) ;
 #   - a la demande, depuis l'onglet Actions (bouton "Run workflow").
 #
-# LES TROIS SCRIPTS SONT INDEPENDANTS : si l'un echoue, les deux autres
-# s'executent quand meme (continue-on-error), et le script en echec ne
-# modifie pas son fichier JSON - le site continue d'afficher la derniere
-# donnee valide.
+# SECRETS A CREER (Settings > Secrets and variables > Actions > New secret) :
+#   FTP_SERVER     ftp.cluster129.hosting.ovh.net
+#   FTP_USERNAME   rocketj
+#   FTP_PASSWORD   (mot de passe FTP, depuis l'espace client OVH)
+# Ils ne servent QU'A l'etape de deploiement. La recuperation des donnees,
+# elle, n'utilise que des API publiques et ne demande aucune authentification.
+#
+# LES SCRIPTS SONT INDEPENDANTS : si l'un echoue, l'autre s'execute quand
+# meme (continue-on-error), et le script en echec ne modifie pas son fichier
+# JSON - le site continue d'afficher la derniere donnee valide.
 # ============================================================================
 
 name: Mise a jour des donnees
@@ -131,6 +136,65 @@ jobs:
           fi
 
       # ----------------------------------------------------------------------
+      # DEPLOIEMENT FTP VERS OVH
+      #
+      # N'envoie QUE le dossier data/ vers /www/data/. Le reste du site
+      # (HTML, CSS, JS, images) n'est jamais touche par ce workflow : il est
+      # televerse a la main.
+      #
+      # QUAND : uniquement si les donnees ont reellement change, ou a chaque
+      # declenchement manuel (pour pouvoir tester le FTP sans attendre qu'une
+      # donnee bouge).
+      #
+      # SEULS LES FICHIERS MODIFIES SONT ENVOYES : l'action garde un etat
+      # (.ftp-deploy-sync-state.json, depose dans /www/data/) qui lui sert a
+      # comparer. Ce fichier commence par un point : la regle FilesMatch du
+      # .htaccess le rend inaccessible depuis le web.
+      #
+      # A SAVOIR SUR LES SUPPRESSIONS : cette action synchronise, donc elle
+      # supprimerait du serveur un fichier disparu en local. Il n'existe pas
+      # d'option pour le desactiver. Le risque est toutefois circonscrit :
+      #   - elle n'agit QUE dans /www/data/, jamais ailleurs ;
+      #   - les trois JSON sont suivis par Git et les scripts ne les
+      #     effacent jamais (en cas d'echec ils laissent l'ancien fichier).
+      # Pour une garantie absolue "aucune suppression", il faudrait passer
+      # par lftp avec "mirror -R --only-newer" SANS --delete.
+      # ----------------------------------------------------------------------
+      - name: Deployer data/ sur OVH (FTP)
+        id: ftp
+        if: steps.publication.outputs.modifie == 'oui' || github.event_name == 'workflow_dispatch'
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+
+          # FTPS = FTP chiffre (les identifiants ne circulent pas en clair).
+          # OVH mutualise l'accepte sur le port 21.
+          # >>> Si la connexion echoue avec une erreur TLS, remplace par
+          #     protocol: ftp  (non chiffre : a n'utiliser qu'en dernier
+          #     recours, et pense alors a changer ton mot de passe FTP
+          #     regulierement).
+          protocol: ftps
+          port: 21
+
+          # "loose" tolere le certificat TLS d'OVH, qui ne correspond pas
+          # toujours exactement au nom d'hote. Sans cela, la connexion
+          # echouerait sur une erreur de validation de certificat.
+          security: loose
+
+          # Les deux chemins DOIVENT se terminer par un slash.
+          local-dir: ./data/
+          server-dir: /www/data/
+
+          # false = ne vide jamais le dossier distant avant l'envoi.
+          dangerous-clean-slate: false
+
+          # Passe a "verbose" si tu dois diagnostiquer un probleme de
+          # connexion : le journal detaillera chaque fichier.
+          log-level: standard
+
+      # ----------------------------------------------------------------------
       # Recapitulatif lisible dans l'onglet Actions (page du run > Summary).
       # ----------------------------------------------------------------------
       - name: Recapitulatif
@@ -148,7 +212,27 @@ jobs:
             echo "l'auteur (voir l'etape desactivee dans le workflow)._"
             echo ""
             echo "Donnees modifiees et publiees : ${{ steps.publication.outputs.modifie || 'non determine' }}"
+            echo ""
+            echo "Deploiement FTP vers OVH : ${{ steps.ftp.outcome || 'non execute (aucune donnee modifiee)' }}"
           } >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "${{ steps.ftp.outcome }}" = "failure" ]; then
+            {
+              echo ""
+              echo "### Le deploiement FTP a echoue"
+              echo ""
+              echo "Les donnees sont bien sur GitHub, mais PAS sur le serveur OVH :"
+              echo "le site en ligne affiche encore les donnees precedentes."
+              echo ""
+              echo "A verifier, dans l'ordre :"
+              echo "1. les trois secrets FTP_SERVER, FTP_USERNAME et FTP_PASSWORD"
+              echo "   existent bien dans Settings > Secrets and variables > Actions ;"
+              echo "2. le mot de passe FTP est toujours valide (espace client OVH) ;"
+              echo "3. le dossier /www/data/ existe sur le serveur ;"
+              echo "4. si l'erreur mentionne TLS ou un certificat, passe"
+              echo "   'protocol: ftps' a 'protocol: ftp' dans le workflow."
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
 
           if [ "${{ steps.membres.outcome }}" != "success" ] || \
              [ "${{ steps.boutique.outcome }}" != "success" ]; then

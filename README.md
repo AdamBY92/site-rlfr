@@ -58,22 +58,21 @@ site_rlfr/
 Pour changer le nom plus tard, cherche `Rocket League France` **et** `RL FR` :
 les deux formes coexistent volontairement.
 
-### Restent à remplacer
+| Mentions légales | **Complètes** : éditeur Barcelona (pseudonyme, anonymat LCEN art. 6-III), hébergeur OVH SAS, contact contact@rocketleaguefrancediscord.fr |
+| Compteur de membres | **Dynamique**, récupéré depuis Discord (section 12) — plus aucun chiffre à saisir |
 
-Fais un « Rechercher / Remplacer dans tous les fichiers » avec ton éditeur.
+Pour changer le nom plus tard, cherche `Rocket League France` **et** `RL FR` :
+les deux formes coexistent volontairement.
 
-| Placeholder                | Où | À remplacer par |
-|---|---|---|
-| `[ADRESSE_EMAIL_DE_CONTACT]` | mentions légales | Ton e-mail de contact |
-| `[ADRESSE_POSTALE]`, `[NOM_DU_RESPONSABLE]`, `[NOM_DE_L_HEBERGEUR]`, `[ADRESSE_DE_L_HEBERGEUR]`, `[SITE_DE_L_HEBERGEUR]`, `[DATE_DE_MISE_A_JOUR]` | mentions légales | Tes informations légales |
+### Ce qu'il reste
 
-Le nombre de membres n'est PLUS un placeholder : il est recupere
-automatiquement depuis Discord (voir section 12).
+**Aucun placeholder visible** sur `index.html`, `communaute.html` et
+`mentions-legales.html`.
 
-Il reste des placeholders dans le CONTENU DE SECOURS de `mises-a-jour.html`
-et `boutique.html` (`[TITRE DE LA MISE A JOUR]`, `[Prix]`...). Ils ne
-s'affichent que si `data/*.json` est absent du serveur. Pense a televerser
-le dossier `data/` avec le site.
+Il en subsiste dans le **CONTENU DE SECOURS** de `mises-a-jour.html` et
+`boutique.html` (`[TITRE DE LA MISE A JOUR]`, `[Prix]`…). Ils ne s'affichent
+que si `data/*.json` est absent du serveur — donc jamais, tant que le
+déploiement FTP fonctionne (section 17).
 
 ---
 
@@ -821,3 +820,80 @@ Dans le Planificateur, clic droit sur la tâche → **Exécuter**. Puis :
 Le code `0x1` dans le Planificateur signifie que le script a échoué : le
 journal en donne toujours la raison exacte. Dans tous les cas,
 `data/updates.json` n'est **jamais** écrasé par des données invalides.
+
+---
+
+## 17. Déploiement automatique des données sur OVH (FTP)
+
+Après chaque mise à jour réussie, le workflow téléverse `data/` vers
+`/www/data/` sur l'hébergement OVH. Le reste du site (HTML, CSS, JS, images)
+n'est **jamais** touché : tu le déposes à la main.
+
+### Les 3 secrets à créer
+
+Sur GitHub : **Settings** → **Secrets and variables** → **Actions** → onglet
+**Secrets** → bouton **New repository secret**. Un secret par création.
+
+| Nom du secret (exact, en majuscules) | Valeur |
+|---|---|
+| `FTP_SERVER` | `ftp.cluster129.hosting.ovh.net` |
+| `FTP_USERNAME` | `rocketj` |
+| `FTP_PASSWORD` | Ton mot de passe FTP (espace client OVH) |
+
+Les noms doivent être **identiques au caractère près** : le workflow les
+appelle sous cette forme exacte. Une fois enregistré, un secret n'est plus
+jamais affiché, même par toi — GitHub le masque aussi dans les logs.
+
+> Où trouver le mot de passe : espace client OVH → **Hébergements** → ton
+> hébergement → onglet **FTP - SSH** → ligne `rocketj` → **…** →
+> *Modifier le mot de passe*. OVH n'affiche jamais l'ancien : si tu l'as
+> perdu, il faut en définir un nouveau.
+
+### Tester avant de compter dessus
+
+1. Crée les 3 secrets ci-dessus.
+2. Pousse le workflow sur `main` (`git push`).
+3. GitHub → onglet **Actions** → **Mise a jour des donnees** → **Run workflow**
+   → branche `main` → **Run workflow**.
+
+Le déclenchement manuel force l'étape FTP **même si aucune donnée n'a
+changé** : c'est prévu exprès pour ce test.
+
+4. Ouvre le run, déplie l'étape **Deployer data/ sur OVH (FTP)**. Tu dois y
+   lire la connexion puis la liste des fichiers envoyés.
+5. Vérifie en ligne — le fichier doit répondre et contenir du JSON frais :
+
+```
+https://rocketleaguefrancediscord.fr/data/stats.json
+```
+
+Le bloc **Summary** du run affiche aussi une ligne
+`Deploiement FTP vers OVH : success`.
+
+### Si le déploiement échoue
+
+Le Summary liste les vérifications dans l'ordre. Les deux causes les plus
+fréquentes :
+
+| Message | Cause | Correction |
+|---|---|---|
+| `530 Login incorrect` | Mot de passe ou identifiant erroné | Recrée le secret `FTP_PASSWORD` |
+| Erreur TLS / certificat | FTPS refusé par le serveur | Passe `protocol: ftps` à `protocol: ftp` dans le workflow |
+| `550 ... No such file` | `/www/data/` n'existe pas | Crée le dossier via l'explorateur FTP d'OVH |
+
+Un échec FTP **ne perd aucune donnée** : elles sont déjà commitées sur
+GitHub. Seul le site en ligne reste sur les données précédentes, jusqu'au
+prochain run réussi.
+
+### Deux points de fonctionnement
+
+- **Seuls les fichiers modifiés partent.** L'action garde un état
+  (`.ftp-deploy-sync-state.json`) dans `/www/data/` pour comparer. Ce fichier
+  commence par un point : la règle `FilesMatch` du `.htaccess` le rend
+  inaccessible depuis le web.
+- **Suppressions.** L'action synchronise : elle supprimerait dans
+  `/www/data/` un fichier disparu en local, et il n'existe pas d'option pour
+  l'en empêcher. En pratique le risque est nul (les 3 JSON sont suivis par
+  Git, et les scripts ne les effacent jamais), et son action est confinée à
+  `/www/data/`. Pour une garantie absolue, il faudrait remplacer l'action par
+  `lftp` avec `mirror -R --only-newer` **sans** `--delete`.
