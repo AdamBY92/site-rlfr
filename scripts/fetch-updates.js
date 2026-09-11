@@ -11,8 +11,11 @@
  *   10/09/2026 : pas de <link rel="alternate" type="application/rss+xml">
  *   dans la page, et pas de JSON embarque type __NEXT_DATA__).
  *   On lit donc directement le HTML de la page news, en un seul appel.
- *   Si Psyonix publie un flux un jour, renseigne FEED_URL ci-dessous :
- *   le script l'utilisera en priorite, toujours en un seul appel.
+ *   Neuf URL de flux ont ete testees le 11/09/2026 (/news/rss, /news/feed,
+ *   /news.rss, /feed, /rss, /rss.xml, /atom.xml, /feed.xml, /blog/rss) :
+ *   TOUTES renvoient 404. Il n'existe donc pas de flux a exploiter.
+ *   Si Psyonix en publie un, renseigne FEED_URL ci-dessous : le script
+ *   l'utilisera en priorite, toujours en un seul appel.
  *
  * EN CAS D'ECHEC :
  *   le script ecrit un message d'erreur explicite, NE TOUCHE PAS a
@@ -46,8 +49,51 @@ const NEWS_URL = "https://www.rocketleague.com/news";
  * "curl"  : obligatoire ici, rocketleague.com renvoie 403 aux requetes Node.
  * "fetch" : reseau integre a Node, si leur filtrage disparait un jour.
  * "auto"  : essaie fetch puis retente une fois avec curl.
+ *
+ * ---------------------------------------------------------------------------
+ * POURQUOI PAS node-fetch / undici ? (question frequente)
+ *
+ * Parce que ca ne changerait rien. Mesures faites le 11/09/2026 sur
+ * www.rocketleague.com :
+ *
+ *     curl  + User-Agent "bot"                 -> 200
+ *     curl  + User-Agent Chrome                -> 200
+ *     curl  + UA Chrome + en-tetes Sec-Fetch   -> 200
+ *     fetch + User-Agent "bot"                 -> 403
+ *     fetch + User-Agent Chrome                -> 403
+ *     fetch + UA Chrome + en-tetes Sec-Fetch   -> 403
+ *
+ * Le filtrage ne regarde donc PAS les en-tetes : il reconnait la signature
+ * TLS/HTTP2 de Node. Or le fetch() integre a Node EST undici, et node-fetch
+ * s'appuie sur la meme pile TLS : les trois ont la meme empreinte et seraient
+ * bloques pareil. Seul un client different (curl) passe.
+ * ---------------------------------------------------------------------------
  */
 const TRANSPORT = "curl";
+
+/**
+ * En-tetes envoyes a cette source.
+ *
+ * Compromis assume : un User-Agent de navigateur RECENT (pour ne pas etre
+ * ecarte par un filtrage grossier sur l'UA), auquel on ajoute une mention
+ * d'identification et une URL de contact. On ne se fait donc pas passer pour
+ * un visiteur anonyme : un administrateur qui lit ses journaux sait qui
+ * l'appelle et comment nous joindre.
+ *
+ * >>> REMPLACE l'URL de contact par celle de ton depot.
+ */
+const BROWSER_HEADERS = {
+  "User-Agent":
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) " +
+    "Chrome/140.0.0.0 Safari/537.36 (+https://github.com/ton-compte/site-rlfr; bot communautaire)",
+  Accept:
+    "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+  "Accept-Language": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Sec-Fetch-Dest": "document",
+  "Sec-Fetch-Mode": "navigate",
+  "Sec-Fetch-Site": "none",
+  "Upgrade-Insecure-Requests": "1",
+};
 
 /** Prefixe des liens d'articles, pour reconstruire des URL absolues. */
 const SITE_ORIGIN = "https://www.rocketleague.com";
@@ -95,22 +141,86 @@ const DEFAULT_TAG = "MAJ";
    2. OUTILS DE PARSING
    ========================================================================== */
 
-/** Mois anglais (format "Jun 09, 2026" utilise par rocketleague.com). */
-const MONTHS = {
-  jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5,
-  jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11,
-};
+/**
+ * MOIS, en francais ET en anglais.
+ *
+ * Pourquoi les deux : on demande la version francaise du site
+ * (Accept-Language dans BROWSER_HEADERS), qui affiche "09 sept. 2026".
+ * Mais si le site ignore l'en-tete un jour, ou si un flux RSS anglais est
+ * branche via FEED_URL, on retombe sur "Sep 09, 2026". Les deux formats
+ * doivent donc etre compris.
+ *
+ * Les cles sont des prefixes SANS ACCENT : "aout" couvre "août",
+ * "fevr" couvre "février" et "févr.", "sept" couvre "septembre" et "sept.".
+ * Les prefixes longs sont testes en premier, sinon "juin" et "juillet"
+ * seraient confondus (tous deux commencent par "jui").
+ */
+const MONTH_PREFIXES = [
+  ["janv", 0], ["jan", 0],
+  ["fevr", 1], ["fev", 1], ["feb", 1],
+  ["mars", 2], ["mar", 2],
+  ["avri", 3], ["avr", 3], ["apr", 3],
+  ["juil", 6], ["jul", 6],
+  ["juin", 5], ["jun", 5],
+  ["mai", 4], ["may", 4],
+  ["aout", 7], ["aou", 7], ["aug", 7],
+  ["sept", 8], ["sep", 8],
+  ["octo", 9], ["oct", 9],
+  ["nove", 10], ["nov", 10],
+  ["dece", 11], ["dec", 11],
+];
 
-/** Reconnait "Jun 09, 2026" et renvoie une date ISO, sinon null. */
-function parseEnglishDate(text) {
-  const match = /([A-Za-z]{3})[a-z]*\.?\s+(\d{1,2}),?\s+(\d{4})/.exec(text || "");
-  if (!match) return null;
+/** Retire les accents et la ponctuation d'un nom de mois. */
+function normaliserMois(mot) {
+  return String(mot)
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "") // supprime les accents
+    .replace(/\./g, "");
+}
 
-  const month = MONTHS[match[1].toLowerCase()];
-  if (month === undefined) return null;
+/** Renvoie l'index du mois (0-11), ou null si non reconnu. */
+function indexDuMois(mot) {
+  const propre = normaliserMois(mot);
+  for (const [prefixe, index] of MONTH_PREFIXES) {
+    if (propre.startsWith(prefixe)) return index;
+  }
+  return null;
+}
 
-  const date = new Date(Date.UTC(Number(match[3]), month, Number(match[2])));
-  return Number.isNaN(date.getTime()) ? null : date.toISOString();
+/**
+ * Reconnait les deux formats de la page :
+ *   francais : "09 sept. 2026", "04 août 2026"
+ *   anglais  : "Sep 09, 2026"
+ * Renvoie une date ISO, ou null si la date est illisible.
+ *
+ * IMPORTANT : on renvoie null, JAMAIS la date du jour. Afficher la date du
+ * jour sur un article de juin donnerait une information fausse au visiteur.
+ */
+function parseArticleDate(text) {
+  const brut = String(text || "").trim();
+
+  // Format francais : "09 sept. 2026" (jour, mois, annee)
+  let match = /^(\d{1,2})\s+([A-Za-zÀ-ÿ.]+)\s+(\d{4})$/.exec(brut);
+  if (match) {
+    const mois = indexDuMois(match[2]);
+    if (mois !== null) {
+      const date = new Date(Date.UTC(Number(match[3]), mois, Number(match[1])));
+      if (!Number.isNaN(date.getTime())) return date.toISOString();
+    }
+  }
+
+  // Format anglais : "Sep 09, 2026" (mois, jour, annee)
+  match = /([A-Za-zÀ-ÿ.]{3,})\s+(\d{1,2}),?\s+(\d{4})/.exec(brut);
+  if (match) {
+    const mois = indexDuMois(match[1]);
+    if (mois !== null) {
+      const date = new Date(Date.UTC(Number(match[3]), mois, Number(match[2])));
+      if (!Number.isNaN(date.getTime())) return date.toISOString();
+    }
+  }
+
+  return null;
 }
 
 /** Deduit le tag a partir du titre, selon TAG_RULES. */
@@ -154,13 +264,15 @@ function parseNewsHtml(html) {
     for (let depth = 0; depth < 3 && !date && node.length; depth += 1) {
       node.find(SELECTORS.dateCandidate).each((__, span) => {
         if (date) return;
-        date = parseEnglishDate($(span).text());
+        date = parseArticleDate($(span).text());
       });
       node = node.parent();
     }
 
     entries.push({
-      date: date || new Date().toISOString(), // a defaut : date de recuperation
+      // null si la date est illisible : le site masque alors la date
+      // plutot que d'en afficher une fausse.
+      date: date,
       titre,
       resume: "", // voir la note "RESUME" dans le README
       lien: url,
@@ -214,7 +326,7 @@ function isValidPayload(entries) {
   return (
     Array.isArray(entries) &&
     entries.length > 0 &&
-    entries.every((entry) => entry.titre && entry.lien && entry.date)
+    entries.every((entry) => entry.titre && entry.lien)
   );
 }
 
@@ -227,7 +339,7 @@ async function main() {
   log.info(`recuperation depuis ${source}`);
 
   // UN SEUL appel reseau par execution.
-  const body = await fetchHtml(source, TRANSPORT);
+  const body = await fetchHtml(source, TRANSPORT, BROWSER_HEADERS);
 
   const entries = FEED_URL ? parseFeedXml(body) : parseNewsHtml(body);
   log.info(`${entries.length} article(s) extrait(s).`);
@@ -253,9 +365,45 @@ async function main() {
 // On ne lance le telechargement que si le fichier est execute directement
 // (`node scripts/fetch-updates.js`). Ainsi, un `require()` de ce module
 // pour tester les fonctions de parsing ne declenche aucun appel reseau.
+/**
+ * Traduit une erreur technique en explication actionnable.
+ * Le 403 a une cause bien identifiee et une reponse differente des autres :
+ * inutile de chercher du cote des selecteurs si on est simplement bloque.
+ */
+function expliquerEchec(message) {
+  if (/\b403\b/.test(message)) {
+    return [
+      "Le site officiel a REFUSE la requete (403). Ce n'est pas un bug du",
+      "script : sa protection anti-robot a reconnu l'appel.",
+      "",
+      "Cause la plus probable selon l'endroit ou tu lances le script :",
+      "  - depuis GitHub Actions : les adresses IP des serveurs GitHub sont",
+      "    souvent bloquees en masse par ce genre de protection. Dans ce cas",
+      "    le blocage est DEFINITIF depuis le cloud, et il faut lancer CE",
+      "    script depuis ta machine (Planificateur de taches Windows) ;",
+      "  - depuis ta machine : blocage temporaire (trop d'appels rapproches).",
+      "    Attends une heure et relance.",
+      "",
+      "A savoir : changer le User-Agent ne sert a rien, la protection lit la",
+      "signature TLS du client, pas les en-tetes (mesures dans l'en-tete de",
+      "ce fichier). Les deux autres scripts ne sont pas concernes.",
+    ].join("\n           ");
+  }
+  if (/curl est introuvable/.test(message)) {
+    return "curl est absent de cette machine : installe-le, ou bascule TRANSPORT sur \"fetch\".";
+  }
+  if (/aucun article exploitable/.test(message)) {
+    return "La page a repondu mais sa structure a change : ajuste SELECTORS en haut de ce fichier.";
+  }
+  return null;
+}
+
 if (require.main === module) {
   main().catch((err) => {
     log.error(err.message);
+
+    const explication = expliquerEchec(err.message);
+    if (explication) log.warn(explication);
 
     const existing = readJson("data/updates.json");
     if (existing) {
@@ -273,4 +421,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { parseNewsHtml, parseFeedXml, deduceTag, parseEnglishDate };
+module.exports = { parseNewsHtml, parseFeedXml, deduceTag, parseArticleDate };

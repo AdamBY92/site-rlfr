@@ -50,7 +50,7 @@ function makeLogger(scriptName) {
  * Telecharge une page via fetch() (module reseau integre a Node).
  * Une seule tentative, aucun retry.
  */
-async function fetchViaNode(url) {
+async function fetchViaNode(url, headers) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
 
@@ -58,11 +58,14 @@ async function fetchViaNode(url) {
     const response = await fetch(url, {
       signal: controller.signal,
       redirect: "follow",
-      headers: {
-        "User-Agent": USER_AGENT,
-        Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
-      },
+      headers: Object.assign(
+        {
+          "User-Agent": USER_AGENT,
+          Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+          "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
+        },
+        headers || {}
+      ),
     });
 
     if (!response.ok) {
@@ -95,20 +98,29 @@ async function fetchViaNode(url) {
  * Toujours UNE SEULE requete : `-s` silencieux, `-f` echoue proprement sur
  * un code >= 400, `--max-time` borne la duree, aucun `--retry`.
  */
-function fetchViaCurl(url) {
+function fetchViaCurl(url, headers) {
   const { execFileSync } = require("node:child_process");
+
+  const entetes = Object.assign(
+    {
+      "User-Agent": USER_AGENT,
+      "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
+    },
+    headers || {}
+  );
+
+  const args = [
+    "-sSfL",                                  // silencieux, erreur claire, suit les redirections
+    "--max-time", String(Math.round(TIMEOUT_MS / 1000)),
+    "--compressed",
+  ];
+  Object.entries(entetes).forEach(([cle, valeur]) => args.push("-H", cle + ": " + valeur));
+  args.push(url);
 
   try {
     return execFileSync(
       "curl",
-      [
-        "-sSfL",                                  // silencieux, erreur claire, suit les redirections
-        "--max-time", String(Math.round(TIMEOUT_MS / 1000)),
-        "--compressed",
-        "-A", USER_AGENT,
-        "-H", "Accept-Language: fr-FR,fr;q=0.9,en;q=0.8",
-        url,
-      ],
+      args,
       {
         encoding: "utf8",
         maxBuffer: 32 * 1024 * 1024,
@@ -139,27 +151,68 @@ function fetchViaCurl(url) {
  *        - "curl"  : uniquement curl (1 requete) ;
  *        - "auto"  : essaie fetch, et SEULEMENT s'il est refuse, retente une
  *                    fois avec curl (2 requetes au maximum, jamais plus).
+ * @param {object} headers en-tetes supplementaires, propres a une source
+ *        (voir BROWSER_HEADERS dans fetch-updates.js). Ils ecrasent les
+ *        valeurs par defaut, User-Agent compris.
  */
-async function fetchHtml(url, transport = "auto") {
+async function fetchHtml(url, transport = "auto", headers) {
   let html;
 
   if (transport === "curl") {
-    html = fetchViaCurl(url);
+    html = fetchViaCurl(url, headers);
   } else if (transport === "fetch") {
-    html = await fetchViaNode(url);
+    html = await fetchViaNode(url, headers);
   } else {
     try {
-      html = await fetchViaNode(url);
+      html = await fetchViaNode(url, headers);
     } catch (err) {
       // Repli unique : utile quand un site filtre les requetes emises par Node.
-      html = fetchViaCurl(url);
+      html = fetchViaCurl(url, headers);
     }
   }
 
   if (!html || html.length < 500) {
     throw new Error(`reponse anormalement courte (${(html || "").length} octets) pour ${url}`);
   }
+
+  detecterPageDeBlocage(html, url);
+
   return html;
+}
+
+/**
+ * Detecte une page de verification anti-robot renvoyee A LA PLACE du contenu.
+ *
+ * POURQUOI C'EST INDISPENSABLE : Cloudflare sert sa page de challenge avec un
+ * code HTTP 200 (constate le 11/09/2026 sur rocketleague.com). Sans ce
+ * controle, le script croirait avoir reussi, trouverait 0 article dans une
+ * page de 25 Ko, et afficherait "ajuste les selecteurs" - un diagnostic
+ * totalement faux qui enverrait sur une mauvaise piste pendant des heures.
+ */
+function detecterPageDeBlocage(html, url) {
+  const marqueurs = [
+    "cf_challenge",            // Cloudflare
+    "cf-browser-verification",
+    "Just a moment...",
+    "Attention Required!",
+    "Checking your browser",
+    "Verifying you are human",
+    "__cf_chl",
+    "captcha-delivery",        // DataDome
+    "Access Denied",           // Akamai
+  ];
+
+  const extrait = html.slice(0, 8000); // le marqueur est toujours en tete
+  const trouve = marqueurs.find((m) => extrait.includes(m));
+
+  if (trouve) {
+    throw new Error(
+      `BLOCAGE ANTI-ROBOT : le site a renvoye une page de verification ` +
+        `("${trouve}") au lieu du contenu de ${url}. Note bien : la reponse ` +
+        `porte quand meme un code HTTP 200, c'est pour cela qu'il faut la ` +
+        `detecter sur son contenu. Ce n'est PAS un probleme de selecteurs.`
+    );
+  }
 }
 
 /** Chemin absolu a partir de la racine du projet. */
@@ -229,6 +282,7 @@ function todayUtcMidnight() {
 
 module.exports = {
   USER_AGENT,
+  detecterPageDeBlocage,
   TIMEOUT_MS,
   makeLogger,
   fetchHtml,
