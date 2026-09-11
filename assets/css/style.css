@@ -21,6 +21,12 @@
    16. Section Actus (grille facon site de jeu)
    17. Details de direction artistique
    18. Responsive des nouveaux blocs
+
+   >>> APRES AVOIR MODIFIE CE FICHIER : lance  npm run version-assets
+       Cela incremente le ?v=N des balises <link>/<script> dans les 5 pages.
+       Sans cela, les visiteurs deja venus garderont l ancienne version en
+       cache pendant 7 jours (duree fixee par le .htaccess). Voir README
+       section 18.
    ========================================================================== */
 
 /* ==========================================================================

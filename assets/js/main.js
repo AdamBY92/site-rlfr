@@ -10,6 +10,12 @@
    7. Entree du hero au chargement
    8. Compteur de membres anime (count-up)
    9. Parallaxe du fond au scroll
+
+   >>> APRES AVOIR MODIFIE CE FICHIER : lance  npm run version-assets
+       Cela incremente le ?v=N des balises <link>/<script> dans les 5 pages.
+       Sans cela, les visiteurs deja venus garderont l ancienne version en
+       cache pendant 7 jours (duree fixee par le .htaccess). Voir README
+       section 18.
    ========================================================================== */
 
 (function () {

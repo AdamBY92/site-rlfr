@@ -7,7 +7,8 @@
     "update-content": "node scripts/update-all.js",
     "update-updates": "node scripts/fetch-updates.js",
     "update-shop": "node scripts/fetch-shop.js",
-    "update-stats": "node scripts/fetch-member-count.js"
+    "update-stats": "node scripts/fetch-member-count.js",
+    "version-assets": "node scripts/version-assets.js"
   },
   "engines": {
     "node": ">=18"

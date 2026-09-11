@@ -18,6 +18,12 @@
    fetch() (regle de securite du navigateur) et tu verras donc le contenu
    statique. Lance un petit serveur local pour tester le rendu dynamique :
        npx serve .          (ou)      python -m http.server 8080
+
+   >>> APRES AVOIR MODIFIE CE FICHIER : lance  npm run version-assets
+       Cela incremente le ?v=N des balises <link>/<script> dans les 5 pages.
+       Sans cela, les visiteurs deja venus garderont l ancienne version en
+       cache pendant 7 jours (duree fixee par le .htaccess). Voir README
+       section 18.
    ========================================================================== */
 
 (function () {

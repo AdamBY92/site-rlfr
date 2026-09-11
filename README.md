@@ -920,3 +920,76 @@ que des URL `http(s)` validées.
   Git, et les scripts ne les effacent jamais), et son action est confinée à
   `/www/data/`. Pour une garantie absolue, il faudrait remplacer l'action par
   `lftp` avec `mirror -R --only-newer` **sans** `--delete`.
+
+---
+
+## 18. Cache-busting : forcer le rechargement du CSS et du JS
+
+### Le problème
+
+Le `.htaccess` demande aux navigateurs de garder le CSS et le JS **7 jours**
+en cache (section 4). C'est voulu : le site charge plus vite. Mais quand tu
+modifies `style.css` ou `content.js`, un visiteur déjà venu continue
+d'utiliser l'**ancienne** version pendant une semaine — il voit un site
+inchangé, ou pire, un mélange incohérent entre nouveau HTML et ancien CSS.
+
+### La solution en place
+
+Chaque référence porte un numéro de version :
+
+```html
+<link rel="stylesheet" href="assets/css/style.css?v=2">
+<script src="assets/js/main.js?v=2" defer></script>
+<script src="assets/js/content.js?v=2" defer></script>
+```
+
+Pour le navigateur, `style.css?v=3` est une **adresse différente** de
+`style.css?v=2` : il la retélécharge donc à neuf. Le fichier sur le serveur,
+lui, ne change jamais de nom — c'est purement côté URL.
+
+**Version actuelle : `v=2`**, sur 15 références réparties dans les 5 pages.
+
+### La procédure à chaque déploiement de CSS/JS
+
+Une seule commande, à lancer **avant de téléverser** :
+
+```bash
+npm run version-assets
+```
+
+Elle incrémente le numéro dans **toutes** les pages d'un coup (v=2 → v=3) et
+affiche le détail page par page. Pour imposer une valeur précise :
+
+```bash
+npm run version-assets -- 7
+```
+
+Puis téléverse **les pages `.html` ET les fichiers modifiés** : les deux vont
+ensemble, sinon les pages réclameraient une version qui n'est pas encore en
+ligne.
+
+> **Quand la lancer :** après toute modification de `assets/css/style.css`,
+> `assets/js/main.js`, `assets/js/content.js` ou `assets/js/hero-particles.js`.
+> Inutile après un simple changement de `data/*.json` (ces fichiers ne sont
+> mis en cache que 10 minutes) ou de contenu HTML (1 heure).
+
+### Ce que le script touche, et ce qu'il ne touche pas
+
+Uniquement les `<link>` et `<script>` pointant vers `assets/css/*.css` et
+`assets/js/*.js` dans les pages `.html` à la racine. Il ne touche **ni aux
+images, ni aux polices, ni au reste**.
+
+⚠️ **Conséquence pour le logo :** `assets/img/logo.png` est mis en cache
+**30 jours** et n'est pas versionné. Si tu le remplaces (par exemple par la
+version compressée recommandée en section 4), les visiteurs déjà venus
+garderont l'ancien pendant un mois. Deux options : renommer le fichier
+(`logo-v2.png`, avec mise à jour des 10 références), ou accepter le délai.
+
+### Si tu veux aller plus loin un jour
+
+Le numéro manuel a une limite : il bust le cache des **trois** fichiers même
+si un seul a changé. Une évolution possible serait de calculer une empreinte
+du contenu de chaque fichier (`?v=a3f2c1`) pour ne recharger que ce qui a
+réellement bougé. C'est une trentaine de lignes dans le même script — mais
+tant que tu déploies CSS et JS ensemble, le numéro simple suffit et reste
+plus lisible.
