@@ -13,8 +13,10 @@
        Le compteur de membres est DYNAMIQUE : il vient de data/stats.json,
        genere par scripts/fetch-member-count.js. Aucun chiffre a saisir.
 
-       Il reste a remplacer partout :
-         [URL_DU_SITE]  -> l'URL finale du site (ex: https://rocketleaguefrance.fr)
+       Adresse du site : https://rocketleaguefrancediscord.fr
+       Elle apparait dans canonical, og:url, og:image, twitter:image et les
+       donnees structurees. Si le domaine change, cherche cette adresse
+       dans les 5 pages + sitemap.xml + robots.txt.
        ==================================================================== -->
   <title>Rocket League France - Communauté Discord francophone</title>
   <meta name="description" content="Rejoins Rocket League France, la communauté Discord francophone dédiée à Rocket League : trouve des coéquipiers FR, participe aux tournois maison, progresse avec du coaching et suis les mises à jour du jeu et la rotation de la boutique automatiquement.">
@@ -22,13 +24,13 @@
   <meta name="author" content="Rocket League France">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#04070f">
-  <link rel="canonical" href="[URL_DU_SITE]/">
+  <link rel="canonical" href="https://rocketleaguefrancediscord.fr/">
 
   <!-- Open Graph (Facebook, Discord, LinkedIn...) -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Rocket League France">
-  <meta property="og:url" content="[URL_DU_SITE]/">
+  <meta property="og:url" content="https://rocketleaguefrancediscord.fr/">
   <meta property="og:title" content="Rocket League France - Communauté Discord francophone">
   <meta property="og:description" content="Trouve des coéquipiers FR, participe aux tournois maison et suis les actus du jeu. Serveur gratuit, ouvert 24/7.">
   <!-- IMAGE DE PARTAGE (og:image) : 1200x630 px, JPG ou PNG < 300 Ko.
@@ -36,7 +38,7 @@
        fond degrade bleu nuit (#04070f -> #0a1428) avec une touche corail
        (#ff6b35), et le nom du serveur en gros. C'est cette image qui
        s'affiche dans les previsualisations Discord, X et Facebook. -->
-  <meta property="og:image" content="[URL_DU_SITE]/assets/img/og-image.jpg">
+  <meta property="og:image" content="https://rocketleaguefrancediscord.fr/assets/img/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Bannière de la communauté Discord Rocket League France">
@@ -45,7 +47,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Rocket League France - Communauté Discord francophone">
   <meta name="twitter:description" content="Trouve des coéquipiers FR, participe aux tournois maison et suis les actus du jeu. Serveur gratuit, ouvert 24/7.">
-  <meta name="twitter:image" content="[URL_DU_SITE]/assets/img/og-image.jpg">
+  <meta name="twitter:image" content="https://rocketleaguefrancediscord.fr/assets/img/og-image.jpg">
   <!-- <meta name="twitter:site" content="@ton_compte"> -->
 
   <!-- ====================================================================
@@ -87,7 +89,7 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Rocket League France",
-    "url": "[URL_DU_SITE]/",
+    "url": "https://rocketleaguefrancediscord.fr/",
     "description": "Communauté Discord francophone dédiée à Rocket League : recherche de coéquipiers, tournois internes, coaching et suivi des actualités du jeu.",
     "sameAs": ["https://discord.gg/CNDjmDBmJz"]
   }

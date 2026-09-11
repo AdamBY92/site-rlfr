@@ -53,6 +53,7 @@ site_rlfr/
 | Nom du serveur — forme longue | **Rocket League France** (titres, meta descriptions, H1, textes, copyright, mentions légales) |
 | Nom du serveur — forme courte | **RL FR** (logo du header, logo du footer, `aria-label` du logo, nom du bot dans le mockup Discord, suffixe des titres des pages internes) |
 | Lien d'invitation | **https://discord.gg/CNDjmDBmJz** (31 occurrences : boutons CTA, footers, liens affichés en clair, `sameAs` des données structurées) |
+| Adresse du site | **https://rocketleaguefrancediscord.fr** (27 occurrences : `canonical`, `og:url`, `og:image`, `twitter:image`, données structurées, `sitemap.xml`, `robots.txt`) |
 
 Pour changer le nom plus tard, cherche `Rocket League France` **et** `RL FR` :
 les deux formes coexistent volontairement.
@@ -63,7 +64,6 @@ Fais un « Rechercher / Remplacer dans tous les fichiers » avec ton éditeur.
 
 | Placeholder                | Où | À remplacer par |
 |---|---|---|
-| `[URL_DU_SITE]`            | 26 occurrences (canonical, og:url, sitemap) | L'URL finale **sans slash final** (`https://mon-serveur-rl.fr`) |
 | `[ADRESSE_EMAIL_DE_CONTACT]` | mentions légales | Ton e-mail de contact |
 | `[ADRESSE_POSTALE]`, `[NOM_DU_RESPONSABLE]`, `[NOM_DE_L_HEBERGEUR]`, `[ADRESSE_DE_L_HEBERGEUR]`, `[SITE_DE_L_HEBERGEUR]`, `[DATE_DE_MISE_A_JOUR]` | mentions légales | Tes informations légales |
 

@@ -1,6 +1,5 @@
 # robots.txt
-# >>> REMPLACE [URL_DU_SITE] par l'adresse finale du site
-#     (exemple : https://mon-serveur-rl.fr)
+# Adresse du site : https://rocketleaguefrancediscord.fr
 
 User-agent: *
 Allow: /
@@ -9,4 +8,4 @@ Allow: /
 # Si tu ajoutes un jour un dossier prive, ajoute par exemple :
 # Disallow: /prive/
 
-Sitemap: [URL_DU_SITE]/sitemap.xml
+Sitemap: https://rocketleaguefrancediscord.fr/sitemap.xml
