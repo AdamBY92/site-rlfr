@@ -54,10 +54,6 @@ site_rlfr/
 | Nom du serveur — forme courte | **RL FR** (logo du header, logo du footer, `aria-label` du logo, nom du bot dans le mockup Discord, suffixe des titres des pages internes) |
 | Lien d'invitation | **https://discord.gg/CNDjmDBmJz** (31 occurrences : boutons CTA, footers, liens affichés en clair, `sameAs` des données structurées) |
 | Adresse du site | **https://rocketleaguefrancediscord.fr** (27 occurrences : `canonical`, `og:url`, `og:image`, `twitter:image`, données structurées, `sitemap.xml`, `robots.txt`) |
-
-Pour changer le nom plus tard, cherche `Rocket League France` **et** `RL FR` :
-les deux formes coexistent volontairement.
-
 | Mentions légales | **Complètes** : éditeur Barcelona (pseudonyme, anonymat LCEN art. 6-III), hébergeur OVH SAS, contact contact@rocketleaguefrancediscord.fr |
 | Compteur de membres | **Dynamique**, récupéré depuis Discord (section 12) — plus aucun chiffre à saisir |
 
