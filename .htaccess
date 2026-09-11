@@ -1,0 +1,117 @@
+# ============================================================================
+# .htaccess - En-tetes de securite et performance (hebergement Apache / OVH)
+# ----------------------------------------------------------------------------
+# A DEPOSER A LA RACINE DU SITE, a cote de index.html (dans www/ chez OVH).
+#
+# Le fichier commence par un point : certains clients FTP le masquent.
+# Dans FileZilla : Serveur > Forcer l'affichage des fichiers caches.
+#
+# Ce fichier ne sert QUE sur Apache. Sur Netlify/Vercel/GitHub Pages il est
+# ignore : ces plateformes ont leur propre fichier de configuration
+# (_headers, vercel.json...). L'hebergement mutualise OVH est sous Apache,
+# donc ce fichier s'applique.
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# 1. EN-TETES DE SECURITE
+# ----------------------------------------------------------------------------
+<IfModule mod_headers.c>
+
+    # Empeche le navigateur de "deviner" le type d'un fichier : un .txt
+    # renvoye par erreur comme du HTML ne sera jamais execute.
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Interdit l'affichage du site dans une iframe sur un autre domaine
+    # (protege du clickjacking : un tiers qui superpose un bouton invisible).
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # Ne transmet pas l'URL complete de provenance aux sites externes.
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Coupe l'acces aux API sensibles du navigateur : le site n'en a
+    # besoin d'aucune.
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
+
+    # ------------------------------------------------------------------------
+    # CONTENT-SECURITY-POLICY
+    # Liste blanche de ce que la page a le droit de charger. Tout le reste est
+    # bloque par le navigateur, meme si du code etranger arrivait a s'injecter.
+    #
+    # Ce qui est autorise, et pourquoi :
+    #   default-src 'self'        par defaut, uniquement nos propres fichiers
+    #   script-src  'self'        nos 3 fichiers JS, AUCUN script en ligne
+    #   style-src   ... 'unsafe-inline'
+    #                             obligatoire : les pages utilisent des
+    #                             attributs style="..." (marges ponctuelles)
+    #                             et Google Fonts injecte une feuille.
+    #   font-src    fonts.gstatic.com   les fichiers de police
+    #   img-src     'self' data: https://cdn.locker.gg
+    #                             'self' = logo et visuels locaux
+    #                             data:  = le favicon SVG en ligne
+    #                             cdn.locker.gg = vignettes de la boutique
+    #   connect-src 'self'        fetch() ne lit que nos data/*.json
+    #   frame-ancestors 'none'    equivalent moderne de X-Frame-Options
+    #   base-uri / form-action 'self'   verrouille les detournements de base
+    #                             et d'envoi de formulaire
+    #
+    # >>> SI TU AJOUTES un service externe (widget Discord embarque, statistiques,
+    #     YouTube...), il sera BLOQUE tant que tu ne l'auras pas ajoute ici.
+    #     Symptome typique : la ressource ne s'affiche pas et la console du
+    #     navigateur indique "refused to load ... Content Security Policy".
+    # ------------------------------------------------------------------------
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://cdn.locker.gg; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'"
+
+    # HSTS : force le HTTPS pendant un an.
+    # >>> NE DECOMMENTE QU'APRES avoir verifie que ton certificat SSL OVH est
+    #     actif et que https://ton-domaine.fr fonctionne. Une fois envoye, le
+    #     navigateur refusera le HTTP pendant un an, meme en cas de probleme.
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+</IfModule>
+
+# ----------------------------------------------------------------------------
+# 2. REDIRECTION VERS HTTPS
+# >>> A activer une fois le certificat SSL OVH en place.
+# ----------------------------------------------------------------------------
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{HTTPS} off
+#     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
+
+# ----------------------------------------------------------------------------
+# 3. COMPRESSION (gain immediat sur le temps de chargement)
+# ----------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+    AddOutputFilterByType DEFLATE application/javascript application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ----------------------------------------------------------------------------
+# 4. MISE EN CACHE
+# Les fichiers data/*.json changent tous les jours : cache tres court, sinon
+# les visiteurs verraient une boutique perimee.
+# ----------------------------------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css                "access plus 7 days"
+    ExpiresByType application/javascript  "access plus 7 days"
+    ExpiresByType image/png               "access plus 30 days"
+    ExpiresByType image/jpeg              "access plus 30 days"
+    ExpiresByType image/svg+xml           "access plus 30 days"
+    ExpiresByType application/json        "access plus 10 minutes"
+    ExpiresByType text/html               "access plus 1 hour"
+</IfModule>
+
+# ----------------------------------------------------------------------------
+# 5. ACCES INTERDIT AUX FICHIERS DE TRAVAIL
+# Ils n'ont rien a faire sur le web ; on bloque au cas ou ils seraient
+# televerses par erreur.
+# ----------------------------------------------------------------------------
+<FilesMatch "(^\.|package(-lock)?\.json$|\.md$|\.log$|\.tmp$)">
+    Require all denied
+</FilesMatch>
+
+# Page d'erreur : on renvoie vers l'accueil plutot qu'une page Apache brute.
+ErrorDocument 404 /index.html

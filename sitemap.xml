@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SITEMAP
+  >>> REMPLACE [URL_DU_SITE] par l'adresse finale du site (sans slash final),
+      par exemple : https://mon-serveur-rl.fr
+  >>> Pense a mettre a jour <lastmod> quand tu modifies une page
+      (format AAAA-MM-JJ). Les pages mises a jour souvent (boutique)
+      ont une changefreq plus elevee.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>[URL_DU_SITE]/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>[URL_DU_SITE]/mises-a-jour.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>[URL_DU_SITE]/boutique.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>[URL_DU_SITE]/communaute.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>[URL_DU_SITE]/mentions-legales.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

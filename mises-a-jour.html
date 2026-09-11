@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO - il reste à remplacer [URL_DU_SITE] par l'adresse finale du site -->
+  <title>Mises à jour Rocket League - Patch notes en français | RL FR</title>
+  <meta name="description" content="Suis les dernières mises à jour de Rocket League résumées en français : patch notes, correctifs, événements en jeu et nouveautés saisonnières, publiés aussi automatiquement sur notre Discord.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#04070f">
+  <link rel="canonical" href="[URL_DU_SITE]/mises-a-jour.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Rocket League France">
+  <meta property="og:url" content="[URL_DU_SITE]/mises-a-jour.html">
+  <meta property="og:title" content="Mises à jour Rocket League - Patch notes en français">
+  <meta property="og:description" content="Patch notes, correctifs et événements en jeu résumés en français par la communauté Rocket League France.">
+  <!-- IMAGE DE PARTAGE (og:image) : 1200x630 px, JPG ou PNG < 300 Ko.
+       Compose-la autour de assets/img/logo.png : logo centre ou a gauche,
+       fond degrade bleu nuit (#04070f -> #0a1428) avec une touche corail
+       (#ff6b35), et le nom du serveur en gros. C'est cette image qui
+       s'affiche dans les previsualisations Discord, X et Facebook. -->
+  <meta property="og:image" content="[URL_DU_SITE]/assets/img/og-image.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mises à jour Rocket League - Patch notes en français">
+  <meta name="twitter:description" content="Patch notes, correctifs et événements en jeu résumés en français.">
+  <meta name="twitter:image" content="[URL_DU_SITE]/assets/img/og-image.jpg">
+
+  <!-- ====================================================================
+       FAVICONS
+       Actuellement : un SVG en ligne (aucun fichier necessaire).
+
+       >>> POUR UTILISER TON LOGO : genere ces 4 fichiers a partir de
+           assets/img/logo.png (carre, 512x512 px de preference) avec
+           realfavicongenerator.net ou favicon.io, puis place-les A LA
+           RACINE du site (a cote de index.html) :
+             - favicon.ico           16x16 + 32x32 dans un seul fichier
+             - favicon-32x32.png
+             - favicon-16x16.png
+             - apple-touch-icon.png  180x180, fond OPAQUE (#04070f) :
+                                     iOS ne gere pas la transparence et
+                                     afficherait sinon un fond noir brut.
+
+           Ensuite : supprime la ligne <link rel="icon" href="data:image...">
+           ci-dessous et decommente les 4 lignes qui la suivent.
+       ==================================================================== -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%231d6fe0'/><circle cx='50' cy='50' r='22' fill='none' stroke='white' stroke-width='8'/></svg>">
+  <!--
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+  <!-- HEADER (identique sur toutes les pages) -->
+  <header class="header" data-header>
+    <div class="header__inner">
+      <a class="logo" href="index.html" aria-label="Accueil - RL FR">
+        <span class="logo__mark" aria-hidden="true">
+          <!-- LOGO OFFICIEL : depose ton fichier dans assets/img/logo.png
+               (PNG transparent, carre, 256x256 px minimum).
+               Tant que le fichier n'existe pas, le monogramme SVG ci-dessous
+               reste affiche : aucune image cassee. Le basculement est fait
+               par main.js (section 11) des que l'image se charge. -->
+          <img class="logo__img" src="assets/img/logo.png" alt="" width="48" height="48" decoding="async" data-logo hidden>
+          <svg class="logo__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 3v4M12 17v4M3 12h4M17 12h4"></path>
+          </svg>
+        </span>
+        <span class="logo__text">RL FR</span>
+      </a>
+
+      <nav class="nav" id="menu-principal" data-nav aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="mises-a-jour.html" class="is-active" aria-current="page">Mises à jour</a>
+        <a href="boutique.html">Boutique</a>
+        <a href="communaute.html">Communauté</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--primary" href="https://discord.gg/CNDjmDBmJz" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.3 4.5A19 19 0 0 0 15.6 3l-.2.5c1.6.4 2.9 1 4.1 1.8a15.6 15.6 0 0 0-11-.9c-.6.2-1 .4-1.5.6A16 16 0 0 1 8.6 3.5L8.4 3a19 19 0 0 0-4.7 1.5C1.1 8.4.4 12.2.7 16a19.2 19.2 0 0 0 5.8 2.9l.5-.7c-.8-.3-1.6-.7-2.3-1.2l.5-.4a13.7 13.7 0 0 0 11.6 0l.5.4c-.7.5-1.5.9-2.3 1.2l.5.7A19.1 19.1 0 0 0 21.3 16c.4-4.4-.6-8.2-1-11.5ZM8.2 13.8c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3Zm7.6 0c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3Z"></path>
+          </svg>
+          Rejoindre le Discord
+        </a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="menu-principal" aria-label="Ouvrir le menu">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <!-- EN-TETE DE PAGE -->
+    <section class="page-head">
+      <div class="container">
+        <p class="breadcrumb">
+          <a href="index.html">Accueil</a><span>/</span>Mises à jour
+        </p>
+        <p class="badge">
+          <span class="badge__dot" aria-hidden="true"></span>
+          Actus &amp; patch notes
+        </p>
+        <h1>Les mises à jour du jeu</h1>
+        <p>
+          On résume ici les patch notes et les événements de Rocket League en français.
+          Chaque publication est aussi postée automatiquement par notre bot dans le salon
+          <strong>#patch-notes</strong> du serveur.
+        </p>
+      </div>
+    </section>
+
+    <!-- LISTE DES ACTUS
+         Cette liste est REMPLIE AUTOMATIQUEMENT au chargement de la page,
+         depuis data/updates.json (genere par scripts/fetch-updates.js).
+
+         Le contenu ecrit en dur ci-dessous est le CONTENU DE SECOURS : il
+         s'affiche tel quel si data/updates.json est absent, illisible, ou si
+         la page est ouverte en file:// (le navigateur bloque alors fetch).
+         Tu peux donc l'adapter pour qu'il reste presentable en cas de panne.
+
+         >>> POUR AJOUTER UNE ACTU DE SECOURS : duplique un bloc <article class="post">
+             et modifie la date, le tag, le titre et la liste des changements.
+             Tags disponibles : post__tag (bleu / MAJ), post__tag--fix (orange / correctif),
+             post__tag--event (vert / événement).
+         -->
+    <section class="section">
+      <div class="container">
+        <div class="grid" style="gap:18px" data-updates-list>
+
+          <article class="post reveal">
+            <div class="post__meta">
+              <span class="post__tag">Mise à jour</span>
+              <time class="post__date" datetime="2026-09-04">4 septembre 2026</time>
+            </div>
+            <div>
+              <h3>[TITRE DE LA MISE À JOUR - ex: Patch v2.4X]</h3>
+              <p>[Résumé court de la mise à jour en une ou deux phrases : ce qui change pour les joueurs.]</p>
+              <ul>
+                <li>[Changement 1 - ex: ajustement de l&rsquo;équilibrage du matchmaking classé]</li>
+                <li>[Changement 2 - ex: nouveaux objets ajoutés à la rotation]</li>
+                <li>[Changement 3 - ex: améliorations de performances sur consoles]</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="post reveal" data-delay="1">
+            <div class="post__meta">
+              <span class="post__tag post__tag--fix">Correctif</span>
+              <time class="post__date" datetime="2026-08-27">27 août 2026</time>
+            </div>
+            <div>
+              <h3>[TITRE DU CORRECTIF - ex: Hotfix serveurs EU]</h3>
+              <p>[Résumé court : quel problème est corrigé et qui était concerné.]</p>
+              <ul>
+                <li>[Correction 1 - ex: résolution des déconnexions en file d&rsquo;attente]</li>
+                <li>[Correction 2 - ex: correction d&rsquo;un bug d&rsquo;affichage des récompenses]</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="post reveal" data-delay="2">
+            <div class="post__meta">
+              <span class="post__tag post__tag--event">Événement</span>
+              <time class="post__date" datetime="2026-08-15">15 août 2026</time>
+            </div>
+            <div>
+              <h3>[TITRE DE L&rsquo;ÉVÉNEMENT - ex: Événement saisonnier]</h3>
+              <p>[Résumé court : dates de l&rsquo;événement, modes de jeu temporaires, récompenses à débloquer.]</p>
+              <ul>
+                <li>[Détail 1 - ex: mode de jeu limité disponible pendant deux semaines]</li>
+                <li>[Détail 2 - ex: monnaie d&rsquo;événement échangeable contre des objets]</li>
+                <li>[Détail 3 - ex: défis quotidiens et hebdomadaires]</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="post reveal" data-delay="3">
+            <div class="post__meta">
+              <span class="post__tag">Mise à jour</span>
+              <time class="post__date" datetime="2026-07-30">30 juillet 2026</time>
+            </div>
+            <div>
+              <h3>[TITRE DE LA MISE À JOUR]</h3>
+              <p>[Résumé court de la mise à jour.]</p>
+              <ul>
+                <li>[Changement 1]</li>
+                <li>[Changement 2]</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Rempli par assets/js/content.js quand les actus viennent du JSON -->
+        <p class="muted" style="margin-top:18px;font-size:.85rem" data-updates-note></p>
+
+        <!-- Rappel : source officielle -->
+        <div class="notice reveal" style="margin-top:32px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 16v-4M12 8h.01"></path>
+          </svg>
+          <p style="margin:0">
+            <strong>Bon à savoir :</strong> ces résumés sont rédigés par la communauté à titre informatif.
+            Pour la version officielle et complète des notes de patch, reporte-toi toujours aux
+            communications de l&rsquo;éditeur du jeu.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--soft section--line">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Ne rate plus aucune mise à jour</h2>
+          <p>Notre bot publie chaque patch note dans le serveur dès sa sortie. Active le rôle &laquo; Actus &raquo; et reçois une notification à chaque publication.</p>
+          <a class="btn btn--primary btn--lg" href="https://discord.gg/CNDjmDBmJz" target="_blank" rel="noopener noreferrer">Rejoindre le Discord</a>
+          <div>
+            <a class="invite-link" href="https://discord.gg/CNDjmDBmJz" target="_blank" rel="noopener noreferrer">https://discord.gg/CNDjmDBmJz</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (identique sur toutes les pages) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="logo" href="index.html">
+            <span class="logo__mark" aria-hidden="true">
+          <!-- LOGO OFFICIEL : depose ton fichier dans assets/img/logo.png
+               (PNG transparent, carre, 256x256 px minimum).
+               Tant que le fichier n'existe pas, le monogramme SVG ci-dessous
+               reste affiche : aucune image cassee. Le basculement est fait
+               par main.js (section 11) des que l'image se charge. -->
+          <img class="logo__img" src="assets/img/logo.png" alt="" width="40" height="40" loading="lazy" decoding="async" data-logo hidden>
+          <svg class="logo__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 3v4M12 17v4M3 12h4M17 12h4"></path>
+          </svg>
+        </span>
+            <span class="logo__text">RL FR</span>
+          </a>
+          <p>La communauté Discord francophone pour jouer, progresser et suivre l&rsquo;actualité de Rocket League.</p>
+        </div>
+
+        <div>
+          <h4>Le site</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="mises-a-jour.html">Mises à jour</a></li>
+            <li><a href="boutique.html">Boutique du jour</a></li>
+            <li><a href="communaute.html">Communauté</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Rejoindre</h4>
+          <ul>
+            <li><a href="https://discord.gg/CNDjmDBmJz" target="_blank" rel="noopener noreferrer">Invitation Discord</a></li>
+            <li><a href="communaute.html#reglement">Règlement</a></li>
+            <li><a href="index.html#rejoindre">Comment rejoindre</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Infos</h4>
+          <ul>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="mentions-legales.html#donnees">Données personnelles</a></li>
+            <li><a href="communaute.html#moderation">Modération</a></li>
+            <li><a href="mentions-legales.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="muted">&copy; <span data-year>2026</span> Rocket League France. Tous droits réservés.</p>
+        <p class="disclaimer">
+          Site communautaire indépendant, sans lien officiel avec Psyonix LLC ni Epic Games.
+          Rocket League est une marque de Psyonix LLC.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <!-- Remplit la liste depuis data/*.json, avec repli sur le contenu statique -->
+  <script src="assets/js/content.js" defer></script>
+</body>
+</html>

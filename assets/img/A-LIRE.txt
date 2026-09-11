@@ -1,0 +1,67 @@
+DOSSIER DES IMAGES DU SITE
+==========================
+
+FICHIERS PRESENTS
+-----------------
+icone_rlfr.png   Ton logo d'origine : 1024 x 1024 px, PNG transparent, ~1 Mo.
+                 Garde-le : c'est le fichier "master" qui sert a generer
+                 toutes les autres tailles (favicons, image de partage).
+
+logo.png         Copie du precedent, utilisee par le site (header + footer).
+                 >>> A COMPRESSER, voir ci-dessous. <<<
+
+
+A FAIRE EN PRIORITE : ALLEGER logo.png
+--------------------------------------
+Le site affiche ce logo en 44 px de large. Servir 1024 px et 1 Mo pour ca,
+c'est environ 1 Mo telecharge par visiteur, sur chaque page, pour rien.
+C'est aujourd'hui le poste le plus lourd du site, devant tout le reste.
+
+Objectif : 128 x 128 px et moins de 30 Ko.
+
+Methode la plus simple (gratuite, dans le navigateur, rien a installer) :
+  1. va sur squoosh.app
+  2. depose icone_rlfr.png
+  3. panneau de droite : Resize -> 128 x 128
+  4. format : WebP (qualite 85) ou PNG (OxiPNG)
+  5. telecharge, renomme en logo.png et remplace le fichier ici
+
+Sous Windows sans internet : clic droit sur l'image > Ouvrir avec > Paint >
+Redimensionner > 128 x 128 px > Enregistrer sous > PNG.
+(Paint compresse moins bien que Squoosh, mais on passera deja sous 50 Ko.)
+
+Le site fonctionne deja avec le fichier lourd : cette etape ameliore le
+temps de chargement, elle ne debloque rien.
+
+
+FICHIERS A AJOUTER (facultatif)
+-------------------------------
+og-image.jpg          1200 x 630 px, < 300 Ko.
+                      Image affichee quand le lien est partage sur Discord,
+                      X ou Facebook. Compose-la autour du logo : fond degrade
+                      bleu nuit (#04070f vers #0a1428), une touche corail
+                      (#ff6b35), le nom du serveur en gros.
+
+hero-fond.jpg         1920 x 1080 px, < 250 Ko. Fond du hero (facultatif).
+                      Voir les pistes de recherche dans index.html,
+                      "EMPLACEMENT VISUEL 1".
+
+actu-1.jpg ...        640 x 360 px, < 120 Ko chacune. Vignettes d'actus.
+                      Facultatif : sans elles, un degrade abstrait genere en
+                      CSS s'affiche, ce qui est deja propre.
+
+fond-section.jpg      1600 x 900 px, tres sombre (facultatif).
+cta-fond.jpg          1400 x 600 px (facultatif).
+
+Chaque emplacement est documente dans le HTML avec le format attendu,
+l'ambiance recherchee et des pistes de recherche concretes.
+
+
+FAVICONS
+--------
+A generer a partir de icone_rlfr.png sur realfavicongenerator.net, puis a
+placer A LA RACINE du site (a cote de index.html) :
+  favicon.ico, favicon-32x32.png, favicon-16x16.png, apple-touch-icon.png
+
+Les balises correspondantes sont deja ecrites et commentees dans le <head>
+des 5 pages : il n'y a qu'a les decommenter.

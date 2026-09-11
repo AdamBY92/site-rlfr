@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO - il reste à remplacer [URL_DU_SITE] par l'adresse finale du site -->
+  <title>Boutique Rocket League du jour - Rotation quotidienne | RL FR</title>
+  <meta name="description" content="Consulte la rotation de la boutique en jeu de Rocket League du jour : objets disponibles, raretés et prix indicatifs. La rotation est aussi publiée chaque jour automatiquement sur notre Discord francophone.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#04070f">
+  <link rel="canonical" href="[URL_DU_SITE]/boutique.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Rocket League France">
+  <meta property="og:url" content="[URL_DU_SITE]/boutique.html">
+  <meta property="og:title" content="Boutique Rocket League du jour - Rotation quotidienne">
+  <meta property="og:description" content="Les objets de la boutique en jeu du jour, mis à jour quotidiennement par la communauté Rocket League France.">
+  <!-- IMAGE DE PARTAGE (og:image) : 1200x630 px, JPG ou PNG < 300 Ko.
+       Compose-la autour de assets/img/logo.png : logo centre ou a gauche,
+       fond degrade bleu nuit (#04070f -> #0a1428) avec une touche corail
+       (#ff6b35), et le nom du serveur en gros. C'est cette image qui
+       s'affiche dans les previsualisations Discord, X et Facebook. -->
+  <meta property="og:image" content="[URL_DU_SITE]/assets/img/og-image.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Boutique Rocket League du jour">
+  <meta name="twitter:description" content="Les objets de la boutique en jeu du jour, mis à jour quotidiennement.">
+  <meta name="twitter:image" content="[URL_DU_SITE]/assets/img/og-image.jpg">
+
+  <!-- ====================================================================
+       FAVICONS
+       Actuellement : un SVG en ligne (aucun fichier necessaire).
+
+       >>> POUR UTILISER TON LOGO : genere ces 4 fichiers a partir de
+           assets/img/logo.png (carre, 512x512 px de preference) avec
+           realfavicongenerator.net ou favicon.io, puis place-les A LA
+           RACINE du site (a cote de index.html) :
+             - favicon.ico           16x16 + 32x32 dans un seul fichier
+             - favicon-32x32.png
+             - favicon-16x16.png
+             - apple-touch-icon.png  180x180, fond OPAQUE (#04070f) :
+                                     iOS ne gere pas la transparence et
+                                     afficherait sinon un fond noir brut.
+
+           Ensuite : supprime la ligne <link rel="icon" href="data:image...">
+           ci-dessous et decommente les 4 lignes qui la suivent.
+       ==================================================================== -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%231d6fe0'/><circle cx='50' cy='50' r='22' fill='none' stroke='white' stroke-width='8'/></svg>">
+  <!--
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+  <header class="header" data-header>
+    <div class="header__inner">
+      <a class="logo" href="index.html" aria-label="Accueil - RL FR">
+        <span class="logo__mark" aria-hidden="true">
+          <!-- LOGO OFFICIEL : depose ton fichier dans assets/img/logo.png
+               (PNG transparent, carre, 256x256 px minimum).
+               Tant que le fichier n'existe pas, le monogramme SVG ci-dessous
+               reste affiche : aucune image cassee. Le basculement est fait
+               par main.js (section 11) des que l'image se charge. -->
+          <img class="logo__img" src="assets/img/logo.png" alt="" width="48" height="48" decoding="async" data-logo hidden>
+          <svg class="logo__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 3v4M12 17v4M3 12h4M17 12h4"></path>
+          </svg>
+        </span>
+        <span class="logo__text">RL FR</span>
+      </a>
+
+      <nav class="nav" id="menu-principal" data-nav aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="mises-a-jour.html">Mises à jour</a>
+        <a href="boutique.html" class="is-active" aria-current="page">Boutique</a>
+        <a href="communaute.html">Communauté</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--primary" href="https://discord.gg/CNDjmDBmJz" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.3 4.5A19 19 0 0 0 15.6 3l-.2.5c1.6.4 2.9 1 4.1 1.8a15.6 15.6 0 0 0-11-.9c-.6.2-1 .4-1.5.6A16 16 0 0 1 8.6 3.5L8.4 3a19 19 0 0 0-4.7 1.5C1.1 8.4.4 12.2.7 16a19.2 19.2 0 0 0 5.8 2.9l.5-.7c-.8-.3-1.6-.7-2.3-1.2l.5-.4a13.7 13.7 0 0 0 11.6 0l.5.4c-.7.5-1.5.9-2.3 1.2l.5.7A19.1 19.1 0 0 0 21.3 16c.4-4.4-.6-8.2-1-11.5ZM8.2 13.8c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3Zm7.6 0c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3Z"></path>
+          </svg>
+          Rejoindre le Discord
+        </a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="menu-principal" aria-label="Ouvrir le menu">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <section class="page-head">
+      <div class="container">
+        <p class="breadcrumb">
+          <a href="index.html">Accueil</a><span>/</span>Boutique
+        </p>
+        <p class="badge">
+          <span class="badge__dot" aria-hidden="true"></span>
+          <!-- data-today : date du jour (main.js), remplacee par la date reelle
+               de la rotation issue de data/shop.json quand elle est disponible
+               (data-shop-date, gere par content.js). -->
+          Rotation du <span data-today data-shop-date>jour</span>
+        </p>
+        <h1>La boutique en jeu du jour</h1>
+        <p>
+          Voici les objets actuellement proposés dans la boutique de Rocket League.
+          La liste est renouvelée chaque jour et publiée automatiquement dans le salon
+          <strong>#boutique</strong> de notre serveur Discord.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <!-- ==================================================================
+             GRILLE DES OBJETS
+             Cette grille est REMPLIE AUTOMATIQUEMENT au chargement de la page,
+             depuis data/shop.json (genere par scripts/fetch-shop.js, lance
+             chaque jour a 00:05 UTC juste apres la rotation).
+
+             Le contenu ci-dessous est le CONTENU DE SECOURS : il s'affiche si
+             data/shop.json est absent, illisible, ou si la page est ouverte en
+             file:// (le navigateur bloque alors fetch).
+
+             >>> POUR MODIFIER LE SECOURS : duplique un bloc <article class="item">
+                 et remplis la rareté, le nom et le prix. La vignette est générée
+                 en CSS (aucune image officielle utilisée).
+             ================================================================== -->
+        <div class="shop-grid" data-shop-list>
+
+          <article class="item reveal">
+            <div class="item__thumb" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 13h18l-2-5H5l-2 5Z"></path>
+                <circle cx="7.5" cy="16.5" r="2.5"></circle>
+                <circle cx="16.5" cy="16.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div class="item__body">
+              <span class="item__rarity">[Rareté]</span>
+              <h3>[Nom de l&rsquo;objet 1]</h3>
+              <p class="item__price">[Prix] crédits &middot; [Catégorie]</p>
+            </div>
+          </article>
+
+          <article class="item reveal" data-delay="1">
+            <div class="item__thumb" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 3v18M3 12h18"></path>
+              </svg>
+            </div>
+            <div class="item__body">
+              <span class="item__rarity">[Rareté]</span>
+              <h3>[Nom de l&rsquo;objet 2]</h3>
+              <p class="item__price">[Prix] crédits &middot; [Catégorie]</p>
+            </div>
+          </article>
+
+          <article class="item reveal" data-delay="2">
+            <div class="item__thumb" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 19c3-9 8-14 14-14 0 6-5 11-14 14Z"></path>
+                <path d="M5 19l3-3"></path>
+              </svg>
+            </div>
+            <div class="item__body">
+              <span class="item__rarity">[Rareté]</span>
+              <h3>[Nom de l&rsquo;objet 3]</h3>
+              <p class="item__price">[Prix] crédits &middot; [Catégorie]</p>
+            </div>
+          </article>
+
+          <article class="item reveal" data-delay="3">
+            <div class="item__thumb" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-3-5.3 3 1.1-6L3.4 9.4l6-.8L12 3Z"></path>
+              </svg>
+            </div>
+            <div class="item__body">
+              <span class="item__rarity">[Rareté]</span>
+              <h3>[Nom de l&rsquo;objet 4]</h3>
+              <p class="item__price">[Prix] crédits &middot; [Catégorie]</p>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Rempli par assets/js/content.js depuis data/shop.json -->
+        <p class="muted" style="margin-top:18px;font-size:.85rem" data-shop-next></p>
+
+        <!-- Avertissement (important : prix et disponibilite non officiels) -->
+        <div class="notice reveal" style="margin-top:32px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 16v-4M12 8h.01"></path>
+          </svg>
+          <p style="margin:0">
+            <strong>Informations indicatives :</strong> les noms, raretés et prix affichés sont relevés
+            manuellement par la communauté et peuvent varier selon ta région et ta plateforme.
+            Seule la boutique affichée dans le jeu fait foi. Ce site ne vend rien et ne permet
+            aucun achat.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COMMENT CA MARCHE -->
+    <section class="section section--soft section--line">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Comment fonctionne la rotation</h2>
+          <p>Trois choses à savoir pour ne rien manquer.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card reveal" data-delay="1">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 7v5l3 2"></path>
+              </svg>
+            </div>
+            <h3>Un renouvellement quotidien</h3>
+            <p>Les emplacements de la boutique changent tous les jours à heure fixe. Certains objets restent affichés plus longtemps que d&rsquo;autres.</p>
+          </article>
+
+          <article class="card reveal" data-delay="2">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.7 21a2 2 0 0 1-3.4 0"></path>
+              </svg>
+            </div>
+            <h3>Une alerte sur Discord</h3>
+            <p>Active le rôle &laquo; Boutique &raquo; sur le serveur pour recevoir une notification dès que la nouvelle rotation est publiée.</p>
+          </article>
+
+          <article class="card reveal" data-delay="3">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3a9 9 0 1 0 9 9"></path>
+                <path d="M12 7v5l3 2M21 3v6h-6"></path>
+              </svg>
+            </div>
+            <h3>Un historique communautaire</h3>
+            <p>Les anciennes rotations restent consultables dans le salon dédié : pratique pour savoir quand un objet est réapparu la dernière fois.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Reçois la boutique chaque jour</h2>
+          <p>Plus besoin de lancer le jeu pour vérifier : notre bot poste la rotation complète directement sur le serveur.</p>
+          <a class="btn btn--primary btn--lg" href="https://discord.gg/CNDjmDBmJz" target="_blank" rel="noopener noreferrer">Rejoindre le Discord</a>
+          <div>
+            <a class="invite-link" href="https://discord.gg/CNDjmDBmJz" target="_blank" rel="noopener noreferrer">https://discord.gg/CNDjmDBmJz</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="logo" href="index.html">
+            <span class="logo__mark" aria-hidden="true">
+          <!-- LOGO OFFICIEL : depose ton fichier dans assets/img/logo.png
+               (PNG transparent, carre, 256x256 px minimum).
+               Tant que le fichier n'existe pas, le monogramme SVG ci-dessous
+               reste affiche : aucune image cassee. Le basculement est fait
+               par main.js (section 11) des que l'image se charge. -->
+          <img class="logo__img" src="assets/img/logo.png" alt="" width="40" height="40" loading="lazy" decoding="async" data-logo hidden>
+          <svg class="logo__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 3v4M12 17v4M3 12h4M17 12h4"></path>
+          </svg>
+        </span>
+            <span class="logo__text">RL FR</span>
+          </a>
+          <p>La communauté Discord francophone pour jouer, progresser et suivre l&rsquo;actualité de Rocket League.</p>
+        </div>
+
+        <div>
+          <h4>Le site</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="mises-a-jour.html">Mises à jour</a></li>
+            <li><a href="boutique.html">Boutique du jour</a></li>
+            <li><a href="communaute.html">Communauté</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Rejoindre</h4>
+          <ul>
+            <li><a href="https://discord.gg/CNDjmDBmJz" target="_blank" rel="noopener noreferrer">Invitation Discord</a></li>
+            <li><a href="communaute.html#reglement">Règlement</a></li>
+            <li><a href="index.html#rejoindre">Comment rejoindre</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Infos</h4>
+          <ul>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="mentions-legales.html#donnees">Données personnelles</a></li>
+            <li><a href="communaute.html#moderation">Modération</a></li>
+            <li><a href="mentions-legales.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="muted">&copy; <span data-year>2026</span> Rocket League France. Tous droits réservés.</p>
+        <p class="disclaimer">
+          Site communautaire indépendant, sans lien officiel avec Psyonix LLC ni Epic Games.
+          Rocket League est une marque de Psyonix LLC.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <!-- Remplit la liste depuis data/*.json, avec repli sur le contenu statique -->
+  <script src="assets/js/content.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+# ============================================================================
+# .gitattributes - Normalisation des fins de ligne
+# ----------------------------------------------------------------------------
+# POURQUOI CE FICHIER : tu travailles sous Windows (fins de ligne CRLF), mais
+# GitHub Actions execute le workflow sous Linux (fins de ligne LF). Un script
+# shell enregistre en CRLF y echoue avec une erreur cryptique du type
+# "$'\r': command not found".
+#
+# La regle ci-dessous stocke tout en LF dans le depot, tout en te laissant
+# des CRLF dans ton editeur. Rien a faire de ton cote.
+# ============================================================================
+
+# Detection automatique du texte, stockage en LF dans le depot.
+* text=auto eol=lf
+
+# Fichiers ou le LF est imperatif (executes sous Linux).
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.sh    text eol=lf
+.htaccess text eol=lf
+
+# Fichiers binaires : Git ne doit jamais y toucher.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.webp  binary
+*.ico   binary
+*.woff  binary
+*.woff2 binary
+*.pdf   binary

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO - il reste à remplacer [URL_DU_SITE] et les champs [ ] du contenu -->
+  <title>Mentions légales et données personnelles | Rocket League France</title>
+  <meta name="description" content="Mentions légales du site communautaire Rocket League France : éditeur, hébergeur, propriété intellectuelle, cookies et traitement des données personnelles conformément au RGPD.">
+  <!-- Page utilitaire : indexée mais sans intérêt de référencement, tu peux passer à noindex si tu préfères -->
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#04070f">
+  <link rel="canonical" href="[URL_DU_SITE]/mentions-legales.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Rocket League France">
+  <meta property="og:url" content="[URL_DU_SITE]/mentions-legales.html">
+  <meta property="og:title" content="Mentions légales et données personnelles">
+  <meta property="og:description" content="Éditeur, hébergeur, propriété intellectuelle et données personnelles du site Rocket League France.">
+  <!-- IMAGE DE PARTAGE (og:image) : 1200x630 px, JPG ou PNG < 300 Ko.
+       Compose-la autour de assets/img/logo.png : logo centre ou a gauche,
+       fond degrade bleu nuit (#04070f -> #0a1428) avec une touche corail
+       (#ff6b35), et le nom du serveur en gros. C'est cette image qui
+       s'affiche dans les previsualisations Discord, X et Facebook. -->
+  <meta property="og:image" content="[URL_DU_SITE]/assets/img/og-image.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mentions légales et données personnelles">
+  <meta name="twitter:description" content="Éditeur, hébergeur, propriété intellectuelle et données personnelles.">
+  <meta name="twitter:image" content="[URL_DU_SITE]/assets/img/og-image.jpg">
+
+  <!-- ====================================================================
+       FAVICONS
+       Actuellement : un SVG en ligne (aucun fichier necessaire).
+
+       >>> POUR UTILISER TON LOGO : genere ces 4 fichiers a partir de
+           assets/img/logo.png (carre, 512x512 px de preference) avec
+           realfavicongenerator.net ou favicon.io, puis place-les A LA
+           RACINE du site (a cote de index.html) :
+             - favicon.ico           16x16 + 32x32 dans un seul fichier
+             - favicon-32x32.png
+             - favicon-16x16.png
+             - apple-touch-icon.png  180x180, fond OPAQUE (#04070f) :
+                                     iOS ne gere pas la transparence et
+                                     afficherait sinon un fond noir brut.
+
+           Ensuite : supprime la ligne <link rel="icon" href="data:image...">
+           ci-dessous et decommente les 4 lignes qui la suivent.
+       ==================================================================== -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%231d6fe0'/><circle cx='50' cy='50' r='22' fill='none' stroke='white' stroke-width='8'/></svg>">
+  <!--
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+  <header class="header" data-header>
+    <div class="header__inner">
+      <a class="logo" href="index.html" aria-label="Accueil - RL FR">
+        <span class="logo__mark" aria-hidden="true">
+          <!-- LOGO OFFICIEL : depose ton fichier dans assets/img/logo.png
+               (PNG transparent, carre, 256x256 px minimum).
+               Tant que le fichier n'existe pas, le monogramme SVG ci-dessous
+               reste affiche : aucune image cassee. Le basculement est fait
+               par main.js (section 11) des que l'image se charge. -->
+          <img class="logo__img" src="assets/img/logo.png" alt="" width="48" height="48" decoding="async" data-logo hidden>
+          <svg class="logo__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 3v4M12 17v4M3 12h4M17 12h4"></path>
+          </svg>
+        </span>
+        <span class="logo__text">RL FR</span>
+      </a>
+
+      <nav class="nav" id="menu-principal" data-nav aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="mises-a-jour.html">Mises à jour</a>
+        <a href="boutique.html">Boutique</a>
+        <a href="communaute.html">Communauté</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--primary" href="https://discord.gg/CNDjmDBmJz" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.3 4.5A19 19 0 0 0 15.6 3l-.2.5c1.6.4 2.9 1 4.1 1.8a15.6 15.6 0 0 0-11-.9c-.6.2-1 .4-1.5.6A16 16 0 0 1 8.6 3.5L8.4 3a19 19 0 0 0-4.7 1.5C1.1 8.4.4 12.2.7 16a19.2 19.2 0 0 0 5.8 2.9l.5-.7c-.8-.3-1.6-.7-2.3-1.2l.5-.4a13.7 13.7 0 0 0 11.6 0l.5.4c-.7.5-1.5.9-2.3 1.2l.5.7A19.1 19.1 0 0 0 21.3 16c.4-4.4-.6-8.2-1-11.5ZM8.2 13.8c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3Zm7.6 0c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3Z"></path>
+          </svg>
+          Rejoindre le Discord
+        </a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="menu-principal" aria-label="Ouvrir le menu">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <section class="page-head">
+      <div class="container">
+        <p class="breadcrumb">
+          <a href="index.html">Accueil</a><span>/</span>Mentions légales
+        </p>
+        <h1>Mentions légales</h1>
+        <p>Informations légales relatives au site Rocket League France et au traitement des données personnelles.</p>
+        <p class="muted" style="font-size:.85rem">Dernière mise à jour : [DATE_DE_MISE_A_JOUR]</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="prose">
+
+          <!-- ==============================================================
+               >>> À COMPLÉTER OBLIGATOIREMENT
+               Remplis chaque champ entre crochets. Si tu édites le site en tant
+               que particulier, tu dois indiquer nom, prénom et un moyen de contact ;
+               l'adresse postale peut être remplacée par celle de l'hébergeur si tu
+               choisis l'anonymat prévu pour les éditeurs non professionnels
+               (l'hébergeur doit alors connaître ton identité).
+               ============================================================== -->
+
+          <h2 id="editeur">1. Éditeur du site</h2>
+          <p>
+            Le présent site est édité par :
+          </p>
+          <ul>
+            <li><strong>Éditeur :</strong> [NOM_ET_PRENOM ou NOM_DE_L_ASSOCIATION]</li>
+            <li><strong>Statut :</strong> [Particulier / Association loi 1901 / Autre]</li>
+            <li><strong>Adresse :</strong> [ADRESSE_POSTALE]</li>
+            <li><strong>Contact :</strong> [ADRESSE_EMAIL_DE_CONTACT]</li>
+            <li><strong>Directeur de la publication :</strong> [NOM_DU_RESPONSABLE]</li>
+          </ul>
+          <p>
+            Le site est un projet communautaire bénévole, sans activité commerciale
+            ni but lucratif.
+          </p>
+
+          <h2 id="hebergeur">2. Hébergeur</h2>
+          <ul>
+            <li><strong>Hébergeur :</strong> [NOM_DE_L_HEBERGEUR - ex: Netlify, Vercel, OVH, GitHub Pages]</li>
+            <li><strong>Adresse :</strong> [ADRESSE_DE_L_HEBERGEUR]</li>
+            <li><strong>Site :</strong> [SITE_DE_L_HEBERGEUR]</li>
+          </ul>
+
+          <h2 id="propriete">3. Propriété intellectuelle</h2>
+          <p>
+            L&rsquo;ensemble des éléments graphiques, textes, mises en page et codes sources
+            spécifiquement créés pour ce site sont la propriété de l&rsquo;éditeur, sauf mention
+            contraire. Toute reproduction ou réutilisation, totale ou partielle, sans
+            autorisation préalable est interdite.
+          </p>
+          <p>
+            <strong>Marques et contenus de tiers :</strong> Rocket League est une marque de
+            Psyonix LLC. Ce site est un projet communautaire indépendant, sans lien officiel,
+            partenariat ni affiliation avec Psyonix LLC ni Epic Games. Les noms de jeux, de
+            marques et de produits cités appartiennent à leurs propriétaires respectifs et
+            ne sont mentionnés qu&rsquo;à des fins d&rsquo;information. Aucun visuel officiel du jeu
+            n&rsquo;est reproduit sur ce site ; les illustrations sont des créations originales.
+          </p>
+          <p>
+            Si vous estimez qu&rsquo;un contenu publié porte atteinte à vos droits, contactez-nous
+            à l&rsquo;adresse indiquée ci-dessous : le contenu concerné sera retiré ou modifié
+            dans les meilleurs délais.
+          </p>
+
+          <h2 id="responsabilite">4. Limitation de responsabilité</h2>
+          <p>
+            Les informations publiées sur ce site (résumés de mises à jour, rotation de la
+            boutique en jeu, prix indicatifs) sont fournies à titre informatif et sans
+            garantie d&rsquo;exactitude ou d&rsquo;exhaustivité. Seules les informations affichées
+            dans le jeu et les communications officielles de l&rsquo;éditeur du jeu font foi.
+          </p>
+          <p>
+            L&rsquo;éditeur du site ne saurait être tenu responsable des dommages resultant de
+            l&rsquo;utilisation des informations publiées, ni du contenu des sites tiers vers
+            lesquels des liens sont proposés, y compris la plateforme Discord.
+          </p>
+
+          <h2 id="donnees">5. Données personnelles</h2>
+          <p>
+            Ce site est un site statique : il ne comporte ni formulaire, ni compte
+            utilisateur, ni espace de commentaires. <strong>Aucune donnée personnelle
+            n&rsquo;est collectée directement par le site.</strong>
+          </p>
+
+          <h3>Données traitées</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Traitement</th>
+                  <th scope="col">Données concernées</th>
+                  <th scope="col">Base et durée</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Journaux techniques de l&rsquo;hébergeur</td>
+                  <td>Adresse IP, date et heure, page consultée, navigateur</td>
+                  <td>Interet légitime (sécurité du service) - [DURÉE, ex: 30 jours]</td>
+                </tr>
+                <tr>
+                  <td>Polices Google Fonts</td>
+                  <td>Adresse IP transmise au serveur de Google lors du chargement</td>
+                  <td>Interet légitime (affichage du site) - voir remarque ci-dessous</td>
+                </tr>
+                <tr>
+                  <td>Participation au serveur Discord</td>
+                  <td>Pseudo, identifiant Discord, messages publiés</td>
+                  <td>Traitement réalisé par Discord, selon sa propre politique</td>
+                </tr>
+                <tr>
+                  <td>Mesure d&rsquo;audience</td>
+                  <td>[Aucune / ou précise l&rsquo;outil utilisé si tu en ajoutes un]</td>
+                  <td>[À compléter si tu installes un outil de statistiques]</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p style="margin-top:18px">
+            <em>Remarque sur les polices :</em> le site charge la police Inter depuis Google Fonts,
+            ce qui transmet l&rsquo;adresse IP du visiteur aux serveurs de Google. Pour éviter
+            totalement ce transfert, tu peux héberger les fichiers de police sur ton propre
+            serveur et supprimer les liens vers <code>fonts.googleapis.com</code> dans les pages HTML.
+          </p>
+
+          <h3>Cookies</h3>
+          <p>
+            Ce site ne dépose <strong>aucun cookie de mesure d&rsquo;audience, de publicité ou de
+            traçage</strong>. Aucun bandeau de consentement n&rsquo;est donc nécessaire. Si un outil
+            de statistiques venait à être ajouté, cette section serait mise à jour et le
+            consentement recueilli lorsque la loi l&rsquo;exige.
+          </p>
+
+          <h3>Tes droits</h3>
+          <p>
+            Conformément au Règlement général sur la protection des données (RGPD) et à la
+            loi Informatique et Libertés, tu disposes d&rsquo;un droit d&rsquo;accès, de rectification,
+            d&rsquo;effacement, de limitation et d&rsquo;opposition sur les données te concernant.
+            Pour l&rsquo;exercer, écris à [ADRESSE_EMAIL_DE_CONTACT].
+          </p>
+          <p>
+            Pour les données liées au serveur Discord (pseudo, messages), le traitement relève
+            de Discord Inc. et de notre équipe de modération : tu peux demander la suppression
+            de tes messages en contactant le staff. En cas de désaccord persistant, tu peux
+            introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">www.cnil.fr</a>).
+          </p>
+
+          <h2 id="discord">6. Serveur Discord</h2>
+          <p>
+            L&rsquo;accès au serveur Discord associé à ce site est gratuit et soumis au respect du
+            <a href="communaute.html#reglement">règlement de la communauté</a> ainsi qu&rsquo;aux
+            conditions d&rsquo;utilisation de Discord. L&rsquo;équipe se réserve le droit d&rsquo;exclure tout
+            membre ne respectant pas ces règles, sans préavis ni justification publique.
+          </p>
+          <p>
+            Discord impose un age minimum pour utiliser sa plateforme : en rejoignant le
+            serveur, tu déclares remplir cette condition.
+          </p>
+
+          <h2 id="contact">7. Contact</h2>
+          <p>
+            Pour toute question relative au site, aux mentions légales, à un contenu publié
+            ou à tes données personnelles :
+          </p>
+          <ul>
+            <li><strong>E-mail :</strong> [ADRESSE_EMAIL_DE_CONTACT]</li>
+            <li><strong>Discord :</strong> message privé à un membre du staff sur <a href="https://discord.gg/CNDjmDBmJz" target="_blank" rel="noopener noreferrer">notre serveur</a></li>
+          </ul>
+
+          <div class="notice" style="margin-top:30px">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 16v-4M12 8h.01"></path>
+            </svg>
+            <p style="margin:0">
+              <strong>A lire avant publication :</strong> ce texte est un modèle générique fourni
+              à titre indicatif. Complète tous les champs entre crochets et fais-le relire si ton
+              projet prend une dimension commerciale (dons, sponsors, vente) : les obligations
+              légales sont alors plus étendues.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="logo" href="index.html">
+            <span class="logo__mark" aria-hidden="true">
+          <!-- LOGO OFFICIEL : depose ton fichier dans assets/img/logo.png
+               (PNG transparent, carre, 256x256 px minimum).
+               Tant que le fichier n'existe pas, le monogramme SVG ci-dessous
+               reste affiche : aucune image cassee. Le basculement est fait
+               par main.js (section 11) des que l'image se charge. -->
+          <img class="logo__img" src="assets/img/logo.png" alt="" width="40" height="40" loading="lazy" decoding="async" data-logo hidden>
+          <svg class="logo__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 3v4M12 17v4M3 12h4M17 12h4"></path>
+          </svg>
+        </span>
+            <span class="logo__text">RL FR</span>
+          </a>
+          <p>La communauté Discord francophone pour jouer, progresser et suivre l&rsquo;actualité de Rocket League.</p>
+        </div>
+
+        <div>
+          <h4>Le site</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="mises-a-jour.html">Mises à jour</a></li>
+            <li><a href="boutique.html">Boutique du jour</a></li>
+            <li><a href="communaute.html">Communauté</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Rejoindre</h4>
+          <ul>
+            <li><a href="https://discord.gg/CNDjmDBmJz" target="_blank" rel="noopener noreferrer">Invitation Discord</a></li>
+            <li><a href="communaute.html#reglement">Règlement</a></li>
+            <li><a href="index.html#rejoindre">Comment rejoindre</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Infos</h4>
+          <ul>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="mentions-legales.html#donnees">Données personnelles</a></li>
+            <li><a href="communaute.html#moderation">Modération</a></li>
+            <li><a href="mentions-legales.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="muted">&copy; <span data-year>2026</span> Rocket League France. Tous droits réservés.</p>
+        <p class="disclaimer">
+          Site communautaire indépendant, sans lien officiel avec Psyonix LLC ni Epic Games.
+          Rocket League est une marque de Psyonix LLC.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

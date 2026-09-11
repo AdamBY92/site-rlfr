@@ -1,0 +1,59 @@
+# ============================================================================
+# .gitignore - Ce qui ne doit JAMAIS partir sur GitHub
+# ============================================================================
+
+# --- Dependances Node -------------------------------------------------------
+# Reinstallees par "npm ci" a partir de package-lock.json.
+node_modules/
+
+# --- Secrets et identifiants ------------------------------------------------
+# Le projet n'utilise aujourd'hui AUCUN secret (les API Discord employees sont
+# publiques). Ces regles sont preventives : si tu ajoutes un jour un token
+# (bot Discord, cle d'API, acces FTP), mets-le dans un fichier .env et il ne
+# sera jamais publie par accident.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+secrets*
+auth.json
+.netrc
+
+# --- Identifiants d'hebergement / deploiement -------------------------------
+.ftpconfig
+sftp-config.json
+.vscode/sftp.json
+deploy.config.js
+
+# --- Journaux et fichiers temporaires ---------------------------------------
+*.log
+npm-debug.log*
+update.log
+*.tmp
+*.bak
+*.orig
+
+# --- Systeme et editeurs ----------------------------------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# ============================================================================
+# IMPORTANT - CE QUI DOIT RESTER SUIVI PAR GIT :
+#
+#   data/*.json   Ce sont les donnees du site (actus, boutique, compteur de
+#                 membres). GitHub Actions les regenere et les commit
+#                 automatiquement : les ignorer casserait l'automatisation
+#                 ET le site, qui les lit directement.
+#
+#   .htaccess     Configuration serveur, sans aucun secret.
+#
+#   assets/img/   Logo et visuels du site.
+# ============================================================================

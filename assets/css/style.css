@@ -1,0 +1,1557 @@
+/* ==========================================================================
+   FEUILLE DE STYLE PRINCIPALE
+   Site communautaire Rocket League FR - thème sombre / esport premium
+   --------------------------------------------------------------------------
+   SOMMAIRE
+   01. Variables & thème        -> couleurs, polices ET vitesses d'animation
+   02. Reset & base
+   03. Utilitaires & layout
+   04. Boutons
+   05. Header / navigation
+   06. Hero
+   07. Cards & grilles ("Ce qui t'attend")
+   08. Section Bot + mockup Discord
+   09. Étapes "Comment rejoindre"
+   10. FAQ (accordéon)
+   11. CTA final
+   12. Footer
+   13. Pages internes (actus, boutique, communauté, mentions légales)
+   14. Animations au scroll + prefers-reduced-motion
+   15. Responsive
+   16. Section Actus (grille facon site de jeu)
+   17. Details de direction artistique
+   18. Responsive des nouveaux blocs
+   ========================================================================== */
+
+/* ==========================================================================
+   01. VARIABLES & THEME
+   >>> Deux familles de couleurs : FROIDE (--accent-*) pour l'ambiance,
+       CHAUDE (--hot-*) pour les actions. Le bloc MOUVEMENT en bas regle
+       le tempo de toutes les animations du site.
+   ========================================================================== */
+:root {
+  /* --- Fonds ------------------------------------------------------------ */
+  --bg:            #04070f;   /* fond général, quasi noir bleuté */
+  --bg-deep:       #0a1428;   /* bleu nuit du dégradé animé */
+  --bg-soft:       #070c19;   /* fond de section alternée */
+  --surface:       #0a1120;   /* fond des cards (repli sans blur) */
+  --surface-2:     #0e1728;   /* fond des cards au survol */
+
+  /* --- Accent FROID : ambiance, structure, liens ------------------------ */
+  --accent-1:      #1d6fe0;
+  --accent-2:      #4fa3ff;
+  --accent-soft:   rgba(79, 163, 255, 0.12);
+  --gradient:      linear-gradient(135deg, var(--accent-1) 0%, var(--accent-2) 100%);
+
+  /* --- Accent CHAUD : action, survol, points forts ----------------------
+     C'est le deuxième accent qui casse le monochrome bleu.
+     --hot-1 = corail, --hot-2 = magenta électrique.
+     Change ces deux valeurs pour reteinter tous les CTA du site.        */
+  --hot-1:         #ff6b35;
+  --hot-2:         #ff2d78;
+  --hot-soft:      rgba(255, 107, 53, 0.14);
+  --gradient-hot:  linear-gradient(135deg, var(--hot-2) 0%, var(--hot-1) 100%);
+
+  /* --- Texte ------------------------------------------------------------ */
+  --text:          #eef3fb;
+  --text-muted:    #97a6c0;
+  --text-dim:      #76849d;   /* AA (>=4.5) sur tous les fonds du site */
+
+  /* --- Bordures & ombres ------------------------------------------------ */
+  --border:        rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --shadow-sm:     0 2px 10px rgba(0, 0, 0, 0.35);
+  --shadow-md:     0 12px 34px rgba(0, 0, 0, 0.45);
+  --glow:          0 0 32px rgba(79, 163, 255, 0.35);
+  --glow-hot:      0 0 34px rgba(255, 107, 53, 0.45);
+
+  /* --- Verre (glassmorphism) ------------------------------------------- */
+  --glass-bg:      rgba(15, 25, 45, 0.55);
+  --glass-bg-2:    rgba(22, 34, 58, 0.72);
+  --glass-blur:    14px;
+
+  /* --- Rayons & rythme -------------------------------------------------- */
+  --radius-sm:     10px;
+  --radius:        16px;
+  --radius-lg:     24px;
+  --container:     1180px;
+  --header-h:      72px;
+
+  /* --- Typographie ------------------------------------------------------
+     --font-display : titres, boutons, chiffres (police technique/esport)
+     --font         : texte courant (lisibilité)                          */
+  --font-display: "Chakra Petch", "Space Grotesk", system-ui, sans-serif;
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* --- MOUVEMENT : tout le tempo du site se règle ici -------------------
+     --ease-out-expo : arrivées (entrées, apparitions au scroll)
+     --ease-dynamic  : interactions (survols, boutons)
+     --speed-bg      : rotation du dégradé de fond (plus grand = plus lent).
+                       55s = mouvement percu mais calme. Au-dela de ~90s,
+                       l'oeil ne detecte plus rien et le fond parait fige.
+     --speed-drift   : respiration des halos lumineux
+     --speed-reveal  : durée des apparitions au scroll
+     --parallax      : intensité du parallaxe de fond (0 = désactivé)   */
+  --ease-out-expo: cubic-bezier(.16, 1, .3, 1);
+  --ease-dynamic:  cubic-bezier(.2, .85, .25, 1);
+  --speed-bg:      55s;
+  --speed-drift:   18s;
+  --speed-reveal:  .85s;
+  --parallax:      0.25;
+}
+
+/* ==========================================================================
+   02. RESET & BASE
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 16px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* --------------------------------------------------------------------------
+   FOND ANIMÉ PERMANENT (2 couches, 100 % CSS, aucune image)
+
+   body::before : dégradé conique qui tourne très lentement (--speed-bg).
+                  C'est lui qui donne l'impression que le fond "respire".
+   body::after  : halos lumineux ; ils se décalent au scroll (parallaxe)
+                  via --parallax-y, valeur écrite par assets/js/main.js.
+
+   Les deux couches sont en position: fixed et pointer-events: none : elles
+   ne gênent ni le scroll, ni les clics, et ne provoquent aucun reflow.
+   -------------------------------------------------------------------------- */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  pointer-events: none;
+}
+
+/* PERFORMANCE — pourquoi ce montage précis :
+   un flou large coûte cher à calculer, et le recalculer à chaque frame de
+   rotation faisait chuter le FPS. On floute donc une surface PETITE (la moitié
+   du viewport), puis on l'agrandit avec scale() : le GPU réutilise la texture
+   déjà floutée au lieu de la refabriquer. Résultat identique à l'oeil, coût
+   divisé par ~4. Ne remplace pas le scale() par une grande surface floutée. */
+body::before {
+  inset: 25%;
+  z-index: -2;
+  background:
+    conic-gradient(
+      from 0deg at 50% 50%,
+      transparent 0deg,
+      rgba(29, 111, 224, 0.42) 60deg,
+      transparent 130deg,
+      rgba(255, 45, 120, 0.22) 200deg,
+      transparent 260deg,
+      rgba(79, 163, 255, 0.34) 320deg,
+      transparent 360deg
+    );
+  filter: blur(34px);
+  animation: bgRotate var(--speed-bg) linear infinite;
+}
+
+body::after {
+  inset: -15%;
+  z-index: -1;
+  background:
+    radial-gradient(900px 520px at 82% 6%, rgba(29, 111, 224, 0.20), transparent 60%),
+    radial-gradient(700px 460px at 4% 22%, rgba(79, 163, 255, 0.10), transparent 62%),
+    radial-gradient(620px 420px at 60% 92%, rgba(255, 107, 53, 0.08), transparent 65%),
+    linear-gradient(180deg, transparent 60%, var(--bg-deep) 140%);
+  /* Décalage vertical piloté au scroll = effet de profondeur.
+     translate3d uniquement : aucune propriété de mise en page n'est animée. */
+  transform: translate3d(0, var(--parallax-y, 0px), 0);
+  animation: haloBreath var(--speed-drift) ease-in-out infinite alternate;
+}
+
+/* La rotation embarque le scale : c'est ce qui permet de flouter petit. */
+@keyframes bgRotate {
+  from { transform: scale(2.6) rotate(0deg); }
+  to   { transform: scale(2.6) rotate(360deg); }
+}
+
+@keyframes haloBreath {
+  from { opacity: .55; }
+  to   { opacity: 1; }
+}
+
+img, svg { max-width: 100%; display: block; }
+a { color: var(--accent-2); text-decoration: none; transition: color .2s ease; }
+a:hover { color: #ffffff; }
+
+/* Titres : police display technique, plus serrée et plus haute que le texte */
+h1, h2, h3, h4 {
+  margin: 0 0 .6em;
+  font-family: var(--font-display);
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+h1 { font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1.02; }
+h2 { font-size: clamp(1.9rem, 4.4vw, 3rem); }
+h3 { font-size: 1.2rem; letter-spacing: 0; }
+p  { margin: 0 0 1rem; color: var(--text-muted); }
+
+ul, ol { color: var(--text-muted); }
+
+/* Accessibilité : focus visible au clavier */
+:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Lien d'évitement pour lecteurs d'écran */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 999;
+  background: var(--accent-1);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 0 0 8px 0;
+}
+.skip-link:focus { left: 0; }
+
+/* ==========================================================================
+   03. UTILITAIRES & LAYOUT
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.section { padding-block: clamp(64px, 9vw, 112px); position: relative; }
+.section--soft { background: var(--bg-soft); }
+.section--line { border-top: 1px solid var(--border); }
+
+.section-head { max-width: 680px; margin: 0 auto clamp(36px, 5vw, 56px); text-align: center; }
+.section-head p { font-size: 1.05rem; }
+
+/* Petit badge / pilule */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 15px;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  color: var(--accent-2);
+  background: var(--accent-soft);
+  border: 1px solid rgba(79, 163, 255, 0.28);
+  border-radius: 999px;
+  margin-bottom: 22px;
+}
+/* PERFORMANCE : l'onde du point pulsait avant via box-shadow, une propriété
+   qui force un REPAINT à chaque frame, en continu, sur chaque badge du site.
+   Elle est maintenant dessinée par un pseudo-élément animé en transform +
+   opacity, deux propriétés gérées par le compositeur (aucun repaint). */
+.badge__dot {
+  position: relative;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--accent-2);
+}
+.badge__dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--accent-2);
+  animation: pulse 2.4s ease-out infinite;
+}
+@keyframes pulse {
+  0%   { transform: scale(1);   opacity: .6; }
+  70%  { transform: scale(3.8); opacity: 0; }
+  100% { transform: scale(3.8); opacity: 0; }
+}
+
+/* Texte en dégradé (nom du serveur dans le H1) */
+.gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-center { text-align: center; }
+.muted { color: var(--text-dim); }
+
+/* ==========================================================================
+   04. BOUTONS
+   ========================================================================== */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 24px;
+  font-family: var(--font-display);
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  transition:
+    transform .28s var(--ease-dynamic),
+    box-shadow .28s var(--ease-dynamic),
+    background .28s var(--ease-dynamic),
+    border-color .28s var(--ease-dynamic);
+  white-space: nowrap;
+}
+
+/* CTA principal : accent CHAUD. C'est la seule couleur chaude pleine du site,
+   ce qui en fait le point le plus attractif de chaque page. */
+.btn--primary {
+  background: var(--gradient-hot);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(255, 45, 120, .28);
+}
+.btn--primary:hover {
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 14px 38px rgba(255, 45, 120, .42), var(--glow-hot);
+}
+
+/* Halo pulsant doux autour du CTA du hero (jamais agressif : opacité faible,
+   cycle lent). Désactivé par prefers-reduced-motion, section 14. */
+.btn--pulse::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  background: var(--gradient-hot);
+  filter: blur(16px);
+  opacity: .35;
+  z-index: -1;
+  animation: ctaPulse 3.4s ease-in-out infinite;
+}
+/* PERF : opacite seule. Animer aussi scale() obligeait le navigateur a
+   refabriquer la texture floutee (blur 16px) a chaque frame. */
+@keyframes ctaPulse {
+  0%, 100% { opacity: .28; }
+  50%      { opacity: .55; }
+}
+
+.btn--ghost {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+.btn--ghost:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+  border-color: rgba(79, 163, 255, .5);
+}
+
+.btn--lg { padding: 17px 34px; font-size: 1.05rem; }
+.btn--block { width: 100%; }
+.btn svg { width: 18px; height: 18px; flex: none; }
+
+/* ==========================================================================
+   05. HEADER / NAVIGATION
+   ========================================================================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  /* PERF : on ne transitionne PAS backdrop-filter (recalcul du flou a chaque frame). */
+  transition: background .28s ease, border-color .28s ease;
+}
+/* Classe ajoutee par le JS après quelques pixels de scroll */
+.header.is-scrolled {
+  background: rgba(4, 7, 15, 0.86);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom-color: var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+/* --- Logo : remplace le SVG dans le HTML par ton propre logo --- */
+.logo { display: inline-flex; align-items: center; gap: 11px; color: var(--text); font-weight: 800; letter-spacing: -.02em; }
+.logo:hover { color: var(--text); }
+.logo__mark {
+  width: 36px; height: 36px;
+  border-radius: 11px;
+  background: var(--gradient);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 16px rgba(29, 111, 224, .45);
+  flex: none;
+}
+.logo__mark svg { width: 21px; height: 21px; color: #fff; }
+.logo__text { font-size: 1.05rem; }
+
+/* --- Menu --- */
+.nav { display: flex; align-items: center; gap: 6px; }
+.nav a {
+  padding: 9px 14px;
+  font-size: .93rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-radius: 999px;
+  transition: color .2s ease, background .2s ease;
+}
+.nav a:hover { color: var(--text); background: rgba(255, 255, 255, .05); }
+.nav a.is-active { color: var(--text); background: rgba(255, 255, 255, .07); }
+
+.header__actions { display: flex; align-items: center; gap: 10px; }
+
+/* Burger mobile */
+.nav-toggle {
+  display: none;
+  width: 42px; height: 42px;
+  align-items: center; justify-content: center;
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block; width: 18px; height: 2px;
+  background: currentColor; border-radius: 2px;
+  position: relative;
+  transition: background .2s ease;
+}
+.nav-toggle span::before,
+.nav-toggle span::after {
+  content: ""; position: absolute; left: 0;
+  width: 18px; height: 2px; background: currentColor; border-radius: 2px;
+  transition: transform .25s ease, top .25s ease;
+}
+.nav-toggle span::before { top: -6px; }
+.nav-toggle span::after  { top: 6px; }
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after  { top: 0; transform: rotate(-45deg); }
+
+/* ==========================================================================
+   06. HERO
+   ========================================================================== */
+/* Hero plein écran : 100svh evite le saut de hauteur sur mobile quand la
+   barre d'adresse du navigateur se replie. */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-block: clamp(48px, 8vw, 90px) clamp(96px, 12vw, 140px);
+  overflow: hidden;
+}
+
+/* Canvas des traînées de vitesse : derrière le contenu, jamais cliquable. */
+.hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+.hero > .container { position: relative; z-index: 1; }
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+.hero__title { margin-bottom: 20px; }
+.hero__title span { display: block; }
+.hero__lead {
+  font-size: clamp(1.02rem, 2.2vw, 1.2rem);
+  max-width: 54ch;
+  margin-bottom: 32px;
+}
+.hero__cta { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 38px; }
+
+/* --------------------------------------------------------------------------
+   ENTRÉE DU HERO au chargement (et non au scroll).
+   Le JS ajoute .is-ready sur <body> : chaque élément .hero-in monte alors en
+   fondu, décalé par --i (0, 1, 2...) pour créer la cascade.
+   -------------------------------------------------------------------------- */
+.hero-in {
+  opacity: 0;
+  transform: translateY(28px);
+}
+body.is-ready .hero-in {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity .9s var(--ease-out-expo),
+    transform .9s var(--ease-out-expo);
+  transition-delay: calc(var(--i, 0) * .11s);
+}
+
+/* 3 stats sous le CTA */
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 560px;
+}
+.stat {
+  padding: 14px 16px;
+  background: var(--glass-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: border-color .3s var(--ease-dynamic), transform .3s var(--ease-dynamic);
+}
+.stat:hover { border-color: rgba(255, 107, 53, .45); transform: translateY(-3px); }
+.stat__value {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.08rem;
+  color: var(--text);
+}
+.stat__label { display: block; font-size: .78rem; color: var(--text-dim); }
+
+/* Compteur de membres animé (count-up) : chiffres tabulaires pour que la
+   largeur ne saute pas pendant l'animation. */
+.counter {
+  font-family: var(--font-display);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--hot-1);
+}
+
+/* --------------------------------------------------------------------------
+   INDICATEUR DE SCROLL en bas du hero
+   -------------------------------------------------------------------------- */
+.scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(20px, 4vh, 40px);
+  z-index: 2;
+  transform: translateX(-50%);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-family: var(--font-display);
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border-radius: 999px;
+  transition: color .3s var(--ease-dynamic);
+}
+.scroll-cue:hover { color: var(--text); }
+.scroll-cue svg {
+  width: 20px;
+  height: 20px;
+  animation: cueBounce 2.6s ease-in-out infinite;
+}
+@keyframes cueBounce {
+  0%, 100% { transform: translateY(0);   opacity: .55; }
+  50%      { transform: translateY(7px); opacity: 1; }
+}
+
+/* --- Visuel de droite : 100% CSS/SVG, aucun asset officiel --- */
+.hero__visual { position: relative; display: grid; place-items: center; min-height: 340px; }
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: .55;
+  pointer-events: none;
+}
+.orb--1 { width: 300px; height: 300px; background: var(--accent-1); top: 4%;  left: 8%;  animation: float 9s ease-in-out infinite; }
+.orb--2 { width: 240px; height: 240px; background: var(--accent-2); bottom: 2%; right: 4%; animation: float 11s ease-in-out infinite reverse; }
+@keyframes float {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50%      { transform: translate3d(18px, -26px, 0); }
+}
+
+/* Disque orbital + "ballon" géométrique */
+.orbit {
+  position: relative;
+  width: min(330px, 78vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(79, 163, 255, .10), transparent 65%);
+  animation: spin 26s linear infinite;
+}
+.orbit::before {
+  content: "";
+  position: absolute;
+  inset: 13%;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, .12);
+}
+.orbit__dot {
+  position: absolute;
+  top: -6px; left: 50%;
+  width: 12px; height: 12px;
+  margin-left: -6px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  box-shadow: 0 0 18px var(--accent-2);
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.orbit__core {
+  width: 46%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--gradient);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 18px 50px rgba(29, 111, 224, .5), inset 0 -10px 30px rgba(0, 0, 0, .35);
+  animation: spin 26s linear infinite reverse; /* garde l'icône droite */
+}
+.orbit__core svg { width: 44%; height: 44%; color: #fff; }
+
+/* Cartouches flottants autour du visuel */
+.float-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: rgba(10, 17, 32, .88);
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  box-shadow: var(--shadow-md);
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--text);
+  backdrop-filter: blur(8px);
+  animation: float 7s ease-in-out infinite;
+}
+.float-card--a { top: 8%;  left: -4%; }
+.float-card--b { bottom: 10%; right: -2%; animation-delay: 1.6s; }
+.float-card svg { width: 16px; height: 16px; color: var(--accent-2); }
+
+/* ==========================================================================
+   07. CARDS & GRILLES
+   ========================================================================== */
+.grid { display: grid; gap: 20px; }
+.grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+/* --------------------------------------------------------------------------
+   CARDS EN VERRE (glassmorphism léger)
+   Fond semi-transparent + flou d'arrière-plan : le dégradé animé du body
+   transparaît à travers les cards, ce qui les fait vivre au fil du scroll.
+   Repli : les navigateurs sans backdrop-filter affichent --surface, opaque.
+   -------------------------------------------------------------------------- */
+.card {
+  position: relative;
+  padding: 26px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform .4s var(--ease-dynamic),
+    border-color .4s var(--ease-dynamic),
+    box-shadow .4s var(--ease-dynamic),
+    background .4s var(--ease-dynamic);
+  overflow: hidden;
+}
+
+@supports (backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px)) {
+  .card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+  }
+  .card:hover { background: var(--glass-bg-2); }
+}
+
+.card::after {
+  /* liséré lumineux en haut de la card au survol : froid -> chaud */
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-2), var(--hot-1), transparent);
+  opacity: 0;
+  transition: opacity .4s var(--ease-dynamic);
+}
+.card:hover {
+  transform: translateY(-6px);
+  background: var(--surface-2);
+  border-color: rgba(255, 255, 255, .22);
+  box-shadow: var(--shadow-md), 0 0 30px rgba(255, 107, 53, .10);
+}
+.card:hover::after { opacity: 1; }
+.card h3 { margin-bottom: .45em; }
+.card p { margin: 0; font-size: .94rem; }
+
+.card__icon {
+  width: 46px; height: 46px;
+  display: grid; place-items: center;
+  border-radius: 13px;
+  background: var(--accent-soft);
+  border: 1px solid rgba(79, 163, 255, .22);
+  color: var(--accent-2);
+  margin-bottom: 18px;
+}
+.card__icon svg { width: 22px; height: 22px; }
+
+/* ==========================================================================
+   08. SECTION BOT + MOCKUP DISCORD
+   ========================================================================== */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 60px);
+  align-items: center;
+}
+.feature-list { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 14px; }
+.feature-list li { display: flex; gap: 12px; align-items: flex-start; font-size: .96rem; }
+.feature-list svg { width: 20px; height: 20px; flex: none; color: var(--accent-2); margin-top: 2px; }
+
+/* --- Mockup message Discord (recréé en CSS, aucun asset copie) --- */
+/* Mockup Discord : même rendu réaliste, mais présenté comme un écran flottant
+   (halo bleu/chaud autour + très légère inclinaison qui se redresse au survol). */
+.discord-mock {
+  position: relative;
+  background: #0d1117;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    var(--shadow-md),
+    0 0 60px rgba(29, 111, 224, .22),
+    0 0 100px rgba(255, 45, 120, .08);
+  overflow: hidden;
+  transform: perspective(1400px) rotateY(-3deg) rotateX(1.5deg);
+  transition: transform .7s var(--ease-out-expo), box-shadow .7s var(--ease-out-expo);
+}
+.discord-mock:hover {
+  transform: perspective(1400px) rotateY(0deg) rotateX(0deg) translateY(-4px);
+  box-shadow:
+    var(--shadow-md),
+    0 0 80px rgba(29, 111, 224, .3),
+    0 0 120px rgba(255, 45, 120, .12);
+}
+.discord-mock__bar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, .03);
+  border-bottom: 1px solid var(--border);
+}
+.discord-mock__bar i {
+  width: 11px; height: 11px; border-radius: 50%;
+  background: rgba(255, 255, 255, .16);
+  display: inline-block;
+}
+.discord-mock__channel {
+  margin-left: 6px;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+.discord-mock__body { padding: 18px 16px; display: grid; gap: 20px; }
+
+.dmsg { display: flex; gap: 13px; }
+.dmsg__avatar {
+  width: 40px; height: 40px; flex: none;
+  border-radius: 50%;
+  background: var(--gradient);
+  display: grid; place-items: center;
+  color: #fff;
+}
+.dmsg__avatar svg { width: 20px; height: 20px; }
+.dmsg__content { min-width: 0; flex: 1; }
+.dmsg__head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 5px; }
+.dmsg__author { font-weight: 700; font-size: .95rem; color: #fff; }
+.dmsg__tag {
+  font-size: .64rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+  background: var(--accent-1); color: #fff;
+  padding: 2px 6px; border-radius: 4px;
+}
+.dmsg__time { font-size: .72rem; color: var(--text-dim); }
+
+/* Embed Discord : barre colorée à gauche */
+.dembed {
+  border-left: 4px solid var(--accent-2);
+  background: rgba(255, 255, 255, .035);
+  border-radius: 6px;
+  padding: 13px 15px;
+}
+.dembed__title { font-weight: 700; font-size: .93rem; color: var(--accent-2); margin-bottom: 6px; }
+.dembed p { font-size: .86rem; margin: 0 0 10px; color: var(--text-muted); }
+.dembed__fields { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 10px; }
+.dembed__field span { display: block; font-size: .72rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: .05em; }
+.dembed__field strong { font-size: .86rem; color: var(--text); font-weight: 600; }
+.dembed__foot { margin-top: 12px; font-size: .72rem; color: var(--text-dim); }
+
+/* ==========================================================================
+   09. ETAPES "COMMENT REJOINDRE"
+   ========================================================================== */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.step {
+  position: relative;
+  padding: 30px 24px 26px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform .25s ease, border-color .25s ease;
+}
+.step:hover { transform: translateY(-4px); border-color: var(--border-strong); }
+.step__num {
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--gradient);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 20px rgba(29, 111, 224, .4);
+}
+.step p { margin: 0; font-size: .94rem; }
+
+/* ==========================================================================
+   10. FAQ (ACCORDÉON)
+   ========================================================================== */
+.faq { max-width: 800px; margin-inline: auto; display: grid; gap: 12px; }
+.faq__item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color .25s ease, background .25s ease;
+}
+.faq__item:hover { border-color: var(--border-strong); }
+.faq__item.is-open { border-color: rgba(79, 163, 255, .38); background: var(--surface-2); }
+
+.faq__question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 22px;
+  background: none;
+  border: 0;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 650;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+.faq__icon {
+  width: 26px; height: 26px; flex: none;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  color: var(--accent-2);
+  transition: transform .3s ease, background .3s ease;
+}
+.faq__icon svg { width: 14px; height: 14px; }
+.faq__item.is-open .faq__icon { transform: rotate(180deg); background: var(--accent-soft); }
+
+/* Animation d'ouverture via max-height (piloté par le JS) */
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .32s ease;
+}
+.faq__answer > div { padding: 0 22px 22px; }
+.faq__answer p { margin: 0; font-size: .95rem; }
+
+/* ==========================================================================
+   11. CTA FINAL
+   ========================================================================== */
+.cta-band {
+  position: relative;
+  padding: clamp(44px, 7vw, 70px) clamp(24px, 5vw, 56px);
+  text-align: center;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(79, 163, 255, .28);
+  background:
+    radial-gradient(700px 320px at 50% 0%, rgba(29, 111, 224, .30), transparent 70%),
+    var(--surface);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+.cta-band h2 { margin-bottom: .4em; }
+.cta-band p { max-width: 58ch; margin-inline: auto; }
+.cta-band .btn { margin-top: 12px; }
+
+/* Lien d'invite affiché en clair sous le bouton */
+.invite-link {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 9px 16px;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: .85rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, .04);
+  border: 1px dashed var(--border-strong);
+  border-radius: 999px;
+  word-break: break-all;
+}
+.invite-link:hover { color: var(--accent-2); border-color: var(--accent-2); }
+
+/* ==========================================================================
+   12. FOOTER
+   ========================================================================== */
+.footer {
+  border-top: 1px solid var(--border);
+  background: var(--bg-soft);
+  padding-block: 56px 28px;
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.6fr repeat(3, 1fr);
+  gap: 40px 24px;
+  padding-bottom: 36px;
+}
+.footer__brand p { font-size: .9rem; max-width: 34ch; margin-top: 14px; }
+.footer h4 {
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--text-dim);
+  margin-bottom: 14px;
+}
+.footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+.footer ul a { color: var(--text-muted); font-size: .92rem; }
+.footer ul a:hover { color: var(--text); }
+
+.footer__bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__bottom p { margin: 0; font-size: .82rem; }
+.disclaimer {
+  font-size: .78rem;
+  color: var(--text-dim);
+  max-width: 62ch;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   13. PAGES INTERNES
+   ========================================================================== */
+/* En-tete de page interne */
+.page-head {
+  padding-block: clamp(48px, 8vw, 84px) clamp(28px, 4vw, 44px);
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+.page-head p { max-width: 62ch; margin-inline: auto; font-size: 1.05rem; }
+
+/* Fil d'Ariane */
+.breadcrumb { font-size: .82rem; color: var(--text-dim); margin-bottom: 18px; }
+.breadcrumb a { color: var(--text-muted); }
+.breadcrumb span { margin-inline: 8px; }
+
+/* Liste d'actualités / patch notes */
+.post {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 24px;
+  padding: 26px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+.post:hover { transform: translateY(-4px); border-color: var(--border-strong); background: var(--surface-2); }
+.post__meta { display: grid; gap: 10px; align-content: start; }
+.post__date { font-size: .82rem; color: var(--text-dim); }
+.post__tag {
+  justify-self: start;
+  font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em;
+  padding: 4px 10px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent-2);
+  border: 1px solid rgba(79, 163, 255, .25);
+}
+.post__tag--fix   { background: rgba(255, 176, 46, .12); color: #ffb02e; border-color: rgba(255, 176, 46, .28); }
+.post__tag--event { background: rgba(126, 231, 160, .12); color: #7ee7a0; border-color: rgba(126, 231, 160, .28); }
+.post h3 { margin-bottom: .4em; }
+.post ul { margin: 12px 0 0; padding-left: 20px; font-size: .93rem; display: grid; gap: 6px; }
+
+/* Boutique : grille d'items */
+.shop-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.item:hover { transform: translateY(-5px); border-color: var(--border-strong); box-shadow: var(--shadow-md); }
+/* Vignette générée en CSS (placeholder - remplace par une capture à toi si tu veux) */
+.item__thumb {
+  aspect-ratio: 4 / 3;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(79, 163, 255, .22), transparent 65%),
+    linear-gradient(160deg, #0e1728, #060b16);
+  border-bottom: 1px solid var(--border);
+  color: var(--accent-2);
+}
+.item__thumb svg { width: 42px; height: 42px; opacity: .85; }
+.item__body { padding: 16px 18px 18px; }
+.item__rarity {
+  display: inline-block;
+  font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+  margin-bottom: 8px;
+  color: var(--accent-2);
+}
+.item h3 { font-size: 1rem; margin-bottom: 4px; }
+.item__price { font-size: .88rem; color: var(--text-muted); font-weight: 600; }
+
+/* Bloc d'info / avertissement */
+.notice {
+  display: flex;
+  gap: 14px;
+  padding: 18px 20px;
+  background: var(--accent-soft);
+  border: 1px solid rgba(79, 163, 255, .25);
+  border-radius: var(--radius);
+  font-size: .92rem;
+  color: var(--text-muted);
+}
+.notice svg { width: 22px; height: 22px; flex: none; color: var(--accent-2); margin-top: 2px; }
+.notice strong { color: var(--text); }
+
+/* Contenu texte long (règlement, mentions légales) */
+.prose { max-width: 820px; margin-inline: auto; }
+.prose h2 { margin-top: 2.2em; font-size: 1.5rem; }
+.prose h2:first-child { margin-top: 0; }
+.prose h3 { margin-top: 1.6em; }
+.prose li { margin-bottom: .5em; }
+.prose ul, .prose ol { padding-left: 22px; }
+
+/* Règlement : liste numérotée en cards */
+.rules { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; counter-reset: rule; }
+.rules li {
+  position: relative;
+  padding: 18px 22px 18px 62px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: .95rem;
+  color: var(--text-muted);
+}
+.rules li::before {
+  counter-increment: rule;
+  content: counter(rule);
+  position: absolute;
+  left: 18px; top: 17px;
+  width: 28px; height: 28px;
+  display: grid; place-items: center;
+  border-radius: 8px;
+  background: var(--accent-soft);
+  border: 1px solid rgba(79, 163, 255, .25);
+  color: var(--accent-2);
+  font-size: .82rem; font-weight: 700;
+}
+.rules strong { color: var(--text); display: block; margin-bottom: 3px; }
+
+/* Tableau simple (sanctions, données perso) */
+.table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); }
+table { width: 100%; border-collapse: collapse; font-size: .92rem; min-width: 520px; }
+th, td { padding: 13px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+th { background: rgba(255, 255, 255, .03); font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--text-dim); }
+td { color: var(--text-muted); }
+tr:last-child td { border-bottom: 0; }
+
+/* ==========================================================================
+   14. ANIMATIONS AU SCROLL (classes pilotées par assets/js/main.js)
+   ========================================================================== */
+/* Apparition au scroll : montée en fondu avec un très léger flou de mouvement
+   qui se dissipe (le "motion blur" reste discret : 6px, sur la seule entrée). */
+/* PERFORMANCE — deux règles importantes ici :
+
+   1. On n'anime QUE transform et opacity. La version précédente animait aussi
+      filter: blur() : c'est une propriété de peinture, recalculée à chaque
+      frame et sur chaque élément de la cascade en même temps — c'était une
+      source directe de saccades au scroll.
+
+   2. Pas de `will-change` en dur : il est posé par main.js juste avant
+      l'animation et RETIRÉ à la fin (transitionend). Le laisser en permanence
+      garderait une couche GPU par élément révélé, soit des dizaines de
+      textures inutiles sur une page longue. */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity var(--speed-reveal) var(--ease-out-expo),
+    transform var(--speed-reveal) var(--ease-out-expo);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* Posée par le JS pendant la seule durée de l'animation. */
+.reveal.is-animating { will-change: transform, opacity; }
+
+/* Décalages en cascade : ajoute data-delay="1..6" sur l'élément.
+   Les grilles marquées [data-stagger] reçoivent ces valeurs automatiquement
+   depuis main.js, sans avoir à les écrire une par une dans le HTML. */
+.reveal[data-delay="1"] { transition-delay: .07s; }
+.reveal[data-delay="2"] { transition-delay: .14s; }
+.reveal[data-delay="3"] { transition-delay: .21s; }
+.reveal[data-delay="4"] { transition-delay: .28s; }
+.reveal[data-delay="5"] { transition-delay: .35s; }
+.reveal[data-delay="6"] { transition-delay: .42s; }
+
+/* --------------------------------------------------------------------------
+   RESPECT DE prefers-reduced-motion
+   Tout le mouvement décoratif s'arrête : rotation du fond, halo des CTA,
+   traînées du hero (le canvas est aussi coupé côté JS), parallaxe, flèche.
+   Le contenu, lui, reste entièrement visible et lisible.
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+  .reveal { opacity: 1; transform: none; filter: none; }
+  .hero-in { opacity: 1; transform: none; }
+  .btn--pulse::after { display: none; }
+  .hero__canvas { display: none; }
+  .scroll-cue svg { animation: none; }
+  .discord-mock { transform: none; }
+  body::after { transform: none !important; }
+}
+
+/* ==========================================================================
+   15. RESPONSIVE (mobile-first : on adapte ici les grilles desktop)
+   ========================================================================== */
+@media (max-width: 980px) {
+  .hero__grid { grid-template-columns: 1fr; text-align: center; }
+  .hero__lead { margin-inline: auto; }
+  .hero__cta  { justify-content: center; }
+  .hero__stats { margin-inline: auto; }
+  .hero__visual { order: -1; min-height: 260px; }
+  .float-card--a { left: 0; }
+  .float-card--b { right: 0; }
+
+  .split { grid-template-columns: 1fr; }
+  .grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .shop-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .steps { grid-template-columns: 1fr; }
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 760px) {
+  /* Menu mobile en panneau déroulant */
+  .nav {
+    position: absolute;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 14px 20px 20px;
+    background: rgba(4, 7, 15, .97);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    display: none;
+  }
+  .nav.is-open { display: flex; }
+  .nav a { padding: 13px 14px; font-size: 1rem; border-radius: 12px; }
+
+  .nav-toggle { display: inline-flex; }
+  .header__actions .btn { padding: 11px 16px; font-size: .85rem; }
+
+  .grid--2, .grid--3, .grid--4 { grid-template-columns: 1fr; }
+  .shop-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .post { grid-template-columns: 1fr; gap: 14px; }
+  .dembed__fields { grid-template-columns: 1fr; }
+  .footer__grid { grid-template-columns: 1fr; gap: 30px; }
+  .footer__bottom { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 420px) {
+  .hero__stats { grid-template-columns: 1fr; }
+  .shop-grid { grid-template-columns: 1fr; }
+  .btn--lg { width: 100%; }
+  .logo__text { font-size: .98rem; }
+}
+
+/* --------------------------------------------------------------------------
+   Vignettes d'objets chargees depuis data/shop.json (assets/js/content.js).
+   Le contenu statique de secours utilise un SVG ; ici on cadre l'image reelle.
+   -------------------------------------------------------------------------- */
+.item__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 6px;
+}
+
+/* ==========================================================================
+   16. SECTION ACTUS (grille façon site de jeu)
+   Cards : vignette en haut, date, titre, zoom léger de la vignette au survol.
+   --------------------------------------------------------------------------
+   VIGNETTES : ce sont des dégradés géométriques abstraits générés en CSS,
+   volontairement différents d'une card à l'autre (.news-card__thumb--1 à --4).
+   Aucun asset du jeu n'est utilisé.
+
+   >>> POUR METTRE TES PROPRES VISUELS : place une image dans la vignette
+       <div class="news-card__thumb news-card__thumb--1">
+         <img src="assets/img/actu-1.jpg" alt="" loading="lazy">
+       </div>
+       Format conseillé : 640 x 360 px (16/9), JPG ou WebP compressé (< 120 Ko).
+       Suggestion de visuel : plan large abstrait de voiture en mouvement,
+       lumières filées sur fond sombre, ou capture de ton propre gameplay.
+   ========================================================================== */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.news-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition:
+    transform .45s var(--ease-dynamic),
+    border-color .45s var(--ease-dynamic),
+    box-shadow .45s var(--ease-dynamic);
+}
+
+@supports (backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px)) {
+  .news-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+  }
+}
+
+.news-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, .22);
+  box-shadow: var(--shadow-md), 0 0 34px rgba(255, 107, 53, .12);
+}
+
+/* --- Vignette --- */
+.news-card__thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  background: #060b16;
+}
+.news-card__thumb::after {
+  /* voile sombre en bas pour que le texte reste lisible si tu mets une photo */
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 55%;
+  background: linear-gradient(to top, rgba(4, 7, 15, .85), transparent);
+}
+.news-card__thumb img,
+.news-card__art {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .75s var(--ease-out-expo);
+}
+.news-card:hover .news-card__thumb img,
+.news-card:hover .news-card__art { transform: scale(1.07); }
+
+/* Quatre compositions abstraites, une par card (dégradés + formes CSS) */
+.news-card__art { display: block; }
+.news-card__thumb--1 .news-card__art {
+  background:
+    radial-gradient(120% 90% at 15% 20%, rgba(79, 163, 255, .55), transparent 60%),
+    conic-gradient(from 210deg at 70% 80%, rgba(255, 45, 120, .40), transparent 45%),
+    linear-gradient(140deg, #0b1730, #050a15);
+}
+.news-card__thumb--2 .news-card__art {
+  background:
+    repeating-linear-gradient(115deg, rgba(255, 255, 255, .06) 0 2px, transparent 2px 16px),
+    radial-gradient(100% 80% at 80% 25%, rgba(255, 107, 53, .45), transparent 62%),
+    linear-gradient(160deg, #101b33, #060b16);
+}
+.news-card__thumb--3 .news-card__art {
+  background:
+    conic-gradient(from 40deg at 30% 60%, rgba(29, 111, 224, .55), transparent 40%),
+    radial-gradient(90% 70% at 75% 75%, rgba(255, 45, 120, .30), transparent 60%),
+    linear-gradient(200deg, #0a1428, #04070f);
+}
+.news-card__thumb--4 .news-card__art {
+  background:
+    repeating-linear-gradient(65deg, rgba(255, 107, 53, .12) 0 3px, transparent 3px 22px),
+    radial-gradient(110% 90% at 25% 80%, rgba(79, 163, 255, .40), transparent 60%),
+    linear-gradient(120deg, #0d1830, #050912);
+}
+
+/* --- Corps de la card --- */
+.news-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 20px 22px;
+  flex: 1;
+}
+.news-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .74rem;
+  color: var(--text-dim);
+  font-family: var(--font-display);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.news-card__meta .post__tag { font-size: .64rem; padding: 3px 8px; }
+.news-card__title {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.25;
+  color: var(--text);
+}
+.news-card__link {
+  margin-top: auto;
+  padding-top: 12px;
+  font-family: var(--font-display);
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--hot-1);
+  transition: gap .3s var(--ease-dynamic), color .3s var(--ease-dynamic);
+}
+.news-card__link:hover { color: #fff; }
+/* La card entière est cliquable, sans imbriquer de lien dans un lien */
+.news-card__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   17. DÉTAILS DE DIRECTION ARTISTIQUE
+   ========================================================================== */
+
+/* Filets diagonaux décoratifs : rappellent la vitesse sans image. */
+.speed-lines {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .5;
+  background-image: repeating-linear-gradient(
+    115deg,
+    transparent 0 38px,
+    rgba(255, 255, 255, .045) 38px 39px
+  );
+  mask-image: linear-gradient(to bottom, transparent, #000 30%, #000 70%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 30%, #000 70%, transparent);
+}
+.section > .container { position: relative; z-index: 1; }
+
+/* Titre de section : petit filet chaud au-dessus, façon écran de jeu */
+.section-head .badge { margin-bottom: 16px; }
+.section-head h2 { position: relative; display: inline-block; }
+.section-head h2::after {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 3px;
+  margin: 14px auto 0;
+  border-radius: 3px;
+  background: var(--gradient-hot);
+}
+
+/* Le point du badge passe en accent chaud : petite touche qui réchauffe.
+   (L'onde est animée en transform/opacity, voir section 03.) */
+.badge__dot,
+.badge__dot::after { background: var(--hot-1); }
+
+/* Bandeau CTA final : halo chaud plutôt que froid */
+.cta-band {
+  border-color: rgba(255, 107, 53, .28);
+  background:
+    radial-gradient(700px 320px at 50% 0%, rgba(255, 45, 120, .20), transparent 70%),
+    radial-gradient(600px 300px at 50% 100%, rgba(29, 111, 224, .22), transparent 70%),
+    var(--surface);
+}
+
+/* Étapes numérotées : pastille chaude */
+.step__num {
+  background: var(--gradient-hot);
+  box-shadow: 0 6px 20px rgba(255, 45, 120, .35);
+}
+
+/* Liens de navigation actifs et survolés : soulignement chaud */
+.nav a.is-active { color: var(--text); background: var(--hot-soft); }
+
+/* ==========================================================================
+   18. RESPONSIVE DES NOUVEAUX BLOCS
+   ========================================================================== */
+@media (max-width: 980px) {
+  .news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero { min-height: auto; padding-block: clamp(96px, 16vw, 130px) clamp(90px, 14vw, 120px); }
+  .discord-mock { transform: none; }
+}
+
+@media (max-width: 620px) {
+  .news-grid { grid-template-columns: 1fr; }
+  .scroll-cue { display: none; }
+}
+
+/* Image de fond optionnelle du hero (le <img class="hero__photo"> est commenté
+   dans index.html : décommente-le et dépose ton visuel pour l'activer).
+   Le voile sombre par-dessus garantit que le titre reste lisible. */
+.hero__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: .45;
+  filter: saturate(.85) contrast(1.05);
+  mask-image: linear-gradient(to bottom, #000 55%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent);
+}
+
+/* ==========================================================================
+   19. PERFORMANCE
+   Règles dédiées au coût GPU/CPU. À lire avant d'ajouter une animation.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. PAUSE DES ANIMATIONS HORS ÉCRAN
+   main.js observe les éléments marqués [data-pause-offscreen] et leur pose
+   .is-offscreen dès qu'ils quittent le viewport. Toutes leurs animations
+   (et celles de leurs enfants) sont alors gelées : plus aucune frame n'est
+   calculée pour un décor que personne ne regarde.
+
+   >>> POUR EN AJOUTER UN : mets data-pause-offscreen sur la section ou
+       l'élément décoratif concerné dans le HTML. Rien d'autre à faire.
+   -------------------------------------------------------------------------- */
+.is-offscreen,
+.is-offscreen *,
+.is-offscreen *::before,
+.is-offscreen *::after {
+  animation-play-state: paused !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. ALLÈGEMENT SUR PETIT ÉCRAN
+   backdrop-filter est l'effet le plus coûteux du site : le navigateur doit
+   refloutter ce qu'il y a derrière chaque card à chaque frame de scroll, et
+   le fond animé invalide ce cache en permanence. Sur mobile (GPU plus
+   modeste, écran dense), on repasse donc sur des fonds opaques : le rendu
+   reste identique en apparence, le scroll redevient fluide.
+   -------------------------------------------------------------------------- */
+@media (max-width: 760px) {
+  .card,
+  .news-card,
+  .stat,
+  .float-card {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: var(--surface);
+  }
+  /* Le halo conique de fond est le poste le plus lourd : on le calme. */
+  body::before { filter: blur(24px); opacity: .7; }
+}
+
+/* --------------------------------------------------------------------------
+   3. ÉCONOMIE D'ÉNERGIE
+   Certains navigateurs mobiles exposent le mode économie de batterie.
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-data: reduce) {
+  body::before { animation: none; }
+}
+
+/* ==========================================================================
+   20. LOGO OFFICIEL
+   Deux états possibles, gérés par main.js :
+     - par défaut  : monogramme SVG dans une pastille en dégradé ;
+     - .has-logo   : ton logo PNG, sans pastille ni ombre (il porte sa
+                     propre identité et sa transparence).
+   ========================================================================== */
+.logo__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Le logo réel est un peu plus grand que le monogramme : 44 px dans un
+   header de 72 px, ce qui laisse une respiration de 14 px en haut et en bas. */
+.logo__mark.has-logo {
+  width: 44px;
+  height: 44px;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+.logo__mark.has-logo .logo__svg { display: none; }
+
+/* Footer : même logo, légèrement plus discret. */
+.footer .logo__mark.has-logo { width: 40px; height: 40px; }
+
+@media (max-width: 420px) {
+  .logo__mark.has-logo { width: 38px; height: 38px; }
+}

@@ -1,0 +1,145 @@
+# ============================================================================
+# Regeneration automatique des donnees du site
+# ----------------------------------------------------------------------------
+# Ce workflow relance les trois scripts de recuperation, puis commit les
+# fichiers data/*.json UNIQUEMENT s'ils ont reellement change.
+#
+# AUCUN SECRET N'EST NECESSAIRE : les trois scripts n'utilisent que des API
+# publiques (Discord widget/invitations) et des pages web publiques. Il n'y a
+# rien a configurer dans Settings > Secrets.
+#
+# QUAND :
+#   - automatiquement toutes les heures (a la minute 5) ;
+#   - a la demande, depuis l'onglet Actions (bouton "Run workflow").
+#
+# LES TROIS SCRIPTS SONT INDEPENDANTS : si l'un echoue, les deux autres
+# s'executent quand meme (continue-on-error), et le script en echec ne
+# modifie pas son fichier JSON - le site continue d'afficher la derniere
+# donnee valide.
+# ============================================================================
+
+name: Mise a jour des donnees
+
+on:
+  schedule:
+    # Format : minute heure jour mois jour_semaine (UTC).
+    # "5 * * * *" = a la minute 5 de chaque heure.
+    # Pour repasser a une fois par jour : "5 0 * * *".
+    - cron: "5 * * * *"
+  workflow_dispatch:
+
+# Autorise le job a pousser un commit sur le depot.
+permissions:
+  contents: write
+
+# Empeche deux executions de se chevaucher (le cron horaire pourrait sinon
+# croiser un declenchement manuel et provoquer un conflit de push).
+concurrency:
+  group: update-content
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Recuperer et publier les donnees
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Recuperer le depot
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Installer les dependances
+        run: npm ci
+
+      # ----------------------------------------------------------------------
+      # Les trois recuperations, dans l'ordre demande.
+      # continue-on-error: true -> un echec n'interrompt pas la suite du job.
+      # L'etape reste marquee en echec dans l'interface, et le recapitulatif
+      # final (derniere etape) reprend le detail.
+      # ----------------------------------------------------------------------
+      - name: "1/3 - Compteur de membres Discord"
+        id: membres
+        continue-on-error: true
+        run: node scripts/fetch-member-count.js
+
+      - name: "2/3 - Actualites officielles du jeu"
+        id: actus
+        continue-on-error: true
+        run: node scripts/fetch-updates.js
+
+      - name: "3/3 - Rotation de la boutique"
+        id: boutique
+        continue-on-error: true
+        run: node scripts/fetch-shop.js
+
+      # ----------------------------------------------------------------------
+      # Commit UNIQUEMENT si le contenu a change.
+      # "git diff --staged --quiet" renvoie 0 si rien n'a bouge : dans ce cas
+      # on saute le commit, ce qui evite de polluer l'historique avec des
+      # commits vides toutes les heures.
+      # ----------------------------------------------------------------------
+      - name: Publier les donnees modifiees
+        id: publication
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/stats.json data/updates.json data/shop.json
+
+          if git diff --staged --quiet; then
+            echo "Aucun changement dans data/ : rien a publier."
+            echo "modifie=non" >> "$GITHUB_OUTPUT"
+          else
+            echo "Fichiers modifies :"
+            git diff --staged --name-only
+
+            git commit -m "chore(data): mise a jour automatique des donnees"
+
+            # Le cron et un declenchement manuel peuvent se croiser : on rejoue
+            # notre commit par-dessus la branche distante avant de pousser.
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+
+            echo "Donnees publiees."
+            echo "modifie=oui" >> "$GITHUB_OUTPUT"
+          fi
+
+      # ----------------------------------------------------------------------
+      # Recapitulatif lisible dans l'onglet Actions (page du run > Summary).
+      # ----------------------------------------------------------------------
+      - name: Recapitulatif
+        if: always()
+        run: |
+          {
+            echo "## Resultat de la mise a jour"
+            echo ""
+            echo "| Script | Resultat |"
+            echo "|---|---|"
+            echo "| Compteur de membres | ${{ steps.membres.outcome }} |"
+            echo "| Actualites du jeu | ${{ steps.actus.outcome }} |"
+            echo "| Boutique | ${{ steps.boutique.outcome }} |"
+            echo ""
+            echo "Donnees modifiees et publiees : ${{ steps.publication.outputs.modifie || 'non determine' }}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "${{ steps.membres.outcome }}" != "success" ] || \
+             [ "${{ steps.actus.outcome }}" != "success" ] || \
+             [ "${{ steps.boutique.outcome }}" != "success" ]; then
+            {
+              echo ""
+              echo "### Au moins un script n'a pas abouti"
+              echo ""
+              echo "Le fichier JSON concerne n'a PAS ete modifie : le site continue"
+              echo "d'afficher la derniere donnee valide."
+              echo ""
+              echo "Pour comprendre : clique sur l'etape en rouge ci-dessus, le"
+              echo "message d'erreur indique quoi corriger (selecteur CSS a ajuster,"
+              echo "widget Discord desactive, site source indisponible...)."
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi

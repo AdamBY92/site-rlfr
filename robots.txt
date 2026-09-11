@@ -1,0 +1,12 @@
+# robots.txt
+# >>> REMPLACE [URL_DU_SITE] par l'adresse finale du site
+#     (exemple : https://mon-serveur-rl.fr)
+
+User-agent: *
+Allow: /
+
+# Rien a cacher sur un site statique : on autorise tout le site.
+# Si tu ajoutes un jour un dossier prive, ajoute par exemple :
+# Disallow: /prive/
+
+Sitemap: [URL_DU_SITE]/sitemap.xml

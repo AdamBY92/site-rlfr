@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO - il reste à remplacer [URL_DU_SITE] et [NOMBRE_MEMBRES] -->
+  <title>Notre communauté Rocket League - Règlement et modération | RL FR</title>
+  <meta name="description" content="Découvre Rocket League France, la communauté Discord francophone dédiée au jeu : salons, rôles, tournois internes, règlement complet et équipe de modération. Un serveur bienveillant, ouvert à tous les niveaux.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#04070f">
+  <link rel="canonical" href="[URL_DU_SITE]/communaute.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Rocket League France">
+  <meta property="og:url" content="[URL_DU_SITE]/communaute.html">
+  <meta property="og:title" content="Notre communauté Rocket League - Règlement et modération">
+  <meta property="og:description" content="Salons, rôles, tournois, règlement et modération du serveur Discord francophone Rocket League France.">
+  <!-- IMAGE DE PARTAGE (og:image) : 1200x630 px, JPG ou PNG < 300 Ko.
+       Compose-la autour de assets/img/logo.png : logo centre ou a gauche,
+       fond degrade bleu nuit (#04070f -> #0a1428) avec une touche corail
+       (#ff6b35), et le nom du serveur en gros. C'est cette image qui
+       s'affiche dans les previsualisations Discord, X et Facebook. -->
+  <meta property="og:image" content="[URL_DU_SITE]/assets/img/og-image.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Notre communauté Rocket League - Règlement et modération">
+  <meta name="twitter:description" content="Salons, rôles, tournois, règlement et modération du serveur.">
+  <meta name="twitter:image" content="[URL_DU_SITE]/assets/img/og-image.jpg">
+
+  <!-- ====================================================================
+       FAVICONS
+       Actuellement : un SVG en ligne (aucun fichier necessaire).
+
+       >>> POUR UTILISER TON LOGO : genere ces 4 fichiers a partir de
+           assets/img/logo.png (carre, 512x512 px de preference) avec
+           realfavicongenerator.net ou favicon.io, puis place-les A LA
+           RACINE du site (a cote de index.html) :
+             - favicon.ico           16x16 + 32x32 dans un seul fichier
+             - favicon-32x32.png
+             - favicon-16x16.png
+             - apple-touch-icon.png  180x180, fond OPAQUE (#04070f) :
+                                     iOS ne gere pas la transparence et
+                                     afficherait sinon un fond noir brut.
+
+           Ensuite : supprime la ligne <link rel="icon" href="data:image...">
+           ci-dessous et decommente les 4 lignes qui la suivent.
+       ==================================================================== -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%231d6fe0'/><circle cx='50' cy='50' r='22' fill='none' stroke='white' stroke-width='8'/></svg>">
+  <!--
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+  <header class="header" data-header>
+    <div class="header__inner">
+      <a class="logo" href="index.html" aria-label="Accueil - RL FR">
+        <span class="logo__mark" aria-hidden="true">
+          <!-- LOGO OFFICIEL : depose ton fichier dans assets/img/logo.png
+               (PNG transparent, carre, 256x256 px minimum).
+               Tant que le fichier n'existe pas, le monogramme SVG ci-dessous
+               reste affiche : aucune image cassee. Le basculement est fait
+               par main.js (section 11) des que l'image se charge. -->
+          <img class="logo__img" src="assets/img/logo.png" alt="" width="48" height="48" decoding="async" data-logo hidden>
+          <svg class="logo__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 3v4M12 17v4M3 12h4M17 12h4"></path>
+          </svg>
+        </span>
+        <span class="logo__text">RL FR</span>
+      </a>
+
+      <nav class="nav" id="menu-principal" data-nav aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="mises-a-jour.html">Mises à jour</a>
+        <a href="boutique.html">Boutique</a>
+        <a href="communaute.html" class="is-active" aria-current="page">Communauté</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--primary" href="https://discord.gg/CNDjmDBmJz" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.3 4.5A19 19 0 0 0 15.6 3l-.2.5c1.6.4 2.9 1 4.1 1.8a15.6 15.6 0 0 0-11-.9c-.6.2-1 .4-1.5.6A16 16 0 0 1 8.6 3.5L8.4 3a19 19 0 0 0-4.7 1.5C1.1 8.4.4 12.2.7 16a19.2 19.2 0 0 0 5.8 2.9l.5-.7c-.8-.3-1.6-.7-2.3-1.2l.5-.4a13.7 13.7 0 0 0 11.6 0l.5.4c-.7.5-1.5.9-2.3 1.2l.5.7A19.1 19.1 0 0 0 21.3 16c.4-4.4-.6-8.2-1-11.5ZM8.2 13.8c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3Zm7.6 0c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3Z"></path>
+          </svg>
+          Rejoindre le Discord
+        </a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="menu-principal" aria-label="Ouvrir le menu">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <section class="page-head">
+      <div class="container">
+        <p class="breadcrumb">
+          <a href="index.html">Accueil</a><span>/</span>Communauté
+        </p>
+        <!-- Compteur alimenté par data/stats.json (assets/js/content.js).
+             Sans le fichier, ce texte générique reste affiché : aucun
+             placeholder visible en ligne. -->
+        <p class="badge">
+          <span class="badge__dot" aria-hidden="true"></span>
+          <span data-members-label>Communauté francophone</span>
+        </p>
+        <h1>Une communauté qui joue ensemble</h1>
+        <p>
+          Rocket League France rassemble des joueurs francophones de tous niveaux, du débutant
+          qui découvre l&rsquo;aerial au joueur classé qui cherche une équipe stable.
+          Ici, on joue sérieusement sans se prendre au sérieux.
+        </p>
+      </div>
+    </section>
+
+    <!-- PRÉSENTATION : les salons -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Ce qu&rsquo;on trouve sur le serveur</h2>
+          <p>Une organisation simple, des salons clairs, et personne qui se perd.</p>
+        </div>
+
+        <!-- ================================================================
+             EMPLACEMENT VISUEL 5 — PORTRAIT DE COMMUNAUTÉ (facultatif)
+             ----------------------------------------------------------------
+             Format      : 1200 x 800 px, JPG/WebP sous 200 Ko.
+             Ambiance    : humaine et chaleureuse, pour incarner le serveur.
+             Composition : plusieurs personnes, ambiance soirée gaming,
+                           lumières colorées. Évite les photos trop "stock"
+                           avec des sourires figés : ça sonne faux.
+
+             LE MIEUX ICI : une vraie capture de votre communauté (screenshot
+             d'une soirée tournoi, montage de vos avatars, photo d'un LAN).
+             C'est plus authentique qu'une banque d'images, et zéro
+             question de droits.
+
+             PISTES DE RECHERCHE si tu préfères une photo :
+               1. Unsplash — "friends gaming together night"
+               2. Pexels   — "esports team playing computer"
+               3. Unsplash — "lan party neon room"
+             ================================================================ -->
+        <div class="grid grid--3">
+
+          <article class="card reveal" data-delay="1">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"></path>
+              </svg>
+            </div>
+            <h3>Salons de discussion</h3>
+            <p>Un salon général, un salon dédié au jeu et des espaces détente pour parler d&rsquo;autre chose entre deux parties.</p>
+          </article>
+
+          <article class="card reveal" data-delay="2">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+              </svg>
+            </div>
+            <h3>Recherche de coéquipiers</h3>
+            <p>Des salons organisés par mode et par rang, avec des rôles à mentionner pour trouver un duo en quelques minutes.</p>
+          </article>
+
+          <article class="card reveal" data-delay="3">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 1a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3Z"></path>
+                <path d="M19 10a7 7 0 0 1-14 0M12 17v5M8 22h8"></path>
+              </svg>
+            </div>
+            <h3>Salons vocaux</h3>
+            <p>Des vocaux permanents pour jouer en équipe, plus des salons temporaires créés automatiquement quand tout est plein.</p>
+          </article>
+
+          <article class="card reveal" data-delay="4">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                <path d="M6 4h12v5a6 6 0 0 1-12 0V4ZM9 20h6M12 15v5"></path>
+              </svg>
+            </div>
+            <h3>Tournois internes</h3>
+            <p>Des tournois maison annoncés à l&rsquo;avance, avec inscriptions, brackets publics et rôles de vainqueur à gagner.</p>
+          </article>
+
+          <article class="card reveal" data-delay="5">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m22 8-6 4 6 4V8Z"></path>
+                <rect x="2" y="6" width="14" height="12" rx="2"></rect>
+              </svg>
+            </div>
+            <h3>Replays et coaching</h3>
+            <p>Poste une partie, reçois des retours constructifs et participe aux sessions d&rsquo;entraînement organisées par les membres.</p>
+          </article>
+
+          <article class="card reveal" data-delay="6">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="8" width="16" height="12" rx="3"></rect>
+                <path d="M12 4v4M9 14h.01M15 14h.01"></path>
+              </svg>
+            </div>
+            <h3>Salons automatiques</h3>
+            <p>Patch notes et rotation de la boutique publiés par notre bot, avec des rôles de notification que tu actives ou non.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- RÈGLEMENT -->
+    <section class="section section--soft section--line" id="reglement">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Le règlement du serveur</h2>
+          <p>Court, clair et appliqué à tout le monde de la même façon. En rejoignant le serveur, tu acceptes ces règles.</p>
+        </div>
+
+        <div class="prose">
+          <!-- >>> Adapte librement ces règles à ton serveur -->
+          <ol class="rules reveal">
+            <li>
+              <strong>Respect avant tout</strong>
+              Aucune insulte, aucun harcèlement, aucun propos raciste, sexiste, homophobe ou haineux. Le trash talk amical s&rsquo;arrête dès que la personne en face le demande.
+            </li>
+            <li>
+              <strong>Pas de spam ni de flood</strong>
+              Évite les messages répétés, les mentions abusives et les majuscules à répétition. Utilise le salon adapté à chaque sujet.
+            </li>
+            <li>
+              <strong>Aucune publicité sauvage</strong>
+              Pas d&rsquo;invitation vers d&rsquo;autres serveurs ni de promotion commerciale sans l&rsquo;accord préalable de l&rsquo;équipe. Le partage de ta chaîne se fait dans le salon prévu.
+            </li>
+            <li>
+              <strong>Contenu approprié</strong>
+              Aucun contenu choquant, sexuel, violent ou illégal. Les pseudos et avatars provocants sont également concernés.
+            </li>
+            <li>
+              <strong>Zéro triche, zero arnaque</strong>
+              Les logiciels de triche, les comptes boostés, la revente de comptes et les échanges frauduleux entraînent une exclusion définitive.
+            </li>
+            <li>
+              <strong>Fair-play en jeu</strong>
+              On ne quitte pas une partie en cours sans prévenir, on ne sabote pas son équipe et on reste correct avec l&rsquo;équipe adverse.
+            </li>
+            <li>
+              <strong>Vie privée respectée</strong>
+              Ne partage jamais d&rsquo;informations personnelles, ni les tiennes ni celles des autres, et n&rsquo;enregistre personne sans son accord.
+            </li>
+            <li>
+              <strong>Les décisions de l&rsquo;équipe s&rsquo;appliquent</strong>
+              Une contestation se discute en message privé avec un membre du staff, pas en public. Les règles de Discord s&rsquo;appliquent en complément.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODÉRATION -->
+    <section class="section" id="moderation">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Modération et sécurité</h2>
+          <p>Une équipe bénévole, des sanctions prévisibles et un moyen simple de signaler un problème.</p>
+        </div>
+
+        <div class="prose">
+
+          <div class="grid grid--2 reveal" style="margin-bottom:28px">
+            <article class="card">
+              <div class="card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
+                </svg>
+              </div>
+              <h3>Une équipe présente</h3>
+              <p>Des modérateurs bénévoles couvrent les horaires de forte activité, en soirée et le week-end. Ils interviennent sur signalement comme de leur propre initiative.</p>
+            </article>
+
+            <article class="card">
+              <div class="card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10.3 3.6 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0Z"></path>
+                  <path d="M12 9v4M12 17h.01"></path>
+                </svg>
+              </div>
+              <h3>Signaler un comportement</h3>
+              <p>Un salon de signalement et un message privé au staff permettent de remonter tout problème. Les signalements restent confidentiels.</p>
+            </article>
+          </div>
+
+          <h3>Échelle des sanctions</h3>
+          <p>Selon la gravité des faits, l&rsquo;équipe applique la sanction adaptée. La récidive fait monter d&rsquo;un cran.</p>
+
+          <div class="table-wrap reveal">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Sanction</th>
+                  <th scope="col">Dans quel cas</th>
+                  <th scope="col">Duree</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Rappel à l&rsquo;ordre</td>
+                  <td>Écart mineur, première fois (hors-sujet, spam léger)</td>
+                  <td>Immediat</td>
+                </tr>
+                <tr>
+                  <td>Avertissement</td>
+                  <td>Manque de respect, provocation répétée</td>
+                  <td>Conservé au dossier</td>
+                </tr>
+                <tr>
+                  <td>Exclusion temporaire</td>
+                  <td>Récidive après avertissement, comportement toxique</td>
+                  <td>De 24 h à 7 jours</td>
+                </tr>
+                <tr>
+                  <td>Exclusion définitive</td>
+                  <td>Propos haineux, arnaque, triche, harcèlement</td>
+                  <td>Permanente</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Nos conseils de sécurité</h3>
+          <ul>
+            <li>Ne clique jamais sur un lien de &laquo; cadeau &raquo; ou de crédits gratuits envoyé en message privé.</li>
+            <li>L&rsquo;équipe ne te demandera jamais ton mot de passe, ton code de connexion ni l&rsquo;accès à ton compte.</li>
+            <li>Active la double authentification sur ton compte Discord et sur ton compte de jeu.</li>
+            <li>En cas de doute sur un membre ou un message, demande à un modérateur avant de répondre.</li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--soft section--line">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Viens jouer avec nous</h2>
+          <p>Lis le règlement, choisis tes rôles et lance ta première partie avec la communauté dès ce soir.</p>
+          <a class="btn btn--primary btn--lg" href="https://discord.gg/CNDjmDBmJz" target="_blank" rel="noopener noreferrer">Rejoindre le Discord</a>
+          <div>
+            <a class="invite-link" href="https://discord.gg/CNDjmDBmJz" target="_blank" rel="noopener noreferrer">https://discord.gg/CNDjmDBmJz</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="logo" href="index.html">
+            <span class="logo__mark" aria-hidden="true">
+          <!-- LOGO OFFICIEL : depose ton fichier dans assets/img/logo.png
+               (PNG transparent, carre, 256x256 px minimum).
+               Tant que le fichier n'existe pas, le monogramme SVG ci-dessous
+               reste affiche : aucune image cassee. Le basculement est fait
+               par main.js (section 11) des que l'image se charge. -->
+          <img class="logo__img" src="assets/img/logo.png" alt="" width="40" height="40" loading="lazy" decoding="async" data-logo hidden>
+          <svg class="logo__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 3v4M12 17v4M3 12h4M17 12h4"></path>
+          </svg>
+        </span>
+            <span class="logo__text">RL FR</span>
+          </a>
+          <p>La communauté Discord francophone pour jouer, progresser et suivre l&rsquo;actualité de Rocket League.</p>
+        </div>
+
+        <div>
+          <h4>Le site</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="mises-a-jour.html">Mises à jour</a></li>
+            <li><a href="boutique.html">Boutique du jour</a></li>
+            <li><a href="communaute.html">Communauté</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Rejoindre</h4>
+          <ul>
+            <li><a href="https://discord.gg/CNDjmDBmJz" target="_blank" rel="noopener noreferrer">Invitation Discord</a></li>
+            <li><a href="communaute.html#reglement">Règlement</a></li>
+            <li><a href="index.html#rejoindre">Comment rejoindre</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Infos</h4>
+          <ul>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="mentions-legales.html#donnees">Données personnelles</a></li>
+            <li><a href="communaute.html#moderation">Modération</a></li>
+            <li><a href="mentions-legales.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="muted">&copy; <span data-year>2026</span> Rocket League France. Tous droits réservés.</p>
+        <p class="disclaimer">
+          Site communautaire indépendant, sans lien officiel avec Psyonix LLC ni Epic Games.
+          Rocket League est une marque de Psyonix LLC.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <!-- Compteur de membres depuis data/stats.json -->
+  <script src="assets/js/content.js" defer></script>
+</body>
+</html>
