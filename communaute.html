@@ -30,35 +30,15 @@
   <meta name="twitter:description" content="Salons, rôles, tournois, règlement et modération du serveur.">
   <meta name="twitter:image" content="https://rocketleaguefrancediscord.fr/assets/img/og-image.jpg">
 
-  <!-- ====================================================================
-       FAVICONS
-       Actuellement : un SVG en ligne (aucun fichier necessaire).
-
-       >>> POUR UTILISER TON LOGO : genere ces 4 fichiers a partir de
-           assets/img/logo.png (carre, 512x512 px de preference) avec
-           realfavicongenerator.net ou favicon.io, puis place-les A LA
-           RACINE du site (a cote de index.html) :
-             - favicon.ico           16x16 + 32x32 dans un seul fichier
-             - favicon-32x32.png
-             - favicon-16x16.png
-             - apple-touch-icon.png  180x180, fond OPAQUE (#04070f) :
-                                     iOS ne gere pas la transparence et
-                                     afficherait sinon un fond noir brut.
-
-           Ensuite : supprime la ligne <link rel="icon" href="data:image...">
-           ci-dessous et decommente les 4 lignes qui la suivent.
-       ==================================================================== -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%231d6fe0'/><circle cx='50' cy='50' r='22' fill='none' stroke='white' stroke-width='8'/></svg>">
-  <!--
+  <!-- Favicons : les 4 fichiers sont a la racine du site, a cote de index.html -->
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
 </head>
 
 <body>
@@ -94,7 +74,7 @@
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M20.3 4.5A19 19 0 0 0 15.6 3l-.2.5c1.6.4 2.9 1 4.1 1.8a15.6 15.6 0 0 0-11-.9c-.6.2-1 .4-1.5.6A16 16 0 0 1 8.6 3.5L8.4 3a19 19 0 0 0-4.7 1.5C1.1 8.4.4 12.2.7 16a19.2 19.2 0 0 0 5.8 2.9l.5-.7c-.8-.3-1.6-.7-2.3-1.2l.5-.4a13.7 13.7 0 0 0 11.6 0l.5.4c-.7.5-1.5.9-2.3 1.2l.5.7A19.1 19.1 0 0 0 21.3 16c.4-4.4-.6-8.2-1-11.5ZM8.2 13.8c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3Zm7.6 0c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3Z"></path>
           </svg>
-          Rejoindre le Discord
+          Rejoindre<span class="btn__suite"> le Discord</span>
         </a>
         <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="menu-principal" aria-label="Ouvrir le menu">
           <span></span>
@@ -434,8 +414,8 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=3" defer></script>
+  <script src="assets/js/main.js?v=4" defer></script>
   <!-- Compteur de membres depuis data/stats.json -->
-  <script src="assets/js/content.js?v=3" defer></script>
+  <script src="assets/js/content.js?v=4" defer></script>
 </body>
 </html>
