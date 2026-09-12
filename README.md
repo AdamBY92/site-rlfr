@@ -1059,3 +1059,75 @@ Colle l'URL du site dans le **test des résultats enrichis** de Google
 (`search.google.com/test/rich-results`). Il doit détecter « FAQ » et
 « Organisation » sans erreur. À faire après chaque mise en ligne qui touche
 à la FAQ.
+
+---
+
+## 20. Preuve sociale : la carte Discord du hero
+
+Le hero peut afficher une capture de la carte de profil du serveur Discord
+(membres en ligne, total, description, tags). C'est une **image figée**, pas
+une donnée en direct : le compteur temps réel, c'est la 3e stat sous les
+boutons, alimentée par `data/stats.json`.
+
+### Déposer l'image
+
+Un seul fichier à placer :
+
+```
+assets/img/carte-discord.png
+```
+
+Format conseillé : PNG, 600 px de large maximum, moins de 150 Ko. Une carte
+verticale exportée depuis Discord convient telle quelle.
+
+**Tant que ce fichier n'existe pas, rien ne s'affiche** — pas d'icône cassée,
+pas d'espace vide : `main.js` retire le bloc du DOM et le hero garde
+exactement la mise en page actuelle. Tu peux donc déployer avant d'avoir
+l'image.
+
+### Changer le nom du fichier
+
+Le nom n'apparaît **qu'à un seul endroit**, dans `index.html`, sur la ligne
+`src` du bloc commenté `PREUVE SOCIALE`. Tu modifies cette ligne et l'`alt`
+juste en dessous, rien d'autre. Si tu passes en `.jpg` ou `.webp`, c'est la
+même ligne.
+
+L'`alt` doit décrire ce qu'on voit sur la carte (nom du serveur, présence
+d'un nombre de membres en ligne et d'un total) : c'est ce que lisent les
+lecteurs d'écran et Google.
+
+### Pourquoi la carte est à droite et pas sous les boutons
+
+Mesuré dans Chrome : la colonne de texte du hero fait déjà ~980 px de haut.
+Tout ce qu'on ajoute dessous commence vers 1016 px, donc **hors du premier
+écran** sur un 1440x900 comme sur un 1366x768 — une preuve sociale que
+personne ne voit.
+
+Placée en 2e ligne de la colonne de droite, sous le visuel animé, elle
+démarre vers 650 px : visible sans scroller. Sur mobile (moins de 980 px),
+la grille repasse en une colonne et la carte se retrouve en dernier, sous
+les stats, centrée.
+
+### Ce qui est garanti
+
+- L'image ne déborde jamais de sa colonne, testé de 1920 px à 320 px de large
+- `loading="eager"` (elle est au premier écran), contrairement aux vignettes
+  d'actus et de boutique qui sont en `lazy`
+- Sans le fichier, la mise en page du hero est **identique au pixel** à ce
+  qu'elle était avant — la classe `has-image` n'est posée par `main.js` que
+  si l'image se charge vraiment
+- Elle entre dans la cascade d'animation du hero (`--i:5`), juste avant la
+  flèche de défilement
+
+### Réutiliser le mécanisme ailleurs
+
+Le motif est générique. Sur n'importe quelle page :
+
+```html
+<figure data-image-optionnelle hidden>
+  <img src="assets/img/mon-image.png" alt="Description">
+</figure>
+```
+
+`main.js` affiche le bloc si l'image se charge, le supprime sinon, et ajoute
+`has-image` sur l'élément parent pour conditionner la mise en page.

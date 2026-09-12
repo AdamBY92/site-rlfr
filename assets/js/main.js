@@ -435,6 +435,44 @@
     img.addEventListener("error", dropImage);
   });
 
+  /* ----------------------------------------------------------------------
+     11 bis. IMAGES OPTIONNELLES (meme principe, applique a un bloc entier)
+
+     Usage cote HTML :
+       <figure data-image-optionnelle hidden> <img src="..."> ... </figure>
+
+     Le conteneur reste masque tant que son image n'a pas fini de se charger,
+     et il est retire du DOM si le fichier est absent. Cela permet de preparer
+     un emplacement visuel dans la page avant meme d'avoir l'image : tant
+     qu'elle n'est pas deposee, le visiteur ne voit ni trou ni icone cassee.
+
+     Utilise par la carte de preuve sociale du hero (index.html).
+     ---------------------------------------------------------------------- */
+  document.querySelectorAll("[data-image-optionnelle]").forEach(function (bloc) {
+    var img = bloc.querySelector("img");
+    if (!img) return;
+
+    /* On previent aussi le conteneur parent : la mise en page qui reserve
+       une place a l'image ne doit s'appliquer QUE si l'image existe vraiment,
+       sinon elle laisse un trou dans la grille (cas du fichier pas encore
+       depose). Voir .hero__grid.has-image dans le CSS. */
+    var show = function () {
+      bloc.hidden = false;
+      if (bloc.parentElement) bloc.parentElement.classList.add("has-image");
+    };
+    var drop = function () { bloc.remove(); };
+
+    /* Image deja en cache : l'evenement load ne se declenchera plus. */
+    if (img.complete) {
+      if (img.naturalWidth > 0) show();
+      else drop();
+      return;
+    }
+
+    img.addEventListener("load", show);
+    img.addEventListener("error", drop);
+  });
+
   /* ======================================================================
      10. PAUSE DES ANIMATIONS HORS ECRAN
      Les decors animes en permanence (orbite du hero, cartouches flottants,

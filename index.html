@@ -321,10 +321,39 @@
           </div>
         </div>
 
+          <!-- ==================================================================
+               PREUVE SOCIALE : carte de profil du serveur Discord
+               ------------------------------------------------------------------
+               >>> NOM DU FICHIER : la ligne src ci-dessous est le SEUL endroit
+                   ou le nom apparait. Pour changer d'image, tu ne modifies que
+                   celle-la (et l'alt juste apres, qui doit decrire ce qu'on y
+                   voit). Format attendu : carte verticale exportee depuis
+                   Discord, PNG, 600 px de large maximum, moins de 150 Ko.
+
+               L'image reste MASQUEE tant que le fichier n'existe pas : le
+               <figure> porte l'attribut hidden, et main.js (section 11) ne
+               l'affiche que si l'image se charge vraiment. Si le fichier est
+               absent, le bloc est retire du DOM - jamais d'icone cassee dans
+               le hero. Aucune donnee n'est recuperee en direct : c'est une
+               capture figee, le compteur dynamique est la stat ci-dessus.
+
+               Pas de loading="lazy" ici : l'image est visible au premier ecran.
+               ================================================================== -->
+          <figure class="social-proof hero-in" style="--i:5" data-image-optionnelle hidden>
+            <img class="social-proof__img"
+                 src="assets/img/carte-discord.png"
+                 alt="Carte de profil du serveur Discord Rocket League France, indiquant le nombre de membres en ligne et le total des membres, la description du serveur et ses tags."
+                 loading="eager"
+                 decoding="async">
+            <figcaption class="social-proof__caption">
+              Aperçu du serveur sur Discord
+            </figcaption>
+          </figure>
+
       </div>
 
       <!-- Indicateur de scroll : flèche qui pulse doucement, cliquable -->
-      <a class="scroll-cue hero-in" style="--i:5" href="#actus">
+      <a class="scroll-cue hero-in" style="--i:6" href="#actus">
         Défiler
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M12 5v14M6 13l6 6 6-6"></path>
