@@ -34,6 +34,7 @@ const {
   writeJsonIfValid,
   cleanText,
 } = require("./lib/util");
+const { signalerSucces, signalerEchec } = require("./lib/health");
 
 const log = makeLogger("fetch-updates");
 
@@ -353,7 +354,13 @@ async function main() {
   }
 
   const written = writeJsonIfValid("data/updates.json", entries, isValidPayload, log);
-  if (!written) process.exitCode = 1;
+  if (!written) {
+    // Ecriture refusee : c'est un echec, meme si le reseau a repondu.
+    process.exitCode = 1;
+    await signalerEchec("les donnees recuperees ont ete jugees invalides, data/updates.json n'a pas ete modifie", log);
+  } else {
+    await signalerSucces(log);
+  }
 
   const counts = entries.reduce((acc, entry) => {
     acc[entry.tag] = (acc[entry.tag] || 0) + 1;
@@ -399,7 +406,7 @@ function expliquerEchec(message) {
 }
 
 if (require.main === module) {
-  main().catch((err) => {
+  main().catch(async (err) => {
     log.error(err.message);
 
     const explication = expliquerEchec(err.message);
@@ -417,6 +424,11 @@ if (require.main === module) {
           "son contenu statique de secours."
       );
     }
+    // Suivi des echecs consecutifs : alerte Discord au 3e d'affilee.
+    // Volontairement en dernier, pour que le diagnostic soit deja journalise
+    // meme si l'envoi de l'alerte echoue a son tour.
+    await signalerEchec(err.message, log);
+
     process.exitCode = 1;
   });
 }

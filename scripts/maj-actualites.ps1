@@ -21,6 +21,17 @@
 
  AUCUN MOT DE PASSE ICI : le push utilise les identifiants deja enregistres
  par le Gestionnaire d'identification Windows lors de ton premier push manuel.
+
+ ALERTE EN CAS DE PANNE (facultatif) :
+   Si fetch-updates.js echoue 3 fois d'affilee, il peut prevenir sur un salon
+   Discord. L'URL du webhook n'est ecrite NULLE PART dans le code ni ici :
+   elle est lue dans la variable d'environnement DISCORD_WEBHOOK_URL.
+   Pour l'activer, une fois pour toutes, dans un terminal :
+       setx DISCORD_WEBHOOK_URL "https://discord.com/api/webhooks/..."
+   Le Planificateur de taches herite des variables de l'utilisateur, donc
+   la tache y aura acces a sa prochaine execution. Sans cette variable, le
+   comptage des echecs continue mais aucune alerte n'est envoyee.
+   Details : README section 21.
 ================================================================================
 #>
 

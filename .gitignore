@@ -37,6 +37,13 @@ update.log
 *.bak
 *.orig
 
+# --- Etat local des scripts -------------------------------------------------
+# Suivi des echecs consecutifs de fetch-updates.js (README section 21).
+# C'est l'etat de la MACHINE qui lance la tache planifiee, pas une donnee du
+# site : inutile sur GitHub, et a ne pas televerser sur OVH (il contient des
+# messages d'erreur techniques). .htaccess refuse deja les fichiers caches.
+data/.fetch-updates-health.json
+
 # --- Systeme et editeurs ----------------------------------------------------
 Thumbs.db
 ehthumbs.db

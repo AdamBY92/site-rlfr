@@ -1131,3 +1131,134 @@ Le motif est générique. Sur n'importe quelle page :
 
 `main.js` affiche le bloc si l'image se charge, le supprime sinon, et ajoute
 `has-image` sur l'élément parent pour conditionner la mise en page.
+
+---
+
+## 21. Alerte quand les actualités ne se mettent plus à jour
+
+### Le problème que ça résout
+
+Quand `fetch-updates.js` échoue, le site **ne casse pas** : il continue
+d'afficher les dernières actualités valides. C'est voulu, mais ça veut dire
+qu'une panne est totalement invisible. Sans surveillance, on découvre trois
+mois plus tard que les actus datent de mars.
+
+Un échec isolé est normal (coupure réseau, site en maintenance). L'alerte ne
+part donc qu'après **3 échecs consécutifs**.
+
+### Où ça tourne
+
+`fetch-updates.js` s'exécute **uniquement sur ta machine**, via le
+Planificateur de tâches Windows (section 16). L'étape correspondante est
+désactivée dans GitHub Actions, parce que rocketleague.com bloque les IP de
+GitHub. La configuration se fait donc en **variable d'environnement Windows**,
+pas en secret GitHub.
+
+### Activer les alertes
+
+**1. Créer le webhook dans Discord**
+
+Paramètres du salon qui doit recevoir les alertes → Intégrations → Webhooks →
+Nouveau webhook → Copier l'URL. Choisis un salon privé réservé au staff :
+cette URL permet à quiconque la possède de poster dans le salon.
+
+**2. Enregistrer l'URL sur la machine**
+
+Dans un terminal (PowerShell ou cmd), une seule fois :
+
+```
+setx DISCORD_WEBHOOK_URL "https://discord.com/api/webhooks/....../......"
+```
+
+`setx` écrit la variable de façon permanente pour ton compte Windows. Le
+Planificateur de tâches hérite des variables de l'utilisateur : la tâche y
+aura accès dès son exécution suivante.
+
+> Ouvre un **nouveau** terminal pour la tester : `setx` n'affecte pas la
+> fenêtre en cours. Vérification : `echo %DISCORD_WEBHOOK_URL%` (cmd) ou
+> `$env:DISCORD_WEBHOOK_URL` (PowerShell).
+
+**3. C'est tout.** Aucune ligne de code à modifier.
+
+### L'URL n'est jamais écrite dans le projet
+
+Elle n'apparaît ni dans le code, ni dans le `.ps1`, ni dans le README, ni
+dans les journaux — le script ne l'affiche jamais, même en cas d'erreur
+d'envoi. Il vérifie en plus qu'elle pointe bien vers `discord.com` en HTTPS :
+si la variable contient autre chose (faute de frappe, URL collée de travers),
+rien n'est envoyé.
+
+### Sans la variable, ça marche quand même
+
+Le comptage des échecs continue normalement, seul l'envoi est sauté. Le
+journal l'indique clairement. Tu peux donc activer les alertes plus tard,
+sans rien changer d'autre.
+
+### Le fichier d'état
+
+```
+data/.fetch-updates-health.json
+```
+
+```json
+{
+  "echecs_consecutifs": 0,
+  "dernier_succes": "2026-09-12T11:03:19.531Z",
+  "dernier_echec": null,
+  "derniere_erreur": null,
+  "alerte_envoyee_le": null
+}
+```
+
+Il est **ignoré par Git** (`.gitignore`) : c'est l'état de la machine qui
+lance la tâche, pas une donnée du site. Il ne part donc ni sur GitHub ni sur
+OVH. Par sécurité, son nom commence par un point et `.htaccess` refuse déjà
+de servir les fichiers cachés.
+
+Le supprimer est sans danger : le compteur repart de zéro. Un fichier
+corrompu est traité comme absent, jamais comme une erreur.
+
+### Le rythme des alertes
+
+| Échecs d'affilée | Ce qui se passe |
+|---|---|
+| 1 et 2 | Rien. Journal seulement : un échec isolé est banal |
+| 3 | **Alerte envoyée** sur le webhook |
+| 4 à 9 | Rien de plus : pas de spam pendant que la panne dure |
+| 10, 17, 24… | Rappel, tous les 7 échecs supplémentaires |
+| Premier succès | Compteur remis à zéro |
+
+Si une alerte était partie, le retour à la normale est signalé aussi : sinon
+le dernier message du salon resterait une alerte, sans jamais savoir que
+c'est réglé.
+
+Les deux seuils se règlent en haut de `scripts/lib/health.js` :
+`SEUIL_ALERTE` (3) et `RAPPEL_TOUS_LES` (7).
+
+### Ce que contient l'alerte
+
+Le nombre d'échecs consécutifs, la date de la dernière récupération réussie,
+le message d'erreur exact, et où regarder. Le texte d'erreur est tronqué à
+500 caractères et ne peut déclencher aucune mention (`@everyone` et consorts
+sont neutralisés côté API).
+
+### Si l'envoi de l'alerte échoue
+
+Il est simplement journalisé en avertissement. Un webhook supprimé ou une
+coupure réseau ne transforme jamais un échec de scraping en plantage du
+script — et le diagnostic est écrit dans le journal **avant** la tentative
+d'envoi, pour qu'il reste lisible dans tous les cas.
+
+### Réutiliser le mécanisme
+
+`scripts/lib/health.js` ne dépend pas de `fetch-updates.js`. Pour surveiller
+un autre script (la boutique, par exemple) :
+
+```js
+const { signalerSucces, signalerEchec } = require("./lib/health");
+
+await signalerSucces(log);              // après une écriture réussie
+await signalerEchec(err.message, log);  // dans le catch
+```
+
+Pense à changer `FICHIER_ETAT` si tu veux un compteur séparé par script.
