@@ -3,129 +3,135 @@
   "prochaine_rotation": "2026-09-17T00:00:00.000Z",
   "items": [
     {
-      "nom": "Dimensionator",
+      "nom": "Aftershock",
+      "prix": 400,
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/1286.png?v=20260916.10",
+      "type": "Body"
+    },
+    {
+      "nom": "Phoenix Fire",
       "prix": 1100,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/11606.png?v=20260916.10",
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/7732.png?v=20260916.10",
       "type": "Goal Explosion"
     },
     {
-      "nom": "Halo: Phased",
-      "prix": 400,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/7214.png?v=20260916.10",
+      "nom": "Ice Age",
+      "prix": 2000,
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/8537.png?v=20260916.10",
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Pixel-Perfect",
+      "prix": 700,
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/9669.png?v=20260916.10",
+      "type": "Decal"
+    },
+    {
+      "nom": "Neural Network",
+      "prix": 900,
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/6083.png?v=20260916.10",
+      "type": "Decal"
+    },
+    {
+      "nom": "Dragon Wings",
+      "prix": 150,
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/2073.png?v=20260916.10",
       "type": "Topper"
     },
     {
-      "nom": "Cargo",
-      "prix": 300,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/9276.png?v=20260916.10",
-      "type": "Wheels"
-    },
-    {
-      "nom": "Intercooler",
-      "prix": 300,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/4342.png?v=20260916.10",
-      "type": "Wheels"
-    },
-    {
-      "nom": "Neon Bomb",
-      "prix": 500,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/9415.png?v=20260916.10",
-      "type": "Trail"
-    },
-    {
-      "nom": "Marauder: Martian Wind",
-      "prix": 300,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/6435.png?v=20260916.10",
-      "type": "Decal"
-    },
-    {
-      "nom": "Aquarium",
-      "prix": 1000,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/8765.png?v=20260916.10",
+      "nom": "Close Encounter",
+      "prix": 2200,
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/12493.png?v=20260916.10",
       "type": "Goal Explosion"
     },
     {
-      "nom": "Kaleidoscope",
-      "prix": 300,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/2711.png?v=20260916.10",
+      "nom": "Storm Watch: Noire",
+      "prix": 2000,
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/9123.png?v=20260916.10",
       "type": "Decal"
     },
     {
-      "nom": "Zefram",
-      "prix": 900,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/3310.png?v=20260916.10",
-      "type": "Wheels"
-    },
-    {
-      "nom": "Hard Broiled",
-      "prix": 2200,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/9664.png?v=20260916.10",
-      "type": "Decal"
-    },
-    {
-      "nom": "Atomizer",
-      "prix": 2200,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/2817.png?v=20260916.10",
+      "nom": "Cosmosis",
+      "prix": 2500,
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/5419.png?v=20260916.10",
       "type": "Goal Explosion"
     },
     {
-      "nom": "Hanami",
+      "nom": "Shodo",
+      "prix": 2000,
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/9441.png?v=20260916.10",
+      "type": "Decal"
+    },
+    {
+      "nom": "Burnout",
+      "prix": 600,
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/4773.png?v=20260916.10",
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Butterflies: Gilded",
+      "prix": 800,
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/9721.png?v=20260916.10",
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Cutter: Inverted",
       "prix": 900,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/9024.png?v=20260916.10",
-      "type": "Decal"
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/5184.png?v=20260916.10",
+      "type": "Wheels"
     },
     {
-      "nom": "Toon Sketch",
-      "prix": 500,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/5674.png?v=20260916.10",
-      "type": "Trail"
-    },
-    {
-      "nom": "Fennec",
-      "prix": 700,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/4284.png?v=20260916.10",
-      "type": "Body"
-    },
-    {
-      "nom": "X-Devil Mk2",
-      "prix": 700,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/1159.png?v=20260916.10",
-      "type": "Body"
-    },
-    {
-      "nom": "Fennec: Huntress Formal",
-      "prix": 300,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/8876.png?v=20260916.10",
-      "type": "Decal"
-    },
-    {
-      "nom": "Fennec: Zeus",
-      "prix": 150,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/5637.png?v=20260916.10",
-      "type": "Decal"
-    },
-    {
-      "nom": "Fennec: Bodacious",
+      "nom": "RAVE",
       "prix": 200,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/5814.png?v=20260916.10",
-      "type": "Decal"
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/8433.png?v=20260916.10",
+      "type": "Player Anthem"
     },
     {
-      "nom": "X-Devil Mk2: Distortion",
-      "prix": 300,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/1395.png?v=20260916.10",
-      "type": "Decal"
+      "nom": "Octane",
+      "prix": 700,
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/23.png?v=20260916.10",
+      "type": "Body"
     },
     {
-      "nom": "Road Hog: Sundae",
+      "nom": "Breakout",
+      "prix": 700,
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/22.png?v=20260916.10",
+      "type": "Body"
+    },
+    {
+      "nom": "Octane: Tinted Formal",
       "prix": 100,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/2672.png?v=20260916.10",
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/4965.png?v=20260916.10",
       "type": "Decal"
     },
     {
-      "nom": "Masamune: Danpa",
+      "nom": "Octane: Tinted Formal",
+      "prix": 100,
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/4965.png?v=20260916.10",
+      "type": "Decal"
+    },
+    {
+      "nom": "Octane: Hyperspace",
       "prix": 300,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/8939.png?v=20260916.10",
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/7180.png?v=20260916.10",
+      "type": "Decal"
+    },
+    {
+      "nom": "Breakout: Megafrost",
+      "prix": 300,
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/8912.png?v=20260916.10",
+      "type": "Decal"
+    },
+    {
+      "nom": "Diestro: Agamid",
+      "prix": 300,
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/6323.png?v=20260916.10",
+      "type": "Decal"
+    },
+    {
+      "nom": "X-Devil: Snakeskin",
+      "prix": 300,
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/1449.png?v=20260916.10",
       "type": "Decal"
     },
     {
@@ -138,12 +144,6 @@
       "nom": "ELECTRIC WAVE DOMINUS",
       "prix": 1000,
       "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/4770.png?v=20260916.10",
-      "type": "Bundle · 2 items"
-    },
-    {
-      "nom": "ELECTRIC WAVE OCTANE",
-      "prix": 800,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/23.png?v=20260916.10",
       "type": "Bundle · 2 items"
     }
   ]
