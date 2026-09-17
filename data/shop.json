@@ -1,6 +1,6 @@
 {
-  "date_rotation": "2026-09-16T00:00:00.000Z",
-  "prochaine_rotation": "2026-09-17T00:00:00.000Z",
+  "date_rotation": "2026-09-17T00:00:00.000Z",
+  "prochaine_rotation": "2026-09-18T00:00:00.000Z",
   "items": [
     {
       "nom": "Aftershock",
@@ -135,16 +135,16 @@
       "type": "Decal"
     },
     {
-      "nom": "ELECTRIC WAVE AFTERMARKET",
+      "nom": "BATMOBILE (2022)",
       "prix": 2000,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/4770.png?v=20260917.10",
-      "type": "Bundle · 11 items"
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/7415.png?v=20260917.10",
+      "type": "Bundle · 6 items"
     },
     {
-      "nom": "ELECTRIC WAVE DOMINUS",
-      "prix": 1000,
-      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/4770.png?v=20260917.10",
-      "type": "Bundle · 2 items"
+      "nom": "The Batman",
+      "prix": 500,
+      "image": "https://cdn.locker.gg/images/rocket-league-baked-cards/7471.png?v=20260917.10",
+      "type": "Goal Explosion"
     }
   ]
 }
