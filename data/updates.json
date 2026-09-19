@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-09-18T00:00:00.000Z",
+    "titre": "Rocket League descend dans la rue pour la saison 24",
+    "resume": "",
+    "lien": "https://www.rocketleague.com/news/rocket-league-heads-to-the-streets-in-season-24",
+    "tag": "evenement"
+  },
+  {
     "date": "2026-09-17T00:00:00.000Z",
     "titre": "Unlock the Magic of KINGDOM HEARTS in Rocket League Starting September 17",
     "resume": "",
@@ -60,13 +67,6 @@
     "titre": "Karmine Corp vise l'adrénaline au Rocket League Paris Major 2026",
     "resume": "",
     "lien": "https://www.rocketleague.com/news/karmine-corp-chase-adrenaline-at-the-2026-rocket-league-paris-major",
-    "tag": "MAJ"
-  },
-  {
-    "date": "2026-05-19T00:00:00.000Z",
-    "titre": "Drop Rush est de retour pour le Rocket League Paris Major",
-    "resume": "",
-    "lien": "https://www.rocketleague.com/news/drop-rush-is-back-for-the-rocket-league-paris-major",
     "tag": "MAJ"
   }
 ]
