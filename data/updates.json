@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-09-20T00:00:00.000Z",
+    "titre": "RLCS Returns To London This December For The Club Championship With $2.5M Up For Grabs",
+    "resume": "",
+    "lien": "https://www.rocketleague.com/news/rlcs-returns-to-london-this-december-for-the-club-championship-with-dollar25m-up-for-grabs",
+    "tag": "evenement"
+  },
+  {
     "date": "2026-09-18T00:00:00.000Z",
     "titre": "Rocket League descend dans la rue pour la saison 24",
     "resume": "",
@@ -60,13 +67,6 @@
     "titre": "Une nouvelle ère pour Team Vitality au Rocket League Paris Major 2026",
     "resume": "",
     "lien": "https://www.rocketleague.com/news/a-new-era-of-team-vitality-enters-the-2026-rocket-league-paris-major",
-    "tag": "MAJ"
-  },
-  {
-    "date": "2026-05-20T00:00:00.000Z",
-    "titre": "Karmine Corp vise l'adrénaline au Rocket League Paris Major 2026",
-    "resume": "",
-    "lien": "https://www.rocketleague.com/news/karmine-corp-chase-adrenaline-at-the-2026-rocket-league-paris-major",
     "tag": "MAJ"
   }
 ]
