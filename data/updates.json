@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-09-21T00:00:00.000Z",
+    "titre": "Notes de patch de Rocket League Saison 24 v2.76",
+    "resume": "",
+    "lien": "https://www.rocketleague.com/news/rocket-league-s24-patch-notes-v276",
+    "tag": "correctif"
+  },
+  {
     "date": "2026-09-20T00:00:00.000Z",
     "titre": "RLCS Returns To London This December For The Club Championship With $2.5M Up For Grabs",
     "resume": "",
@@ -60,13 +67,6 @@
     "titre": "La Karmine Corp remporte la victoire devant une foule à domicile lors du Rocket League Paris Major",
     "resume": "",
     "lien": "https://www.rocketleague.com/news/karmine-corp-clinch-the-win-for-a-home-crowd-at-the-rocket-league-paris-major",
-    "tag": "MAJ"
-  },
-  {
-    "date": "2026-05-21T00:00:00.000Z",
-    "titre": "Une nouvelle ère pour Team Vitality au Rocket League Paris Major 2026",
-    "resume": "",
-    "lien": "https://www.rocketleague.com/news/a-new-era-of-team-vitality-enters-the-2026-rocket-league-paris-major",
     "tag": "MAJ"
   }
 ]
