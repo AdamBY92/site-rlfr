@@ -1,138 +1,126 @@
 {
-  "date_rotation": "2026-09-26T00:00:00.000Z",
-  "prochaine_rotation": "2026-09-27T00:00:00.000Z",
+  "date_rotation": "2026-09-27T00:00:00.000Z",
+  "prochaine_rotation": "2026-09-28T00:00:00.000Z",
   "items": [
     {
-      "nom": "Scarab",
-      "prix": 0,
-      "image": null,
-      "type": "Body"
-    },
-    {
-      "nom": "Ball 4 All",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Dueling Dragons: Yin & Yang",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "SnowGlow",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Draco: Holographic",
+      "nom": "Cristiano",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Fire God",
+      "nom": "Glorifier",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Decemberist",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Sweet Score",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Kinetic Camo",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Vol. 11",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Maz: Holographic",
+      "nom": "Astro-CSX",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Bandwidth",
+      "nom": "Kilowut",
       "prix": 0,
       "image": null,
-      "type": "Rocket Boost"
+      "type": "Animated Decal"
     },
     {
-      "nom": "Darkwell",
+      "nom": "Satiness",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Puzzle Cube",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Ebb 'n Flow: Multichrome",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "In-Finite",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Fissure",
+      "prix": 0,
+      "image": null,
+      "type": "Trail"
+    },
+    {
+      "nom": "Torque TX",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "FAR OUT (VIP)",
+      "nom": "Shiawase",
       "prix": 0,
       "image": null,
       "type": "Player Anthem"
     },
     {
-      "nom": "Dominus",
+      "nom": "TechnoFlow",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Fennec",
       "prix": 0,
       "image": null,
       "type": "Body"
     },
     {
-      "nom": "Breakout Type-S",
+      "nom": "Triton",
       "prix": 0,
       "image": null,
       "type": "Body"
     },
     {
-      "nom": "Dominus: Fancy Formal",
+      "nom": "Fennec: Shinjuku: Remixed",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Fennec: Kana",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Fennec: Ombre",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Dominus: Martian Wind",
+      "nom": "Triton: Vector",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Dominus: Dragon Lord",
+      "nom": "Fennec: Edge Burst",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
-      "nom": "Breakout Type-S: Distortion",
+      "nom": "Fennec: Hardline",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Octane: Polarity",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Fennec: Oozy",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
       "nom": "MONA CAR",
@@ -145,6 +133,18 @@
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
+    },
+    {
+      "nom": "Phantom Thieves of Hearts (P5R)",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "FERRARI 296 GTB",
+      "prix": 0,
+      "image": null,
+      "type": "5 items"
     }
   ]
 }
