@@ -3,148 +3,148 @@
   "prochaine_rotation": "2026-09-27T00:00:00.000Z",
   "items": [
     {
-      "nom": "Scarab: Scarab",
-      "prix": 400,
+      "nom": "Scarab",
+      "prix": 0,
       "image": null,
-      "type": "Body"
+      "type": "Body · Crimson"
+    },
+    {
+      "nom": "Ball 4 All",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
     },
     {
       "nom": "Dueling Dragons: Yin & Yang",
-      "prix": 2000,
+      "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
       "nom": "SnowGlow",
-      "prix": 700,
+      "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Animated Decal"
     },
     {
       "nom": "Draco: Holographic",
-      "prix": 900,
+      "prix": 0,
       "image": null,
-      "type": "Wheels"
+      "type": "Wheels · Black"
     },
     {
       "nom": "Fire God",
-      "prix": 2000,
+      "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Animated Decal"
     },
     {
       "nom": "Decemberist",
-      "prix": 300,
+      "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Animated Decal"
     },
     {
       "nom": "Sweet Score",
-      "prix": 1000,
+      "prix": 0,
       "image": null,
-      "type": "Goal Explosion"
+      "type": "Goal Explosion · Cobalt"
     },
     {
       "nom": "Kinetic Camo",
-      "prix": 500,
+      "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Animated Decal · Crimson"
     },
     {
       "nom": "Vol. 11",
-      "prix": 2200,
+      "prix": 0,
       "image": null,
-      "type": "Goal Explosion"
+      "type": "Goal Explosion · Black"
     },
     {
       "nom": "Maz: Holographic",
-      "prix": 600,
+      "prix": 0,
       "image": null,
-      "type": "Wheels"
+      "type": "Wheels · Pink"
     },
     {
       "nom": "Bandwidth",
-      "prix": 600,
+      "prix": 0,
       "image": null,
-      "type": "Rocket Boost"
+      "type": "Rocket Boost · Orange"
     },
     {
       "nom": "Darkwell",
-      "prix": 400,
+      "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
       "nom": "FAR OUT (VIP)",
-      "prix": 300,
+      "prix": 0,
       "image": null,
       "type": "Player Anthem"
     },
     {
       "nom": "Dominus",
-      "prix": 1000,
+      "prix": 0,
       "image": null,
-      "type": "Body"
+      "type": "Body · Lime"
     },
     {
       "nom": "Breakout Type-S",
-      "prix": 800,
+      "prix": 0,
       "image": null,
-      "type": "Body"
+      "type": "Body · Titanium White"
     },
     {
       "nom": "Dominus: Fancy Formal",
-      "prix": 100,
+      "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Dominus: Neon: Martian Wind",
-      "prix": 300,
+      "nom": "Dominus: Martian Wind",
+      "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Animated Decal"
     },
     {
-      "nom": "Dominus: Neon: Dragon Lord",
-      "prix": 100,
+      "nom": "Dominus: Dragon Lord",
+      "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Animated Decal · Saffron"
     },
     {
       "nom": "Breakout Type-S: Distortion",
-      "prix": 300,
+      "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Animated Decal"
     },
     {
       "nom": "Octane: Polarity",
-      "prix": 300,
+      "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Animated Decal"
     },
     {
       "nom": "Fennec: Oozy",
-      "prix": 500,
+      "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Animated Decal · Cobalt"
     },
     {
-      "nom": "Scarab: Scarab",
-      "prix": 400,
+      "nom": "MONA CAR",
+      "prix": 0,
       "image": null,
-      "type": "Body"
+      "type": "5 items"
     },
     {
-      "nom": "Dueling Dragons: Yin & Yang",
-      "prix": 2000,
+      "nom": "Phantom Thieves of Hearts",
+      "prix": 0,
       "image": null,
       "type": "Goal Explosion"
-    },
-    {
-      "nom": "SnowGlow",
-      "prix": 700,
-      "image": null,
-      "type": "Decal"
     }
   ]
 }
