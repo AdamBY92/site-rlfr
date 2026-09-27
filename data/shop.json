@@ -6,7 +6,7 @@
       "nom": "Scarab",
       "prix": 0,
       "image": null,
-      "type": "Body · Crimson"
+      "type": "Body"
     },
     {
       "nom": "Ball 4 All",
@@ -30,7 +30,7 @@
       "nom": "Draco: Holographic",
       "prix": 0,
       "image": null,
-      "type": "Wheels · Black"
+      "type": "Wheels"
     },
     {
       "nom": "Fire God",
@@ -48,31 +48,31 @@
       "nom": "Sweet Score",
       "prix": 0,
       "image": null,
-      "type": "Goal Explosion · Cobalt"
+      "type": "Goal Explosion"
     },
     {
       "nom": "Kinetic Camo",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal · Crimson"
+      "type": "Animated Decal"
     },
     {
       "nom": "Vol. 11",
       "prix": 0,
       "image": null,
-      "type": "Goal Explosion · Black"
+      "type": "Goal Explosion"
     },
     {
       "nom": "Maz: Holographic",
       "prix": 0,
       "image": null,
-      "type": "Wheels · Pink"
+      "type": "Wheels"
     },
     {
       "nom": "Bandwidth",
       "prix": 0,
       "image": null,
-      "type": "Rocket Boost · Orange"
+      "type": "Rocket Boost"
     },
     {
       "nom": "Darkwell",
@@ -90,13 +90,13 @@
       "nom": "Dominus",
       "prix": 0,
       "image": null,
-      "type": "Body · Lime"
+      "type": "Body"
     },
     {
       "nom": "Breakout Type-S",
       "prix": 0,
       "image": null,
-      "type": "Body · Titanium White"
+      "type": "Body"
     },
     {
       "nom": "Dominus: Fancy Formal",
@@ -114,7 +114,7 @@
       "nom": "Dominus: Dragon Lord",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal · Saffron"
+      "type": "Animated Decal"
     },
     {
       "nom": "Breakout Type-S: Distortion",
@@ -132,7 +132,7 @@
       "nom": "Fennec: Oozy",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal · Cobalt"
+      "type": "Animated Decal"
     },
     {
       "nom": "MONA CAR",
