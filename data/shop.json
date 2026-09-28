@@ -1,123 +1,135 @@
 {
-  "date_rotation": "2026-09-27T00:00:00.000Z",
-  "prochaine_rotation": "2026-09-28T00:00:00.000Z",
+  "date_rotation": "2026-09-28T00:00:00.000Z",
+  "prochaine_rotation": "2026-09-29T00:00:00.000Z",
   "items": [
     {
-      "nom": "Cristiano",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Glorifier",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Astro-CSX",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Kilowut",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Satiness",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Puzzle Cube",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Ebb 'n Flow: Multichrome",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "In-Finite",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Fissure",
-      "prix": 0,
-      "image": null,
-      "type": "Trail"
-    },
-    {
-      "nom": "Torque TX",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Shiawase",
-      "prix": 0,
-      "image": null,
-      "type": "Player Anthem"
-    },
-    {
-      "nom": "TechnoFlow",
+      "nom": "Villainous",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
     },
     {
-      "nom": "Fennec",
+      "nom": "Doublin",
       "prix": 0,
       "image": null,
-      "type": "Body"
+      "type": "Player Anthem"
     },
     {
-      "nom": "Triton",
-      "prix": 0,
-      "image": null,
-      "type": "Body"
-    },
-    {
-      "nom": "Fennec: Shinjuku: Remixed",
+      "nom": "Fennec: Hyperspace",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Fennec: Kana",
+      "nom": "Night-Mare",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Goal Explosion"
     },
     {
-      "nom": "Fennec: Ombre",
+      "nom": "Fennec: Tinted Formal",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Triton: Vector",
+      "nom": "Toon Sketch",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Craynbow",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Fennec: Edge Burst",
+      "nom": "Sub-Zero",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Goal Explosion"
     },
     {
-      "nom": "Fennec: Hardline",
+      "nom": "Trigon",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Hypnotik",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Cyberspace",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Omnikron: Holographic",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Flame Chain",
+      "prix": 0,
+      "image": null,
+      "type": "Trail"
+    },
+    {
+      "nom": "Ball-Life",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Octane",
+      "prix": 0,
+      "image": null,
+      "type": "Body"
+    },
+    {
+      "nom": "Sentinel",
+      "prix": 0,
+      "image": null,
+      "type": "Body"
+    },
+    {
+      "nom": "Octane: Lo Freq",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Octane: Kana",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Octane: Dragon Lord",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Sentinel: Vector",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Dominus: Flametress",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Octane: Gale-Fire",
       "prix": 0,
       "image": null,
       "type": "Decal"
@@ -133,18 +145,6 @@
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
-    },
-    {
-      "nom": "Phantom Thieves of Hearts (P5R)",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "FERRARI 296 GTB",
-      "prix": 0,
-      "image": null,
-      "type": "5 items"
     }
   ]
 }
