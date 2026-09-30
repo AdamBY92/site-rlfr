@@ -1,150 +1,150 @@
 {
-  "date_rotation": "2026-09-29T00:00:00.000Z",
-  "prochaine_rotation": "2026-09-30T00:00:00.000Z",
+  "date_rotation": "2026-09-30T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-01T00:00:00.000Z",
   "items": [
     {
-      "nom": "Fennec: Fancy Formal",
+      "nom": "Ice Age",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Drippy",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Air Strike",
+      "nom": "Reaper",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Storm Watch",
+      "nom": "Fennec: Huntress Formal",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
-      "nom": "Aquarium",
+      "nom": "Close Encounter",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Stipple Gait",
+      "nom": "Shodo",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Hanasha JRL: Multichrome",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Hanami",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Sensei",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Supernova",
+      "nom": "Burnout",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
     },
     {
-      "nom": "Founder",
+      "nom": "Butterflies: Gilded",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Zomba: Glitched",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Dimensionator",
+      "nom": "Intrudium",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Synthwave",
       "prix": 0,
       "image": null,
       "type": "Trail"
     },
     {
-      "nom": "Estrella",
+      "nom": "Cargo",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Dominus",
+      "nom": "Intercooler",
       "prix": 0,
       "image": null,
-      "type": "Body"
+      "type": "Wheels"
     },
     {
-      "nom": "Animus GP",
-      "prix": 0,
-      "image": null,
-      "type": "Body"
-    },
-    {
-      "nom": "Dominus: Araki",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Dominus: Bodacious",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Dominus: Dot Matrix",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Animus GP: Snakeskin",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Werewolf: Anthrophobe",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Fennec: SK Life",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Villainous",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Doublin",
+      "nom": "LUV U NEED U",
       "prix": 0,
       "image": null,
       "type": "Player Anthem"
     },
     {
-      "nom": "Fennec: Fancy Formal",
+      "nom": "Fennec",
+      "prix": 0,
+      "image": null,
+      "type": "Body"
+    },
+    {
+      "nom": "Road Hog XL",
+      "prix": 0,
+      "image": null,
+      "type": "Body"
+    },
+    {
+      "nom": "Fennec: Lo Freq",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Fennec: Dot Matrix",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Fennec: Tumbling Blocks",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Road Hog XL: Tumbling Blocks",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Fennec: Idolix",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Air Strike",
+      "nom": "Diestro: Agamid",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Reaper",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
+    },
+    {
+      "nom": "Fennec: Huntress Formal",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
     }
   ]
 }
