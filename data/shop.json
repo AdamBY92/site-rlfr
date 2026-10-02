@@ -1,150 +1,150 @@
 {
-  "date_rotation": "2026-10-01T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-02T00:00:00.000Z",
+  "date_rotation": "2026-10-02T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-03T00:00:00.000Z",
   "items": [
     {
-      "nom": "Dragon Wings",
-      "prix": 0,
-      "image": null,
-      "type": "Topper"
-    },
-    {
-      "nom": "Dominus: Flametress",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Dissolver",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Vampire Bat",
+      "nom": "Phrosgoth",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Buffy-Sugo",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Cutter: Inverted",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Kalos",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Biomass",
+      "nom": "Affluenter",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "RAVE",
+      "nom": "Fennec: Nitty-Gritty Huntress",
       "prix": 0,
       "image": null,
-      "type": "Player Anthem"
+      "type": "Decal"
     },
     {
-      "nom": "Jak'd: Obverse",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Neon Bomb",
-      "prix": 0,
-      "image": null,
-      "type": "Trail"
-    },
-    {
-      "nom": "Lava",
+      "nom": "Virtual Wave",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
     },
     {
-      "nom": "Octane",
-      "prix": 0,
-      "image": null,
-      "type": "Body"
-    },
-    {
-      "nom": "Breakout",
-      "prix": 0,
-      "image": null,
-      "type": "Body"
-    },
-    {
-      "nom": "Octane: Christmas Tree",
+      "nom": "Fennec: Araki",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Octane: Migraine",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Octane: Kingtress",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Breakout: Megafrost",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Octane ZSR: Funny Book",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Fennec: Huntress Formal",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Ice Age",
+      "nom": "Fireworks",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Drippy",
+      "nom": "Waveform",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Dark Angel",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Pyrrhos",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Dream Beam",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Creeper",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Glister",
+      "prix": 0,
+      "image": null,
+      "type": "Trail"
+    },
+    {
+      "nom": "Orwellian",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "ROCK IT",
+      "prix": 0,
+      "image": null,
+      "type": "Player Anthem"
+    },
+    {
+      "nom": "Dominus",
+      "prix": 0,
+      "image": null,
+      "type": "Body"
+    },
+    {
+      "nom": "X-Devil Mk2",
+      "prix": 0,
+      "image": null,
+      "type": "Body"
+    },
+    {
+      "nom": "Dominus: Hyperspace",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Dominus: Shinjuku",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Dominus: Beastly",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Dragon Wings",
-      "prix": 0,
-      "image": null,
-      "type": "Topper"
-    },
-    {
-      "nom": "Dominus: Flametress",
+      "nom": "X-Devil Mk2: Martian Wind",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
+    },
+    {
+      "nom": "Road Hog: Bugbastic",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Octane ZSR: Distortion",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Fennec: Nitty-Gritty Huntress",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Virtual Wave",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
     }
   ]
 }
