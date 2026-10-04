@@ -1,150 +1,150 @@
 {
-  "date_rotation": "2026-10-03T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-04T00:00:00.000Z",
+  "date_rotation": "2026-10-04T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-05T00:00:00.000Z",
   "items": [
     {
-      "nom": "Standard",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Fennec: Pineapple Pinchi",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Dueling Dragons: Anodized",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Flutterby: Multichrome",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Chameleon",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Spiralis R2: Flare",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Del Rey",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Cold Front",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Photon",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Surge Burst",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Reactor",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Star Princess",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Fennec",
+      "nom": "Dominus",
       "prix": 0,
       "image": null,
       "type": "Body"
     },
     {
-      "nom": "Aftershock",
-      "prix": 0,
-      "image": null,
-      "type": "Body"
-    },
-    {
-      "nom": "Fennec: Fancy Formal",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Fennec: Bob's Ramen",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Fennec: Bodacious",
+      "nom": "Interstellar",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Aftershock: Kana",
+      "nom": "Dominus: Shinjuku: Remixed",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "X-Devil: Snakeskin",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Diestro: Rico",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "NISSAN GT-R NISMO",
-      "prix": 0,
-      "image": null,
-      "type": "8 items"
-    },
-    {
-      "nom": "Arsène",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Anti-Magic",
+      "nom": "Dieci",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Anti-Magic",
+      "nom": "Dominus: Fancy Formal",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Top Hat: Anniversary Edition",
+      "prix": 0,
+      "image": null,
+      "type": "Topper"
+    },
+    {
+      "nom": "Dominus: Neo-Star",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Shade Raid",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Astro-CSX: Inverted",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Meteor Storm",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Corbital",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
+    },
+    {
+      "nom": "Giga-Hurts",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Cryostream",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "AGONIZE",
+      "prix": 0,
+      "image": null,
+      "type": "Player Anthem"
+    },
+    {
+      "nom": "Octane",
+      "prix": 0,
+      "image": null,
+      "type": "Body"
+    },
+    {
+      "nom": "Breakout Type-S",
+      "prix": 0,
+      "image": null,
+      "type": "Body"
+    },
+    {
+      "nom": "Octane: Tinted Formal",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Octane: Ultraheat",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Octane: Krush",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Breakout Type-S: Funny Book",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Jäger 619: Neo-Viral",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Dominus GT: Distortion",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Dominus: Shinjuku: Remixed",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Dieci",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
     }
   ]
 }
