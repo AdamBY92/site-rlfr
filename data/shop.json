@@ -123,28 +123,28 @@
       "type": "Decal"
     },
     {
-      "nom": "Phrosgoth",
+      "nom": "NISSAN GT-R NISMO",
+      "prix": 0,
+      "image": null,
+      "type": "8 items"
+    },
+    {
+      "nom": "Arsène",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Affluenter",
+      "nom": "Anti-Magic",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Wheels"
     },
     {
-      "nom": "Standard",
+      "nom": "Anti-Magic",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
-    },
-    {
-      "nom": "Fennec: Pineapple Pinchi",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
     }
   ]
 }
