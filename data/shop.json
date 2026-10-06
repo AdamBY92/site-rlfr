@@ -1,126 +1,90 @@
 {
-  "date_rotation": "2026-10-05T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-06T00:00:00.000Z",
+  "date_rotation": "2026-10-06T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-07T00:00:00.000Z",
   "items": [
     {
-      "nom": "Dominus: Hyperspace",
+      "nom": "Draco: Multichrome",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Shark Attack",
+      "nom": "Cosmosis",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Tidal Stream",
+      "nom": "Octane: Chromagic",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
-      "nom": "Cristiano: Infinite",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "StarCar",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "OEM: Holographic",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Grand Slam",
+      "nom": "Dimensionator",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Fissure",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "CNTCT-1: Infinite",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "SARPBC",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Broadbolt",
-      "prix": 0,
-      "image": null,
-      "type": "Trail"
-    },
-    {
-      "nom": "Interchiller: Radiant",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Fennec",
-      "prix": 0,
-      "image": null,
-      "type": "Body"
-    },
-    {
-      "nom": "Triton",
-      "prix": 0,
-      "image": null,
-      "type": "Body"
-    },
-    {
-      "nom": "Fennec: Araki",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Fennec: Huntress",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Fennec: Slimline",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Triton: Tumbling Blocks",
+      "nom": "Octane: Songstress",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Peregrine TT: Ombre",
+      "nom": "Glitch: Glitched",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Wheels"
     },
     {
-      "nom": "Komodo: Takeover",
+      "nom": "Storm Watch: Noire",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Ultralex: Radiant",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Halo: Phased",
+      "prix": 0,
+      "image": null,
+      "type": "Topper"
+    },
+    {
+      "nom": "Mic Drop",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "X-Tempo: Radiant",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Hazy Flame",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Glonex",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Gold",
+      "prix": 0,
+      "image": null,
+      "type": "Player Anthem"
     },
     {
       "nom": "Dominus",
@@ -129,19 +93,55 @@
       "type": "Body"
     },
     {
-      "nom": "Interstellar",
+      "nom": "Sentinel",
+      "prix": 0,
+      "image": null,
+      "type": "Body"
+    },
+    {
+      "nom": "Dominus: Migraine",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Dominus: Hyperspace",
+      "nom": "Dominus: Tinted Formal",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Dominus: Firestarter",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Sentinel: Kana",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Shark Attack",
+      "nom": "Endo: MG-88",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Breakout: Snakeskin",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Octane: Chromagic",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Dimensionator",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
