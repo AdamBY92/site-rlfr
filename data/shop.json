@@ -1,7 +1,127 @@
 {
-  "date_rotation": "2026-10-08T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-09T00:00:00.000Z",
+  "date_rotation": "2026-10-09T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-10T00:00:00.000Z",
   "items": [
+    {
+      "nom": "Chronosis",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Mainframe",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "W.I.P.",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Nucleon Clutch",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Krew Made",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Hiro",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Lit Up",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Dream Beam",
+      "prix": 0,
+      "image": null,
+      "type": "Trail"
+    },
+    {
+      "nom": "Cosmic Overdrive",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Orwellian: Inverted",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Mandala",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Tanker: Infinite",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Fennec",
+      "prix": 0,
+      "image": null,
+      "type": "Body"
+    },
+    {
+      "nom": "Breakout",
+      "prix": 0,
+      "image": null,
+      "type": "Body"
+    },
+    {
+      "nom": "Fennec: Flowrider",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Fennec: Neo-LL37",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Fennec: Bug-Bite",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Breakout: Vector",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Cyclone: Migraine",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Peregrine TT: Crisis",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
     {
       "nom": "Breakout Type-S",
       "prix": 0,
@@ -15,136 +135,16 @@
       "type": "Animated Decal"
     },
     {
-      "nom": "Heatwave",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Gravity Bomb",
+      "nom": "Chronosis",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Autoradic",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Dragon Wings: Roasted",
-      "prix": 0,
-      "image": null,
-      "type": "Topper"
-    },
-    {
-      "nom": "Strongline",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Chakram: Holographic",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Dire Wolf",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Fungi Forest",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Beach Party",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Ruinator",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Flow Form",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "TREAT HIM LIKE A BABY",
-      "prix": 0,
-      "image": null,
-      "type": "Player Anthem"
-    },
-    {
-      "nom": "Dominus",
-      "prix": 0,
-      "image": null,
-      "type": "Body"
-    },
-    {
-      "nom": "Aftershock",
-      "prix": 0,
-      "image": null,
-      "type": "Body"
-    },
-    {
-      "nom": "Dominus: Neo-Star",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Dominus: Lo Freq",
+      "nom": "Mainframe",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
-    },
-    {
-      "nom": "Dominus: Tomato Titan",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Aftershock: Tumbling Blocks",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Diestro: Comic Carrot",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Cyclone: Martian Wind",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Heatwave",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Gravity Bomb",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
     }
   ]
 }
