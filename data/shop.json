@@ -1,81 +1,93 @@
 {
-  "date_rotation": "2026-10-09T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-10T00:00:00.000Z",
+  "date_rotation": "2026-10-10T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-11T00:00:00.000Z",
   "items": [
     {
-      "nom": "Chronosis",
+      "nom": "Ball 4 All",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Mainframe",
+      "nom": "Likecraft",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "W.I.P.",
+      "nom": "Fennec: Shinjuku",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Nucleon Clutch",
+      "nom": "Zero's World",
       "prix": 0,
       "image": null,
-      "type": "Wheels"
+      "type": "Goal Explosion"
     },
     {
-      "nom": "Krew Made",
+      "nom": "Constella",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Hiro",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Lit Up",
+      "nom": "Dueling Dragons",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Dream Beam",
+      "nom": "Octane: MG-88 Huntress",
       "prix": 0,
       "image": null,
-      "type": "Trail"
+      "type": "Decal"
     },
     {
-      "nom": "Cosmic Overdrive",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Orwellian: Inverted",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Mandala",
+      "nom": "Party Time",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Tanker: Infinite",
+      "nom": "Candyfloss",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Hikari P5: Infinite",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Fennec",
+      "nom": "Toon Sketch: Gilded",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Gernot",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Voltaic",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "ZERO200",
+      "prix": 0,
+      "image": null,
+      "type": "Player Anthem"
+    },
+    {
+      "nom": "Octane",
       "prix": 0,
       "image": null,
       "type": "Body"
@@ -87,64 +99,52 @@
       "type": "Body"
     },
     {
-      "nom": "Fennec: Flowrider",
+      "nom": "Octane: Chromagic",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Fennec: Neo-LL37",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Fennec: Bug-Bite",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Breakout: Vector",
+      "nom": "Octane: MG-88",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Cyclone: Migraine",
+      "nom": "Octane: Polarity",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Peregrine TT: Crisis",
+      "nom": "Breakout: Ripped Comic",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Breakout Type-S",
+      "nom": "Twinzer: Muddy",
       "prix": 0,
       "image": null,
-      "type": "Body"
+      "type": "Decal"
     },
     {
-      "nom": "Fire God: Multichrome",
+      "nom": "Peregrine TT: Hoodbar",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Fennec: Shinjuku",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Chronosis",
+      "nom": "Zero's World",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
-    },
-    {
-      "nom": "Mainframe",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
     }
   ]
 }
