@@ -135,16 +135,16 @@
       "type": "Decal"
     },
     {
+      "nom": "BMW 1 SERIES",
+      "prix": 0,
+      "image": null,
+      "type": "20 items"
+    },
+    {
       "nom": "Fennec: Shinjuku",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
-    },
-    {
-      "nom": "Zero's World",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
     }
   ]
 }
