@@ -1,7 +1,127 @@
 {
-  "date_rotation": "2026-10-10T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-11T00:00:00.000Z",
+  "date_rotation": "2026-10-11T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-12T00:00:00.000Z",
   "items": [
+    {
+      "nom": "Fennec: Huntress",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Atlantis",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Sugar High",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Y.O.U.",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Kilowut",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Royal Crown: Roasted",
+      "prix": 0,
+      "image": null,
+      "type": "Topper"
+    },
+    {
+      "nom": "Flamerate",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Nagamaki",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Ink: Gilded",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Bravado: Infinite",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "In-Finite",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "HNY: Inverted",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Fennec",
+      "prix": 0,
+      "image": null,
+      "type": "Body"
+    },
+    {
+      "nom": "Breakout",
+      "prix": 0,
+      "image": null,
+      "type": "Body"
+    },
+    {
+      "nom": "Fennec: Shinjuku: Remixed",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Fennec: Pineapple Pinchi",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Fennec: Nitty-Gritty Huntress",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Breakout: Egged",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Dominus GT: Splatter",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Centio: Gigapede",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
     {
       "nom": "Ball 4 All",
       "prix": 0,
@@ -15,136 +135,16 @@
       "type": "Animated Decal"
     },
     {
-      "nom": "Fennec: Shinjuku",
+      "nom": "Fennec: Huntress",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
-      "nom": "Zero's World",
+      "nom": "Atlantis",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
-    },
-    {
-      "nom": "Constella",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Dueling Dragons",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Octane: MG-88 Huntress",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Party Time",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Candyfloss",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Hikari P5: Infinite",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Toon Sketch: Gilded",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Gernot",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Voltaic",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "ZERO200",
-      "prix": 0,
-      "image": null,
-      "type": "Player Anthem"
-    },
-    {
-      "nom": "Octane",
-      "prix": 0,
-      "image": null,
-      "type": "Body"
-    },
-    {
-      "nom": "Breakout",
-      "prix": 0,
-      "image": null,
-      "type": "Body"
-    },
-    {
-      "nom": "Octane: Chromagic",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Octane: MG-88",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Octane: Polarity",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Breakout: Ripped Comic",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Twinzer: Muddy",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Peregrine TT: Hoodbar",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "BMW 1 SERIES",
-      "prix": 0,
-      "image": null,
-      "type": "20 items"
-    },
-    {
-      "nom": "Fennec: Shinjuku",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
     }
   ]
 }
