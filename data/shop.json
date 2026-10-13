@@ -1,85 +1,7 @@
 {
-  "date_rotation": "2026-10-11T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-12T00:00:00.000Z",
+  "date_rotation": "2026-10-12T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-13T00:00:00.000Z",
   "items": [
-    {
-      "nom": "Fennec: Huntress",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Atlantis",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Sugar High",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Y.O.U.",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Kilowut",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Royal Crown: Roasted",
-      "prix": 0,
-      "image": null,
-      "type": "Topper"
-    },
-    {
-      "nom": "Flamerate",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Nagamaki",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Ink: Gilded",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Bravado: Infinite",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "In-Finite",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "HNY: Inverted",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Fennec",
-      "prix": 0,
-      "image": null,
-      "type": "Body"
-    },
     {
       "nom": "Breakout",
       "prix": 0,
@@ -87,64 +9,142 @@
       "type": "Body"
     },
     {
-      "nom": "Fennec: Shinjuku: Remixed",
+      "nom": "Draco: Holographic",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Labyrinth",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Fennec: Pineapple Pinchi",
+      "nom": "Pixel Fire",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Rocket Boost"
     },
     {
-      "nom": "Fennec: Nitty-Gritty Huntress",
+      "nom": "Glorifier",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Animated Decal"
     },
     {
-      "nom": "Breakout: Egged",
+      "nom": "Fancy Ferrule",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Antenna"
     },
     {
-      "nom": "Dominus GT: Splatter",
+      "nom": "Warp Wave",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Animated Decal"
     },
     {
-      "nom": "Centio: Gigapede",
+      "nom": "Razera Ember",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Wheels"
     },
     {
-      "nom": "BATTLE BUS",
+      "nom": "Saptarishi: Inverted",
       "prix": 0,
       "image": null,
-      "type": "4 items"
+      "type": "Wheels"
     },
     {
-      "nom": "MCLAREN 570S + DEADMAU5",
+      "nom": "Pixel-Perfect",
       "prix": 0,
       "image": null,
-      "type": "6 items"
+      "type": "Animated Decal"
     },
     {
-      "nom": "DEADMAU5 ANNIVERSARY",
-      "prix": 0,
-      "image": null,
-      "type": "5 items"
-    },
-    {
-      "nom": "deadmau5 Forever",
+      "nom": "Tidal Rave",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
+    },
+    {
+      "nom": "Tri-oomph",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Populuxe",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "BOUNCE",
+      "prix": 0,
+      "image": null,
+      "type": "Player Anthem"
+    },
+    {
+      "nom": "Dominus",
+      "prix": 0,
+      "image": null,
+      "type": "Body"
+    },
+    {
+      "nom": "Triton",
+      "prix": 0,
+      "image": null,
+      "type": "Body"
+    },
+    {
+      "nom": "Dominus: Flametress",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Dominus: Dragon Lord",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Dominus: UAP",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Triton: Vector",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Jäger 619: StarLighter",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Dominus GT: Staredown",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Labyrinth",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Pixel Fire",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
     }
   ]
 }
