@@ -135,16 +135,16 @@
       "type": "Decal"
     },
     {
-      "nom": "Labyrinth",
+      "nom": "SPONGEBOB'S PATTY WAGON",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "17 items"
     },
     {
-      "nom": "Pixel Fire",
+      "nom": "Bikini Bottom",
       "prix": 0,
       "image": null,
-      "type": "Rocket Boost"
+      "type": "Goal Explosion"
     }
   ]
 }
