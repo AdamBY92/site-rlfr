@@ -1,150 +1,150 @@
 {
-  "date_rotation": "2026-10-13T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-14T00:00:00.000Z",
+  "date_rotation": "2026-10-14T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-15T00:00:00.000Z",
   "items": [
     {
-      "nom": "Encryption",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Yamane",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Hanami",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Juiced",
+      "nom": "Close Encounter",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Heavy Metal",
+      "nom": "Zomba: Glitched",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Fennec: Flowrider",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Hellfire",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Stipple Gait",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Pixelated Shades",
+      "nom": "Hanasha JRL: Multichrome",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Dominus: Anthrophobe",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Looper",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Hologlass",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Zadeh S3",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Twisted Tree",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Scarecrow Jack",
       "prix": 0,
       "image": null,
       "type": "Topper"
     },
     {
-      "nom": "Nitrous",
+      "nom": "Skullfire",
       "prix": 0,
       "image": null,
-      "type": "Rocket Boost"
+      "type": "Topper"
     },
     {
-      "nom": "Sub-Zero: Gilded",
+      "nom": "99 Octane",
+      "prix": 0,
+      "image": null,
+      "type": "Player Anthem"
+    },
+    {
+      "nom": "Dominus",
+      "prix": 0,
+      "image": null,
+      "type": "Body"
+    },
+    {
+      "nom": "Mantis",
+      "prix": 0,
+      "image": null,
+      "type": "Body"
+    },
+    {
+      "nom": "Dominus: Dot Matrix",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Dominus: Slice-Tag",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Dominus: Candy Monster",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Mantis: Megabat",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Diestro: Agamid",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Breakout: Ghost Fever",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Fennec: Flowrider",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Hellfire",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
-    },
-    {
-      "nom": "Breakout: Turbo Huntress",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Glonex: Holographic",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Diamante",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Smokeshow",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Octane",
-      "prix": 0,
-      "image": null,
-      "type": "Body"
-    },
-    {
-      "nom": "Scarab",
-      "prix": 0,
-      "image": null,
-      "type": "Body"
-    },
-    {
-      "nom": "Octane: Hakkaa: Glitched",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Octane: Bodacious",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Octane: Krew Supreme",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Scarab: Stripes",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "X-Devil: Maximon",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Breakout: Coy Koi",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Breakout",
-      "prix": 0,
-      "image": null,
-      "type": "Body"
-    },
-    {
-      "nom": "Draco: Holographic",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Encryption",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Yamane",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
     }
   ]
 }
