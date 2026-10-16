@@ -123,6 +123,12 @@
       "type": "Decal"
     },
     {
+      "nom": "FERRARI F40",
+      "prix": 0,
+      "image": null,
+      "type": "6 items"
+    },
+    {
       "nom": "Close Encounter",
       "prix": 0,
       "image": null,
@@ -139,12 +145,6 @@
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
-    },
-    {
-      "nom": "Tarnation",
-      "prix": 0,
-      "image": null,
-      "type": "Trail"
     }
   ]
 }
