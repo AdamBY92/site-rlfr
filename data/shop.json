@@ -135,16 +135,16 @@
       "type": "Animated Decal"
     },
     {
+      "nom": "LAMBORGHINI COUNTACH LPI 800-4",
+      "prix": 0,
+      "image": null,
+      "type": "7 items"
+    },
+    {
       "nom": "Fennec: Nitty-Gritty Huntress",
       "prix": 0,
       "image": null,
       "type": "Decal"
-    },
-    {
-      "nom": "Marred Shard",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
     }
   ]
 }
