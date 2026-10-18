@@ -123,6 +123,18 @@
       "type": "Decal"
     },
     {
+      "nom": "HEARSE + POPPY PLAYTIME",
+      "prix": 0,
+      "image": null,
+      "type": "4 items"
+    },
+    {
+      "nom": "Huggy Wuggy",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
       "nom": "Fennec",
       "prix": 0,
       "image": null,
@@ -133,18 +145,6 @@
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
-    },
-    {
-      "nom": "Fennec: Bug-Bite",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Flamethrower",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
     }
   ]
 }
