@@ -1,150 +1,150 @@
 {
-  "date_rotation": "2026-10-17T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-18T00:00:00.000Z",
+  "date_rotation": "2026-10-18T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-19T00:00:00.000Z",
   "items": [
     {
-      "nom": "Fennec: Bug-Bite",
+      "nom": "Dueling Dragons: Anodized",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Blood Moon",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Fennec: Tinted Formal",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Flamethrower",
+      "nom": "Cristiano: Anodized",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Shodo",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Reaper: Inverted",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Aquarium",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Ebb 'n Flow: Multichrome",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Splashpad",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Power Chord",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Documint",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
     },
     {
-      "nom": "Fennec: Idolix",
+      "nom": "Clam Jam",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Trail"
     },
     {
-      "nom": "Astro-CSX",
+      "nom": "Gargoyle",
       "prix": 0,
       "image": null,
-      "type": "Wheels"
+      "type": "Topper"
     },
     {
-      "nom": "Draco (Water)",
+      "nom": "SURGE",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Player Anthem"
     },
     {
-      "nom": "Butterflies",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Fennec: Pineapple Pinchi",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Sweet Score",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Dark Angel",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Halcyon",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Neon Bomb",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Demon Disc",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Fennec",
+      "nom": "Dominus",
       "prix": 0,
       "image": null,
       "type": "Body"
     },
     {
-      "nom": "Road Hog XL",
+      "nom": "X-Devil Mk2",
       "prix": 0,
       "image": null,
       "type": "Body"
     },
     {
-      "nom": "Fennec: Kana",
+      "nom": "Dominus: Shinjuku: Remixed",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Fennec: Huntress Formal",
+      "nom": "Dominus: Funny Book",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Fennec: Hardline",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Road Hog XL: Snakeskin",
+      "nom": "Dominus: Bodacious",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Insidio: Sticker Bomb",
+      "nom": "X-Devil Mk2: Distortion",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Jäger 619: Neo-Viral",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Endo: Mummified",
+      "nom": "Breakout: Best Coast",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "HEARSE + POPPY PLAYTIME",
+      "nom": "Fennec: Tinted Formal",
       "prix": 0,
       "image": null,
-      "type": "4 items"
+      "type": "Decal"
     },
     {
-      "nom": "Huggy Wuggy",
+      "nom": "Cristiano: Anodized",
       "prix": 0,
       "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Fennec",
-      "prix": 0,
-      "image": null,
-      "type": "Body"
-    },
-    {
-      "nom": "Phrosgoth",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
+      "type": "Wheels"
     }
   ]
 }
