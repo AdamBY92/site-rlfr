@@ -1,48 +1,138 @@
 {
-  "date_rotation": "2026-10-19T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-20T00:00:00.000Z",
+  "date_rotation": "2026-10-20T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-21T00:00:00.000Z",
   "items": [
     {
-      "nom": "HEARSE + POPPY PLAYTIME",
+      "nom": "Dominus",
       "prix": 0,
       "image": null,
-      "type": "4 items"
-    },
-    {
-      "nom": "Huggy Wuggy",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "LAMBORGHINI COUNTACH LPI 800-4",
-      "prix": 0,
-      "image": null,
-      "type": "6 items"
+      "type": "Exotic Body"
     },
     {
       "nom": "Get Over Here!",
       "prix": 0,
       "image": null,
+      "type": "Black Market Goal Explosion"
+    },
+    {
+      "nom": "Dominus: Candy Monster",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Virused",
+      "prix": 0,
+      "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Scorpion Kombat",
+      "nom": "Dominus: Shinjuku",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Electroshock",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Dominus: Dragon Lord",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Shattered",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Dominus: Tomato Titan",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Infinium",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Sub-Zero Kombat",
+      "nom": "Zowie",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "FERRARI F40",
+      "nom": "Hallowtide",
       "prix": 0,
       "image": null,
-      "type": "6 items"
+      "type": "Trail"
+    },
+    {
+      "nom": "Ball-Life: Holographic",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Therapy",
+      "prix": 0,
+      "image": null,
+      "type": "Player Anthem"
+    },
+    {
+      "nom": "Fennec",
+      "prix": 0,
+      "image": null,
+      "type": "Import Body"
+    },
+    {
+      "nom": "Aftershock",
+      "prix": 0,
+      "image": null,
+      "type": "Very Rare Body"
+    },
+    {
+      "nom": "Fennec: Migraine",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Fennec: SK Life",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Fennec: Idolix",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Aftershock: Kana",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Endo: MG-88",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Tygris: Silencer",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
     },
     {
       "nom": "BMW 1 SERIES",
@@ -55,96 +145,6 @@
       "prix": 0,
       "image": null,
       "type": "17 items"
-    },
-    {
-      "nom": "Bikini Bottom",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Jelly Power",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Bikini Bottom",
-      "prix": 0,
-      "image": null,
-      "type": "Trail"
-    },
-    {
-      "nom": "Sweet Victory",
-      "prix": 0,
-      "image": null,
-      "type": "Player Anthem"
-    },
-    {
-      "nom": "Dueling Dragons: Anodized",
-      "prix": 0,
-      "image": null,
-      "type": "Black Market Goal Explosion"
-    },
-    {
-      "nom": "Blood Moon",
-      "prix": 0,
-      "image": null,
-      "type": "Black Market Goal Explosion"
-    },
-    {
-      "nom": "Fire God",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Lotus Bloom",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Flutterby: Multichrome",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Startrack: Noire",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Battle-Stars",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Grimalkin",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Onix",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Savvy Sway",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Woofer",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
     }
   ]
 }
