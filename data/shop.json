@@ -1,6 +1,6 @@
 {
-  "date_rotation": "2026-10-20T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-21T00:00:00.000Z",
+  "date_rotation": "2026-10-21T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-22T00:00:00.000Z",
   "items": [
     {
       "nom": "Dominus",
@@ -15,136 +15,136 @@
       "type": "Black Market Goal Explosion"
     },
     {
-      "nom": "Dominus: Candy Monster",
+      "nom": "Dominus: Huntress",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Virused",
+      "nom": "Sprattle",
       "prix": 0,
       "image": null,
-      "type": "Goal Explosion"
+      "type": "Rocket Boost"
     },
     {
-      "nom": "Dominus: Shinjuku",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Electroshock",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Dominus: Dragon Lord",
+      "nom": "Dominus: Martian Wind",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Shattered",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Dominus: Tomato Titan",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Infinium",
+      "nom": "Hanasha JRL",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Zowie",
+      "nom": "Dominus: Lo Freq",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Neuro-Agitator",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Carbonator",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Photon",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Hallowtide",
-      "prix": 0,
-      "image": null,
-      "type": "Trail"
-    },
-    {
-      "nom": "Ball-Life: Holographic",
+      "nom": "Dynamo",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Therapy",
-      "prix": 0,
-      "image": null,
-      "type": "Player Anthem"
-    },
-    {
-      "nom": "Fennec",
-      "prix": 0,
-      "image": null,
-      "type": "Import Body"
-    },
-    {
-      "nom": "Aftershock",
-      "prix": 0,
-      "image": null,
-      "type": "Very Rare Body"
-    },
-    {
-      "nom": "Fennec: Migraine",
+      "nom": "Leafstream",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Fennec: SK Life",
+      "nom": "Interchiller",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Shadow Witch",
+      "prix": 0,
+      "image": null,
+      "type": "Antenna"
+    },
+    {
+      "nom": "Octane",
+      "prix": 0,
+      "image": null,
+      "type": "Common Body"
+    },
+    {
+      "nom": "Breakout",
+      "prix": 0,
+      "image": null,
+      "type": "Common Body"
+    },
+    {
+      "nom": "Octane: Saikou Strawberry",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Fennec: Idolix",
+      "nom": "Octane: Mangaka",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Aftershock: Kana",
+      "nom": "Octane: Trick or Treat",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Breakout: Dot Matrix",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Endo: MG-88",
+      "nom": "Peregrine TT: Ombre",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "X-Devil Mk2: Agamid",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Tygris: Silencer",
+      "nom": "NISSAN Z PERFORMANCE",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "2 items"
     },
     {
       "nom": "HEARSE + POPPY PLAYTIME",
       "prix": 0,
       "image": null,
       "type": "4 items"
-    },
-    {
-      "nom": "Huggy Wuggy",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
     }
   ]
 }
