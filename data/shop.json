@@ -1,7 +1,91 @@
 {
-  "date_rotation": "2026-10-21T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-22T00:00:00.000Z",
+  "date_rotation": "2026-10-22T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-23T00:00:00.000Z",
   "items": [
+    {
+      "nom": "Neural Network",
+      "prix": 0,
+      "image": null,
+      "type": "Limited Animated Decal"
+    },
+    {
+      "nom": "Reaper",
+      "prix": 0,
+      "image": null,
+      "type": "Import Goal Explosion"
+    },
+    {
+      "nom": "Storm Watch: Noire",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Mic Drop",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Octane: Bob's Rameness",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Del Rey",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Meteor Storm",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "OEM: Infinite",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Pyrrhos",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Firewall",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Dire Wolf",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Spider Boogie",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Arachnotenna",
+      "prix": 0,
+      "image": null,
+      "type": "Antenna"
+    },
+    {
+      "nom": "Atlas",
+      "prix": 0,
+      "image": null,
+      "type": "Player Anthem"
+    },
     {
       "nom": "Dominus",
       "prix": 0,
@@ -9,142 +93,58 @@
       "type": "Exotic Body"
     },
     {
-      "nom": "Get Over Here!",
+      "nom": "Marauder",
       "prix": 0,
       "image": null,
-      "type": "Black Market Goal Explosion"
+      "type": "Very Rare Body"
     },
     {
-      "nom": "Dominus: Huntress",
+      "nom": "Dominus: Neo-Star",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Sprattle",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Dominus: Martian Wind",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Hanasha JRL",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Dominus: Lo Freq",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Neuro-Agitator",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Carbonator",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Photon",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Dynamo",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Leafstream",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Interchiller",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Shadow Witch",
-      "prix": 0,
-      "image": null,
-      "type": "Antenna"
-    },
-    {
-      "nom": "Octane",
-      "prix": 0,
-      "image": null,
-      "type": "Common Body"
-    },
-    {
-      "nom": "Breakout",
-      "prix": 0,
-      "image": null,
-      "type": "Common Body"
-    },
-    {
-      "nom": "Octane: Saikou Strawberry",
+      "nom": "Dominus: Sovereignteeth",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Octane: Mangaka",
+      "nom": "Dominus: Balmy Boss",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Octane: Trick or Treat",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Breakout: Dot Matrix",
+      "nom": "Marauder: Martian Wind",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Peregrine TT: Ombre",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "X-Devil Mk2: Agamid",
+      "nom": "Triton: Tumbling Blocks",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "NISSAN Z PERFORMANCE",
+      "nom": "Diestro: Comic Carrot",
       "prix": 0,
       "image": null,
-      "type": "2 items"
+      "type": "Decal"
     },
     {
-      "nom": "HEARSE + POPPY PLAYTIME",
+      "nom": "FIVE NIGHTS AT FREDDY'S",
       "prix": 0,
       "image": null,
-      "type": "4 items"
+      "type": "3 items"
+    },
+    {
+      "nom": "FREDDY FAZBEAR",
+      "prix": 0,
+      "image": null,
+      "type": "GOAL EXPLOSION"
     }
   ]
 }
