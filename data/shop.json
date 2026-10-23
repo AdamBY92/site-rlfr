@@ -1,6 +1,6 @@
 {
-  "date_rotation": "2026-10-22T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-23T00:00:00.000Z",
+  "date_rotation": "2026-10-23T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-24T00:00:00.000Z",
   "items": [
     {
       "nom": "Neural Network",
@@ -15,121 +15,121 @@
       "type": "Import Goal Explosion"
     },
     {
-      "nom": "Storm Watch: Noire",
+      "nom": "Interstellar",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Mic Drop",
+      "nom": "Halo: Phased",
+      "prix": 0,
+      "image": null,
+      "type": "Topper"
+    },
+    {
+      "nom": "Octane: Hyperspace",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Chronosis",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Octane: Bob's Rameness",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Del Rey",
+      "nom": "Draco: Multichrome",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Meteor Storm",
+      "nom": "Sub-Zero",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "OEM: Infinite",
+      "nom": "Spiralis R2: Flare",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Pyrrhos",
+      "nom": "Cold Front",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Creeper",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Firewall",
+      "nom": "InfoSec",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
     },
     {
-      "nom": "Dire Wolf",
+      "nom": "Timbertyre",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Spider Boogie",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Arachnotenna",
-      "prix": 0,
-      "image": null,
-      "type": "Antenna"
-    },
-    {
-      "nom": "Atlas",
-      "prix": 0,
-      "image": null,
-      "type": "Player Anthem"
-    },
-    {
-      "nom": "Dominus",
-      "prix": 0,
-      "image": null,
-      "type": "Exotic Body"
-    },
-    {
-      "nom": "Marauder",
-      "prix": 0,
-      "image": null,
-      "type": "Very Rare Body"
-    },
-    {
-      "nom": "Dominus: Neo-Star",
+      "nom": "Arachnophobia",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Dominus: Sovereignteeth",
+      "nom": "Fennec",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Import Body"
     },
     {
-      "nom": "Dominus: Balmy Boss",
+      "nom": "Sentinel",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Import Body"
     },
     {
-      "nom": "Marauder: Martian Wind",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Triton: Tumbling Blocks",
+      "nom": "Fennec: Lo Freq",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Diestro: Comic Carrot",
+      "nom": "Fennec: Neo-LL37",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Fennec: Bug-Bite",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Sentinel: Vector",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Cyclone: Migraine",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Masamune: Kawaii",
       "prix": 0,
       "image": null,
       "type": "Decal"
