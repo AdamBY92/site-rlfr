@@ -1,91 +1,7 @@
 {
-  "date_rotation": "2026-10-23T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-24T00:00:00.000Z",
+  "date_rotation": "2026-10-24T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-25T00:00:00.000Z",
   "items": [
-    {
-      "nom": "Neural Network",
-      "prix": 0,
-      "image": null,
-      "type": "Limited Animated Decal"
-    },
-    {
-      "nom": "Reaper",
-      "prix": 0,
-      "image": null,
-      "type": "Import Goal Explosion"
-    },
-    {
-      "nom": "Interstellar",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Halo: Phased",
-      "prix": 0,
-      "image": null,
-      "type": "Topper"
-    },
-    {
-      "nom": "Octane: Hyperspace",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Chronosis",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Draco: Multichrome",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Sub-Zero",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Spiralis R2: Flare",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Cold Front",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Creeper",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "InfoSec",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Timbertyre",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Arachnophobia",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
     {
       "nom": "Fennec",
       "prix": 0,
@@ -93,43 +9,127 @@
       "type": "Import Body"
     },
     {
-      "nom": "Sentinel",
+      "nom": "Eyescore",
       "prix": 0,
       "image": null,
-      "type": "Import Body"
+      "type": "Limited Goal Explosion"
     },
     {
-      "nom": "Fennec: Lo Freq",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Fennec: Neo-LL37",
+      "nom": "Fennec: Fancy Formal",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Fennec: Bug-Bite",
+      "nom": "Ice Age",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Zero's World",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "StarCar",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Butterflies",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Hexed",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Constella",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Ultralex: Radiant",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Dark Matter",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Fuzzy Skull",
+      "prix": 0,
+      "image": null,
+      "type": "Antenna"
+    },
+    {
+      "nom": "Hexphase",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Mark Twain (Glacier Remix)",
+      "prix": 0,
+      "image": null,
+      "type": "Player Anthem"
+    },
+    {
+      "nom": "Octane",
+      "prix": 0,
+      "image": null,
+      "type": "Common Body"
+    },
+    {
+      "nom": "Breakout",
+      "prix": 0,
+      "image": null,
+      "type": "Common Body"
+    },
+    {
+      "nom": "Octane: MG-88",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Octane: Polarity",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Octane: Kingtress",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Sentinel: Vector",
+      "nom": "Breakout: Ripped Comic",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
-      "nom": "Cyclone: Migraine",
+      "nom": "Twinzer: Muddy",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
-      "nom": "Masamune: Kawaii",
+      "nom": "Peregrine TT: Hoodbar",
       "prix": 0,
       "image": null,
       "type": "Decal"
