@@ -1,6 +1,6 @@
 {
-  "date_rotation": "2026-10-24T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-25T00:00:00.000Z",
+  "date_rotation": "2026-10-25T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-26T00:00:00.000Z",
   "items": [
     {
       "nom": "Fennec",
@@ -15,82 +15,82 @@
       "type": "Limited Goal Explosion"
     },
     {
-      "nom": "Fennec: Fancy Formal",
+      "nom": "Sparkles",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Rocket Boost"
     },
     {
-      "nom": "Ice Age",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Zero's World",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "StarCar",
+      "nom": "Fennec: Hyperspace",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Butterflies",
+      "nom": "Fennec: Shinjuku",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Atlantis",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Hexed",
+      "nom": "Brimstone",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Goal Explosion"
     },
     {
-      "nom": "Constella",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Ultralex: Radiant",
+      "nom": "Cristiano",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Dark Matter",
+      "nom": "Prism Schism",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Spectre",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Kalos",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Zomba",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Haunted House",
+      "prix": 0,
+      "image": null,
+      "type": "Topper"
+    },
+    {
+      "nom": "Autumn",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
     },
     {
-      "nom": "Fuzzy Skull",
+      "nom": "Dominus",
       "prix": 0,
       "image": null,
-      "type": "Antenna"
-    },
-    {
-      "nom": "Hexphase",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Mark Twain (Glacier Remix)",
-      "prix": 0,
-      "image": null,
-      "type": "Player Anthem"
-    },
-    {
-      "nom": "Octane",
-      "prix": 0,
-      "image": null,
-      "type": "Common Body"
+      "type": "Exotic Body"
     },
     {
       "nom": "Breakout",
@@ -99,37 +99,37 @@
       "type": "Common Body"
     },
     {
-      "nom": "Octane: MG-88",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Octane: Polarity",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Octane: Kingtress",
+      "nom": "Dominus: Tomato Titan",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Breakout: Ripped Comic",
+      "nom": "Dominus: Pollo Caliente",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Twinzer: Muddy",
+      "nom": "Dominus: MDGA",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Peregrine TT: Hoodbar",
+      "nom": "Breakout: Egged",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Dominus GT: Splatter",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Centio: Gigapede",
       "prix": 0,
       "image": null,
       "type": "Decal"
