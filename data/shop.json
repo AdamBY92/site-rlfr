@@ -1,135 +1,135 @@
 {
-  "date_rotation": "2026-10-25T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-26T00:00:00.000Z",
+  "date_rotation": "2026-10-26T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-27T00:00:00.000Z",
   "items": [
     {
-      "nom": "Fennec",
+      "nom": "Air Strike",
       "prix": 0,
       "image": null,
-      "type": "Import Body"
+      "type": "Black Market Goal Explosion"
     },
     {
-      "nom": "Eyescore",
+      "nom": "Night-Mare",
       "prix": 0,
       "image": null,
-      "type": "Limited Goal Explosion"
+      "type": "Black Market Goal Explosion"
     },
     {
-      "nom": "Sparkles",
+      "nom": "Fire God: Multichrome",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Toon Sketch",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
     },
     {
-      "nom": "Fennec: Hyperspace",
+      "nom": "Dominus: Flametress",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Fennec: Shinjuku",
+      "nom": "Candyfloss",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Rocket Boost"
     },
     {
-      "nom": "Atlantis",
+      "nom": "Octane: Chromagic",
       "prix": 0,
       "image": null,
-      "type": "Goal Explosion"
+      "type": "Decal"
     },
     {
-      "nom": "Brimstone",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Cristiano",
+      "nom": "Hypnotik",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Prism Schism",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Spectre",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Kalos",
+      "nom": "Voltaic",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Zomba",
+      "nom": "Tidal Rave",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Goal Explosion"
     },
     {
-      "nom": "Haunted House",
+      "nom": "Beastbox",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Leaf Litter",
       "prix": 0,
       "image": null,
       "type": "Topper"
     },
     {
-      "nom": "Autumn",
+      "nom": "Grave Robber",
       "prix": 0,
       "image": null,
-      "type": "Rocket Boost"
+      "type": "Topper"
     },
     {
-      "nom": "Dominus",
+      "nom": "Lie",
       "prix": 0,
       "image": null,
-      "type": "Exotic Body"
+      "type": "Player Anthem"
     },
     {
-      "nom": "Breakout",
+      "nom": "Octane",
       "prix": 0,
       "image": null,
       "type": "Common Body"
     },
     {
-      "nom": "Dominus: Tomato Titan",
+      "nom": "Triton",
+      "prix": 0,
+      "image": null,
+      "type": "Very Rare Body"
+    },
+    {
+      "nom": "Octane: Dragon Lord",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Octane: Bob's Rameness",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Dominus: Pollo Caliente",
+      "nom": "Octane: Auto Aura",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Triton: Vector",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Jäger 619: StarLighter",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Dominus: MDGA",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Breakout: Egged",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Dominus GT: Splatter",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Centio: Gigapede",
+      "nom": "Dominus GT: Staredown",
       "prix": 0,
       "image": null,
       "type": "Decal"
