@@ -1,6 +1,6 @@
 {
-  "date_rotation": "2026-10-26T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-27T00:00:00.000Z",
+  "date_rotation": "2026-10-27T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-28T00:00:00.000Z",
   "items": [
     {
       "nom": "Air Strike",
@@ -15,121 +15,121 @@
       "type": "Black Market Goal Explosion"
     },
     {
-      "nom": "Fire God: Multichrome",
+      "nom": "Dominus: Shinjuku: Remixed",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Toon Sketch",
+      "nom": "Formal Four-Fours",
       "prix": 0,
       "image": null,
-      "type": "Rocket Boost"
+      "type": "Wheels"
     },
     {
-      "nom": "Dominus: Flametress",
+      "nom": "Draco: Multichrome",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Candyfloss",
+      "nom": "Fissure",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
     },
     {
-      "nom": "Octane: Chromagic",
+      "nom": "Octane: Anthrophobe",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Animated Decal"
     },
     {
-      "nom": "Hypnotik",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Voltaic",
+      "nom": "Gernot",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Tidal Rave",
+      "nom": "Fungi Forest",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Beastbox",
+      "nom": "Pixel-Perfect",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Glonex: Holographic",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Leaf Litter",
+      "nom": "Smokeshow",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Undying Love",
       "prix": 0,
       "image": null,
       "type": "Topper"
     },
     {
-      "nom": "Grave Robber",
+      "nom": "Haunted Hoss",
       "prix": 0,
       "image": null,
-      "type": "Topper"
+      "type": "Wheels"
     },
     {
-      "nom": "Lie",
+      "nom": "Dominus",
       "prix": 0,
       "image": null,
-      "type": "Player Anthem"
+      "type": "Exotic Body"
     },
     {
-      "nom": "Octane",
+      "nom": "Breakout",
       "prix": 0,
       "image": null,
       "type": "Common Body"
     },
     {
-      "nom": "Triton",
-      "prix": 0,
-      "image": null,
-      "type": "Very Rare Body"
-    },
-    {
-      "nom": "Octane: Dragon Lord",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Octane: Bob's Rameness",
+      "nom": "Dominus: UAP",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Octane: Auto Aura",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Triton: Vector",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Jäger 619: StarLighter",
+      "nom": "Dominus: OR-AISE",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Dominus GT: Staredown",
+      "nom": "Dominus: Mondo",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Breakout: Coy Koi",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Komodo: Deceptor",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "X-Devil: Maximon",
       "prix": 0,
       "image": null,
       "type": "Decal"
