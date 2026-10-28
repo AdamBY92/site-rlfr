@@ -1,97 +1,7 @@
 {
-  "date_rotation": "2026-10-27T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-28T00:00:00.000Z",
+  "date_rotation": "2026-10-28T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-29T00:00:00.000Z",
   "items": [
-    {
-      "nom": "Air Strike",
-      "prix": 0,
-      "image": null,
-      "type": "Black Market Goal Explosion"
-    },
-    {
-      "nom": "Night-Mare",
-      "prix": 0,
-      "image": null,
-      "type": "Black Market Goal Explosion"
-    },
-    {
-      "nom": "Dominus: Shinjuku: Remixed",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Formal Four-Fours",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Draco: Multichrome",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Fissure",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Octane: Anthrophobe",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Gernot",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Fungi Forest",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Pixel-Perfect",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Glonex: Holographic",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Smokeshow",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Undying Love",
-      "prix": 0,
-      "image": null,
-      "type": "Topper"
-    },
-    {
-      "nom": "Haunted Hoss",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Dominus",
-      "prix": 0,
-      "image": null,
-      "type": "Exotic Body"
-    },
     {
       "nom": "Breakout",
       "prix": 0,
@@ -99,37 +9,127 @@
       "type": "Common Body"
     },
     {
-      "nom": "Dominus: UAP",
+      "nom": "Hellfire",
+      "prix": 0,
+      "image": null,
+      "type": "Black Market Goal Explosion"
+    },
+    {
+      "nom": "Breakout: Ghost Fever",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Dominus: OR-AISE",
+      "nom": "Buffy-Sugo",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Party Time",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Hanasha JRL: Multichrome",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Grand Slam",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Heavy Metal",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Hikari P5: Infinite",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Warp Wave",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Diamante",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Scarecrow Jack",
+      "prix": 0,
+      "image": null,
+      "type": "Topper"
+    },
+    {
+      "nom": "Skullfire",
+      "prix": 0,
+      "image": null,
+      "type": "Topper"
+    },
+    {
+      "nom": "Deadlock",
+      "prix": 0,
+      "image": null,
+      "type": "Player Anthem"
+    },
+    {
+      "nom": "Octane",
+      "prix": 0,
+      "image": null,
+      "type": "Common Body"
+    },
+    {
+      "nom": "Breakout Type-S",
+      "prix": 0,
+      "image": null,
+      "type": "Import Body"
+    },
+    {
+      "nom": "Octane: Hakkaa: Glitched",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Octane: Bodacious",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Octane: Krew Supreme",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Dominus: Mondo",
+      "nom": "Breakout Type-S: Kraken",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Breakout: Coy Koi",
+      "nom": "Venom: Dot Matrix",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Animated Decal"
     },
     {
-      "nom": "Komodo: Deceptor",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "X-Devil: Maximon",
+      "nom": "Insidio: Silencer",
       "prix": 0,
       "image": null,
       "type": "Decal"
