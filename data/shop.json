@@ -1,6 +1,6 @@
 {
-  "date_rotation": "2026-10-28T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-29T00:00:00.000Z",
+  "date_rotation": "2026-10-29T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-30T00:00:00.000Z",
   "items": [
     {
       "nom": "Breakout",
@@ -15,82 +15,82 @@
       "type": "Black Market Goal Explosion"
     },
     {
-      "nom": "Breakout: Ghost Fever",
+      "nom": "Shade Raid",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Dragon Wings: Roasted",
+      "prix": 0,
+      "image": null,
+      "type": "Topper"
+    },
+    {
+      "nom": "Gravity Bomb",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "CNTCT-1: Infinite",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Jak'd: Obverse",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Z-Current",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Hanami",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Lava",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Breakout: Snakeskin",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Zadeh S3",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Twisted Tree",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Buffy-Sugo",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Party Time",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Hanasha JRL: Multichrome",
+      "nom": "Jacana",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Grand Slam",
+      "nom": "Dominus",
       "prix": 0,
       "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Heavy Metal",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Hikari P5: Infinite",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Warp Wave",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Diamante",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Scarecrow Jack",
-      "prix": 0,
-      "image": null,
-      "type": "Topper"
-    },
-    {
-      "nom": "Skullfire",
-      "prix": 0,
-      "image": null,
-      "type": "Topper"
-    },
-    {
-      "nom": "Deadlock",
-      "prix": 0,
-      "image": null,
-      "type": "Player Anthem"
-    },
-    {
-      "nom": "Octane",
-      "prix": 0,
-      "image": null,
-      "type": "Common Body"
+      "type": "Exotic Body"
     },
     {
       "nom": "Breakout Type-S",
@@ -99,37 +99,37 @@
       "type": "Import Body"
     },
     {
-      "nom": "Octane: Hakkaa: Glitched",
+      "nom": "Dominus: Flametress",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Octane: Bodacious",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Octane: Krew Supreme",
+      "nom": "Dominus: Slice-Tag",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Breakout Type-S: Kraken",
+      "nom": "Dominus: Candy Monster",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Venom: Dot Matrix",
+      "nom": "Breakout Type-S: Funny Book",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
-      "nom": "Insidio: Silencer",
+      "nom": "Road Hog XL: Circuit Pro",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Centio: Splashback",
       "prix": 0,
       "image": null,
       "type": "Decal"
