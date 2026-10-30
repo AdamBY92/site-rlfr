@@ -1,7 +1,97 @@
 {
-  "date_rotation": "2026-10-29T00:00:00.000Z",
-  "prochaine_rotation": "2026-10-30T00:00:00.000Z",
+  "date_rotation": "2026-10-30T00:00:00.000Z",
+  "prochaine_rotation": "2026-10-31T00:00:00.000Z",
   "items": [
+    {
+      "nom": "Affluenter",
+      "prix": 0,
+      "image": null,
+      "type": "Limited Animated Decal"
+    },
+    {
+      "nom": "Beastbox",
+      "prix": 0,
+      "image": null,
+      "type": "Limited Goal Explosion"
+    },
+    {
+      "nom": "Marred Shard",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Cosmosis",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Close Encounter",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "OEM",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Dimensionator",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Draco: Holographic",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Shark Attack",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Fennec: Oozy",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Skullker",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Darkwell",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Scary Pumpkin",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "SPEED DEMON",
+      "prix": 0,
+      "image": null,
+      "type": "Player Anthem"
+    },
+    {
+      "nom": "Octane",
+      "prix": 0,
+      "image": null,
+      "type": "Common Body"
+    },
     {
       "nom": "Breakout",
       "prix": 0,
@@ -9,130 +99,40 @@
       "type": "Common Body"
     },
     {
-      "nom": "Hellfire",
+      "nom": "Octane: Chromagic",
       "prix": 0,
       "image": null,
-      "type": "Black Market Goal Explosion"
+      "type": "Decal"
     },
     {
-      "nom": "Shade Raid",
+      "nom": "Octane: Ultraheat",
       "prix": 0,
       "image": null,
-      "type": "Goal Explosion"
+      "type": "Decal"
     },
     {
-      "nom": "Dragon Wings: Roasted",
+      "nom": "Octane: Jacktide",
       "prix": 0,
       "image": null,
-      "type": "Topper"
+      "type": "Decal"
     },
     {
-      "nom": "Gravity Bomb",
+      "nom": "Breakout: BOO!",
       "prix": 0,
       "image": null,
-      "type": "Goal Explosion"
+      "type": "Decal"
     },
     {
-      "nom": "CNTCT-1: Infinite",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Jak'd: Obverse",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Z-Current",
+      "nom": "Octane ZSR: Distortion",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Hanami",
+      "nom": "Diestro: Agamid",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
-    },
-    {
-      "nom": "Lava",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Breakout: Snakeskin",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Zadeh S3",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Twisted Tree",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Jacana",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Dominus",
-      "prix": 0,
-      "image": null,
-      "type": "Exotic Body"
-    },
-    {
-      "nom": "Breakout Type-S",
-      "prix": 0,
-      "image": null,
-      "type": "Import Body"
-    },
-    {
-      "nom": "Dominus: Flametress",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Dominus: Slice-Tag",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Dominus: Candy Monster",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Breakout Type-S: Funny Book",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Road Hog XL: Circuit Pro",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Centio: Splashback",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
     },
     {
       "nom": "FIVE NIGHTS AT FREDDY'S",
