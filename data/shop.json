@@ -3,112 +3,136 @@
   "prochaine_rotation": "2026-11-02T00:00:00.000Z",
   "items": [
     {
-      "nom": "Affluenter",
+      "nom": "Octane",
       "prix": 0,
       "image": null,
-      "type": "Limited Animated Decal"
+      "type": "Common Body"
     },
     {
-      "nom": "Beastbox",
+      "nom": "Kilowut",
       "prix": 0,
       "image": null,
-      "type": "Limited Goal Explosion"
+      "type": "Black Market Animated Decal"
     },
     {
-      "nom": "Standard",
+      "nom": "Villainous",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
     },
     {
-      "nom": "Dueling Dragons: Yin & Yang",
+      "nom": "Butterflies: Gilded",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Octane: Tinted Formal",
+      "nom": "Sweet Score",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Octane: MG-88 Huntress",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Phoenix Fire",
+      "nom": "Virtuality",
       "prix": 0,
       "image": null,
-      "type": "Goal Explosion"
+      "type": "Animated Decal"
     },
     {
-      "nom": "Yeehaw",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Astro-CSX",
+      "nom": "Cristiano: Infinite",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Reaper",
+      "nom": "Octane: Krew Supreme",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Yamane",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Hex Tide",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Top Hat: Anniversary Edition",
-      "prix": 0,
-      "image": null,
-      "type": "Topper"
-    },
-    {
-      "nom": "Dark Angel",
+      "nom": "Fireworks",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Dominus: Anthrophobe",
+      "nom": "Dimensionator",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Rocket Boost"
     },
     {
-      "nom": "Demon Disc",
+      "nom": "Caged Kraken",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "FIVE NIGHTS AT FREDDY'S",
+      "nom": "Shiawase",
       "prix": 0,
       "image": null,
-      "type": "3 items"
+      "type": "Player Anthem"
     },
     {
-      "nom": "Freddy Fazbear",
+      "nom": "Dominus",
       "prix": 0,
       "image": null,
-      "type": "Goal Explosion"
+      "type": "Exotic Body"
     },
     {
-      "nom": "Five Nights",
+      "nom": "Animus GP",
+      "prix": 0,
+      "image": null,
+      "type": "Import Body"
+    },
+    {
+      "nom": "Dominus: Tinted Formal",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Dominus: Shinjuku: Remixed",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Octane: Freddy Fazbear",
+      "nom": "Dominus: Bodacious",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
+    },
+    {
+      "nom": "Animus GP: Distortion",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Masamune: Danpa",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Centio: Hypermark",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
     },
     {
       "nom": "OCTANE + ONE PIECE",
@@ -121,30 +145,6 @@
       "prix": 0,
       "image": null,
       "type": "2 items"
-    },
-    {
-      "nom": "Going Merry",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Straw Hats' Jolly Roger",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "NASCAR NEXT GEN FORD MUSTANG",
-      "prix": 0,
-      "image": null,
-      "type": "8 items"
-    },
-    {
-      "nom": "MYSTERY MACHINE",
-      "prix": 0,
-      "image": null,
-      "type": "4 items"
     }
   ]
 }
