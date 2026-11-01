@@ -1,6 +1,6 @@
 {
-  "date_rotation": "2026-10-31T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-01T00:00:00.000Z",
+  "date_rotation": "2026-11-01T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-02T00:00:00.000Z",
   "items": [
     {
       "nom": "Affluenter",
@@ -87,54 +87,6 @@
       "type": "Wheels"
     },
     {
-      "nom": "Fennec",
-      "prix": 0,
-      "image": null,
-      "type": "Import Body"
-    },
-    {
-      "nom": "Mantis",
-      "prix": 0,
-      "image": null,
-      "type": "Import Body"
-    },
-    {
-      "nom": "Fennec: Fancy Formal",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Fennec: Araki",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Fennec: Huntress",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Mantis: Megabat",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "X-Devil: Snakeskin",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Breakout: Ghost Fever",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
       "nom": "FIVE NIGHTS AT FREDDY'S",
       "prix": 0,
       "image": null,
@@ -145,6 +97,54 @@
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
+    },
+    {
+      "nom": "Five Nights",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Octane: Freddy Fazbear",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "OCTANE + ONE PIECE",
+      "prix": 0,
+      "image": null,
+      "type": "3 items"
+    },
+    {
+      "nom": "FENNEC + ONE PIECE",
+      "prix": 0,
+      "image": null,
+      "type": "2 items"
+    },
+    {
+      "nom": "Going Merry",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Straw Hats' Jolly Roger",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "NASCAR NEXT GEN FORD MUSTANG",
+      "prix": 0,
+      "image": null,
+      "type": "8 items"
+    },
+    {
+      "nom": "MYSTERY MACHINE",
+      "prix": 0,
+      "image": null,
+      "type": "4 items"
     }
   ]
 }
