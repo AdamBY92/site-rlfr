@@ -1,135 +1,135 @@
 {
-  "date_rotation": "2026-11-02T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-03T00:00:00.000Z",
+  "date_rotation": "2026-11-03T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-04T00:00:00.000Z",
   "items": [
     {
-      "nom": "Octane",
+      "nom": "Drippy",
       "prix": 0,
       "image": null,
-      "type": "Common Body"
+      "type": "Exotic Decal"
     },
     {
-      "nom": "Kilowut",
+      "nom": "Blood Moon",
       "prix": 0,
       "image": null,
-      "type": "Black Market Animated Decal"
+      "type": "Black Market Goal Explosion"
     },
     {
-      "nom": "Octane: Polarity",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Fire God",
+      "nom": "Craynbow",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Octane: Oozy",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Atomizer",
+      "nom": "Mandala",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "In-Finite",
+      "nom": "Draco (Water)",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Vol. 11",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Spokeshow",
+      "nom": "Fennec: Migraine",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "So-Low",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Power-Shot",
+      "nom": "Puzzle Cube",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Spacerocker: Radiant",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "TechnoFlow",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
     },
     {
-      "nom": "Maz: Holographic",
+      "nom": "Throned: Sacred",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Beach Party",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Debutante: Crystallized",
+      "nom": "Ball-Life: Holographic",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "NeYoYo",
+      "nom": "ROCK IT",
       "prix": 0,
       "image": null,
-      "type": "Wheels"
+      "type": "Player Anthem"
     },
     {
-      "nom": "Neon Bomb",
+      "nom": "Dominus",
       "prix": 0,
       "image": null,
-      "type": "Rocket Boost"
+      "type": "Exotic Body"
     },
     {
-      "nom": "Fennec",
+      "nom": "Breakout Type-S",
       "prix": 0,
       "image": null,
       "type": "Import Body"
     },
     {
-      "nom": "Aftershock",
-      "prix": 0,
-      "image": null,
-      "type": "Very Rare Body"
-    },
-    {
-      "nom": "Fennec: Pineapple Pinchi",
+      "nom": "Dominus: Suji",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Fennec: Nitty-Gritty Huntress",
+      "nom": "Dominus: Meka",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Fennec: Flowrider",
+      "nom": "Dominus: Firestarter",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Aftershock: Tumbling Blocks",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Scarab: Sea Trow",
+      "nom": "Breakout Type-S: Mad Onion",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Mantis: Widow's Web",
+      "nom": "Breakout: Best Coast",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Road Hog: Bugbastic",
       "prix": 0,
       "image": null,
       "type": "Decal"
