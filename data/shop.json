@@ -1,6 +1,6 @@
 {
-  "date_rotation": "2026-11-03T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-04T00:00:00.000Z",
+  "date_rotation": "2026-11-04T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-05T00:00:00.000Z",
   "items": [
     {
       "nom": "Drippy",
@@ -15,121 +15,121 @@
       "type": "Black Market Goal Explosion"
     },
     {
-      "nom": "Craynbow",
+      "nom": "Fennec: Huntress Formal",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
-      "nom": "Mandala",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Draco (Water)",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Vol. 11",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Fennec: Migraine",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "So-Low",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Puzzle Cube",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Spacerocker: Radiant",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "TechnoFlow",
+      "nom": "Neo-Thermal",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
     },
     {
-      "nom": "Throned: Sacred",
+      "nom": "Satiness",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "SARPBC",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Cutter: Inverted",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Ball-Life: Holographic",
+      "nom": "Neuro-Agitator",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Lit Up",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Spatiotemporal",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Royal Crown: Roasted",
+      "prix": 0,
+      "image": null,
+      "type": "Topper"
+    },
+    {
+      "nom": "Hamster: Holographic",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "ROCK IT",
+      "nom": "Founder",
       "prix": 0,
       "image": null,
-      "type": "Player Anthem"
+      "type": "Wheels"
     },
     {
-      "nom": "Dominus",
+      "nom": "Power Chord",
       "prix": 0,
       "image": null,
-      "type": "Exotic Body"
+      "type": "Goal Explosion"
     },
     {
-      "nom": "Breakout Type-S",
+      "nom": "Octane",
       "prix": 0,
       "image": null,
-      "type": "Import Body"
+      "type": "Common Body"
     },
     {
-      "nom": "Dominus: Suji",
+      "nom": "Aftershock",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Very Rare Body"
     },
     {
-      "nom": "Dominus: Meka",
+      "nom": "Octane: Linx",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Animated Decal"
     },
     {
-      "nom": "Dominus: Firestarter",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Breakout Type-S: Mad Onion",
+      "nom": "Octane: Saverage",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Breakout: Best Coast",
+      "nom": "Octane: Wrapstar: Remixed",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Animated Decal"
     },
     {
-      "nom": "Road Hog: Bugbastic",
+      "nom": "Aftershock: Kana",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Endo: MG-88",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Breakout: First Impression",
       "prix": 0,
       "image": null,
       "type": "Decal"
