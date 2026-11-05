@@ -1,135 +1,135 @@
 {
-  "date_rotation": "2026-11-04T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-05T00:00:00.000Z",
+  "date_rotation": "2026-11-05T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-06T00:00:00.000Z",
   "items": [
     {
-      "nom": "Drippy",
+      "nom": "Dominus",
       "prix": 0,
       "image": null,
-      "type": "Exotic Decal"
+      "type": "Exotic Body"
     },
     {
-      "nom": "Blood Moon",
+      "nom": "Reaper",
       "prix": 0,
       "image": null,
-      "type": "Black Market Goal Explosion"
+      "type": "Import Goal Explosion"
     },
     {
-      "nom": "Fennec: Huntress Formal",
+      "nom": "Utopian",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Dominus: Neo-Star",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Neo-Thermal",
+      "nom": "Shattered",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "YaddaYadda",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Electroshock",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Dominus: Lo Freq",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Monsoon",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
     },
     {
-      "nom": "Satiness",
+      "nom": "Tremor",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Wheels"
     },
     {
-      "nom": "SARPBC",
+      "nom": "Equalizer",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Flame Chain",
+      "prix": 0,
+      "image": null,
+      "type": "Trail"
+    },
+    {
+      "nom": "Corbital",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
     },
     {
-      "nom": "Cutter: Inverted",
+      "nom": "Absence",
       "prix": 0,
       "image": null,
-      "type": "Wheels"
+      "type": "Player Anthem"
     },
     {
-      "nom": "Neuro-Agitator",
+      "nom": "Fennec",
       "prix": 0,
       "image": null,
-      "type": "Goal Explosion"
+      "type": "Import Body"
     },
     {
-      "nom": "Lit Up",
+      "nom": "Breakout Type-S",
       "prix": 0,
       "image": null,
-      "type": "Goal Explosion"
+      "type": "Import Body"
     },
     {
-      "nom": "Spatiotemporal",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Royal Crown: Roasted",
-      "prix": 0,
-      "image": null,
-      "type": "Topper"
-    },
-    {
-      "nom": "Hamster: Holographic",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Founder",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Power Chord",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Octane",
-      "prix": 0,
-      "image": null,
-      "type": "Common Body"
-    },
-    {
-      "nom": "Aftershock",
-      "prix": 0,
-      "image": null,
-      "type": "Very Rare Body"
-    },
-    {
-      "nom": "Octane: Linx",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Octane: Saverage",
+      "nom": "Fennec: Hardline",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Octane: Wrapstar: Remixed",
+      "nom": "Fennec: Edge Burst",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
-      "nom": "Aftershock: Kana",
+      "nom": "Fennec: Idolix",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
-      "nom": "Endo: MG-88",
+      "nom": "Breakout Type-S: Mobo",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
-      "nom": "Breakout: First Impression",
+      "nom": "Insidio: Sticker Bomb",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Werewolf: Big Bad",
       "prix": 0,
       "image": null,
       "type": "Decal"
