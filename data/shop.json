@@ -1,6 +1,6 @@
 {
-  "date_rotation": "2026-11-05T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-06T00:00:00.000Z",
+  "date_rotation": "2026-11-06T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-07T00:00:00.000Z",
   "items": [
     {
       "nom": "Dominus",
@@ -15,121 +15,121 @@
       "type": "Import Goal Explosion"
     },
     {
-      "nom": "Utopian",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Dominus: Neo-Star",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Shattered",
+      "nom": "Chronosis",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "YaddaYadda",
+      "nom": "Mainframe",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Electroshock",
+      "nom": "Hiro",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Lotus Bloom",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Dominus: Lo Freq",
+      "nom": "Dominus: Shinjuku",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Monsoon",
+      "nom": "Halo: Phased",
       "prix": 0,
       "image": null,
-      "type": "Rocket Boost"
+      "type": "Topper"
     },
     {
-      "nom": "Tremor",
+      "nom": "Stipple Gait",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Draco",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Equalizer",
+      "nom": "Dominus: OR-AISE",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Zadeh S3: Inverted",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Flame Chain",
+      "nom": "Surge Burst",
       "prix": 0,
       "image": null,
-      "type": "Trail"
+      "type": "Goal Explosion"
     },
     {
-      "nom": "Corbital",
+      "nom": "Pyrrhos",
       "prix": 0,
       "image": null,
-      "type": "Rocket Boost"
+      "type": "Wheels"
     },
     {
-      "nom": "Absence",
+      "nom": "Octane",
       "prix": 0,
       "image": null,
-      "type": "Player Anthem"
+      "type": "Common Body"
     },
     {
-      "nom": "Fennec",
+      "nom": "Marauder",
       "prix": 0,
       "image": null,
-      "type": "Import Body"
+      "type": "Very Rare Body"
     },
     {
-      "nom": "Breakout Type-S",
-      "prix": 0,
-      "image": null,
-      "type": "Import Body"
-    },
-    {
-      "nom": "Fennec: Hardline",
+      "nom": "Octane: Lone Wolf",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Fennec: Edge Burst",
+      "nom": "Octane: MG-88 Huntress",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Fennec: Idolix",
+      "nom": "Octane: Krush",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Breakout Type-S: Mobo",
+      "nom": "Marauder: XVIII",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Insidio: Sticker Bomb",
+      "nom": "Jäger 619: Neo-Viral",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Werewolf: Big Bad",
+      "nom": "Octane ZSR: Funny Book",
       "prix": 0,
       "image": null,
       "type": "Decal"
