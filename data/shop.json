@@ -135,16 +135,16 @@
       "type": "Decal"
     },
     {
+      "nom": "MERCEDES-AMG G 63 + ONE PIECE",
+      "prix": 0,
+      "image": null,
+      "type": "0 items"
+    },
+    {
       "nom": "OCTANE + ONE PIECE",
       "prix": 0,
       "image": null,
       "type": "3 items"
-    },
-    {
-      "nom": "FENNEC + ONE PIECE",
-      "prix": 0,
-      "image": null,
-      "type": "2 items"
     }
   ]
 }
