@@ -1,6 +1,6 @@
 {
-  "date_rotation": "2026-11-09T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-10T00:00:00.000Z",
+  "date_rotation": "2026-11-10T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-11T00:00:00.000Z",
   "items": [
     {
       "nom": "Breakout Type-S",
@@ -15,121 +15,121 @@
       "type": "Black Market Animated Decal"
     },
     {
-      "nom": "Brimstone",
+      "nom": "Fungi Forest",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Krew Made",
+      "nom": "Ultralex: Radiant",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Atlantis",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Dissolver",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Night-Mare",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Creeper",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Storm Watch: Noire",
+      "nom": "Flutterby: Multichrome",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Zomba: Glitched",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Cosmic Overdrive",
+      "nom": "Carbonator",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Beastbox",
+      "nom": "Fissure",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Starcade",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Debutante",
+      "nom": "Cold Front",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Throned",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Dust Cloud",
+      "nom": "InfoSec",
       "prix": 0,
       "image": null,
-      "type": "Trail"
+      "type": "Rocket Boost"
     },
     {
-      "nom": "Breakout Type-S: Kraken",
+      "nom": "Breakout Type-S: S'mored",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Ghost",
+      "nom": "Octane",
       "prix": 0,
       "image": null,
-      "type": "Player Anthem"
+      "type": "Common Body"
     },
     {
-      "nom": "Fennec",
+      "nom": "X-Devil Mk2",
       "prix": 0,
       "image": null,
       "type": "Import Body"
     },
     {
-      "nom": "Sentinel",
-      "prix": 0,
-      "image": null,
-      "type": "Import Body"
-    },
-    {
-      "nom": "Fennec: Bob's Ramen",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Fennec: Bad Buffy",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Fennec: SK Life",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Sentinel: Kana",
+      "nom": "Octane: Polarity",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Mamba: Huntress",
+      "nom": "Octane: Saikou Strawberry",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Cyclone: Migraine",
+      "nom": "Octane: Toon Sketch",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "X-Devil Mk2: Agamid",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Diestro: Martian Wind",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Breakout: Dot Matrix",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
