@@ -1,138 +1,138 @@
 {
-  "date_rotation": "2026-11-08T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-09T00:00:00.000Z",
+  "date_rotation": "2026-11-09T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-10T00:00:00.000Z",
   "items": [
     {
-      "nom": "Phrosgoth",
-      "prix": 0,
-      "image": null,
-      "type": "Black Market Goal Explosion"
-    },
-    {
-      "nom": "Likecraft",
-      "prix": 0,
-      "image": null,
-      "type": "Limited Animated Decal"
-    },
-    {
-      "nom": "Sparkles",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Neural Network",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Dueling Dragons: Anodized",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Cristiano",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Shodo",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Butterflies",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Octane: Auto Aura",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Reactor",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Vampire Bat",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "FSL-B: Flare",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Bassline",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Cargo: Inverted",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Octane",
-      "prix": 0,
-      "image": null,
-      "type": "Common Body"
-    },
-    {
-      "nom": "Animus GP",
+      "nom": "Breakout Type-S",
       "prix": 0,
       "image": null,
       "type": "Import Body"
     },
     {
-      "nom": "Octane: Abtruse",
+      "nom": "Show-Cal",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Black Market Animated Decal"
     },
     {
-      "nom": "Octane: Mangaka",
+      "nom": "Brimstone",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Goal Explosion"
     },
     {
-      "nom": "Octane: Dragon Slayer",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Animus GP: Rose King",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Werewolf: Martian Wind",
+      "nom": "Krew Made",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Masamune: Kawaii",
+      "nom": "Night-Mare",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Creeper",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Storm Watch: Noire",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Zomba: Glitched",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Cosmic Overdrive",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Beastbox",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Debutante",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Dust Cloud",
+      "prix": 0,
+      "image": null,
+      "type": "Trail"
+    },
+    {
+      "nom": "Breakout Type-S: Kraken",
       "prix": 0,
       "image": null,
       "type": "Decal"
+    },
+    {
+      "nom": "Ghost",
+      "prix": 0,
+      "image": null,
+      "type": "Player Anthem"
+    },
+    {
+      "nom": "Fennec",
+      "prix": 0,
+      "image": null,
+      "type": "Import Body"
+    },
+    {
+      "nom": "Sentinel",
+      "prix": 0,
+      "image": null,
+      "type": "Import Body"
+    },
+    {
+      "nom": "Fennec: Bob's Ramen",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Fennec: Bad Buffy",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Fennec: SK Life",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Sentinel: Kana",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Mamba: Huntress",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Cyclone: Migraine",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
     },
     {
       "nom": "MERCEDES-AMG G 63 + ONE PIECE",
