@@ -1,138 +1,138 @@
 {
-  "date_rotation": "2026-11-10T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-11T00:00:00.000Z",
+  "date_rotation": "2026-11-11T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-12T00:00:00.000Z",
   "items": [
     {
-      "nom": "Breakout Type-S",
+      "nom": "Pointbreak",
       "prix": 0,
       "image": null,
-      "type": "Import Body"
+      "type": "Limited Goal Explosion"
     },
     {
-      "nom": "Show-Cal",
+      "nom": "Interstellar",
       "prix": 0,
       "image": null,
       "type": "Black Market Animated Decal"
     },
     {
-      "nom": "Fungi Forest",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Ultralex: Radiant",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Atlantis",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Dissolver",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Flutterby: Multichrome",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Carbonator",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Fissure",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Starcade",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Cold Front",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Throned",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "InfoSec",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Breakout Type-S: S'mored",
+      "nom": "Octane: Ombre",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Octane",
+      "nom": "Buffy-Sugo",
       "prix": 0,
       "image": null,
-      "type": "Common Body"
+      "type": "Goal Explosion"
     },
     {
-      "nom": "X-Devil Mk2",
+      "nom": "Fire Baller",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "IceLife",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Toon Sketch",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "HNY: Inverted",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Kraken",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Ruinator: Inverted",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Hazy Flame",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Hologlass",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Clam Jam",
+      "prix": 0,
+      "image": null,
+      "type": "Trail"
+    },
+    {
+      "nom": "FAR OUT (VIP)",
+      "prix": 0,
+      "image": null,
+      "type": "Player Anthem"
+    },
+    {
+      "nom": "Fennec",
       "prix": 0,
       "image": null,
       "type": "Import Body"
     },
     {
-      "nom": "Octane: Polarity",
+      "nom": "Animus GP",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Import Body"
     },
     {
-      "nom": "Octane: Saikou Strawberry",
+      "nom": "Fennec: Huntress Formal",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Octane: Toon Sketch",
+      "nom": "Fennec: Neo-LL37",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Fennec: Lo Freq",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "X-Devil Mk2: Agamid",
+      "nom": "Animus GP: Peacock",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
-      "nom": "Diestro: Martian Wind",
+      "nom": "Breakout: Banzai Broccoli",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
-      "nom": "Breakout: Dot Matrix",
+      "nom": "Insidio: Ternion",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
       "nom": "MERCEDES-AMG G 63 + ONE PIECE",
