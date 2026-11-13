@@ -1,6 +1,6 @@
 {
-  "date_rotation": "2026-11-11T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-12T00:00:00.000Z",
+  "date_rotation": "2026-11-12T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-13T00:00:00.000Z",
   "items": [
     {
       "nom": "Pointbreak",
@@ -15,124 +15,124 @@
       "type": "Black Market Animated Decal"
     },
     {
-      "nom": "Octane: Ombre",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Buffy-Sugo",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Fire Baller",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "IceLife",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Toon Sketch",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "HNY: Inverted",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Kraken",
+      "nom": "StarCar",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Ruinator: Inverted",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Hazy Flame",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Hologlass",
+      "nom": "Shade Raid",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Clam Jam",
+      "nom": "Prism Schism",
       "prix": 0,
       "image": null,
-      "type": "Trail"
+      "type": "Goal Explosion"
     },
     {
-      "nom": "FAR OUT (VIP)",
+      "nom": "Dragon Wings: Frosted",
       "prix": 0,
       "image": null,
-      "type": "Player Anthem"
+      "type": "Topper"
     },
     {
-      "nom": "Fennec",
+      "nom": "CNTCT-1: Infinite",
       "prix": 0,
       "image": null,
-      "type": "Import Body"
+      "type": "Wheels"
     },
     {
-      "nom": "Animus GP",
+      "nom": "Grand Slam",
       "prix": 0,
       "image": null,
-      "type": "Import Body"
+      "type": "Goal Explosion"
     },
     {
-      "nom": "Fennec: Huntress Formal",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Fennec: Neo-LL37",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Fennec: Lo Freq",
+      "nom": "Grunge'd",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Animus GP: Peacock",
+      "nom": "Hanasha JRL: Multichrome",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Cyberspace",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Kalos",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Documint",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Jacana",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Octane",
+      "prix": 0,
+      "image": null,
+      "type": "Common Body"
+    },
+    {
+      "nom": "Breakout Type-S",
+      "prix": 0,
+      "image": null,
+      "type": "Import Body"
+    },
+    {
+      "nom": "Octane: Hakkaa: Glitched",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Octane: Krew Supreme",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Breakout: Banzai Broccoli",
+      "nom": "Octane: Wrapstar",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Insidio: Ternion",
+      "nom": "Breakout Type-S: Funny Book",
       "prix": 0,
       "image": null,
       "type": "Decal"
+    },
+    {
+      "nom": "Jäger 619: Vector",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Masamune: Tumbling Blocks",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
     },
     {
       "nom": "MERCEDES-AMG G 63 + ONE PIECE",
