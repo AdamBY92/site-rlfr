@@ -1,138 +1,138 @@
 {
-  "date_rotation": "2026-11-12T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-13T00:00:00.000Z",
+  "date_rotation": "2026-11-13T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-14T00:00:00.000Z",
   "items": [
     {
-      "nom": "Pointbreak",
-      "prix": 0,
-      "image": null,
-      "type": "Limited Goal Explosion"
-    },
-    {
-      "nom": "Interstellar",
-      "prix": 0,
-      "image": null,
-      "type": "Black Market Animated Decal"
-    },
-    {
-      "nom": "StarCar",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Shade Raid",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Prism Schism",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Dragon Wings: Frosted",
-      "prix": 0,
-      "image": null,
-      "type": "Topper"
-    },
-    {
-      "nom": "CNTCT-1: Infinite",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Grand Slam",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Grunge'd",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Hanasha JRL: Multichrome",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Cyberspace",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Kalos",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Documint",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Jacana",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Octane",
-      "prix": 0,
-      "image": null,
-      "type": "Common Body"
-    },
-    {
-      "nom": "Breakout Type-S",
+      "nom": "Fennec",
       "prix": 0,
       "image": null,
       "type": "Import Body"
     },
     {
-      "nom": "Octane: Hakkaa: Glitched",
+      "nom": "Affluenter",
+      "prix": 0,
+      "image": null,
+      "type": "Limited Animated Decal"
+    },
+    {
+      "nom": "Fennec: Hyperspace",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Octane: Krew Supreme",
+      "nom": "Shark Attack",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Goal Explosion"
     },
     {
-      "nom": "Octane: Wrapstar",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Breakout Type-S: Funny Book",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Jäger 619: Vector",
+      "nom": "Fennec: Shinjuku",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Masamune: Tumbling Blocks",
+      "nom": "Dimensionator",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Gravity Bomb",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Y.O.U.",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Hellfire",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Voltaic",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Cityscape",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
+    },
+    {
+      "nom": "Royal Crown: Frosted",
+      "prix": 0,
+      "image": null,
+      "type": "Topper"
+    },
+    {
+      "nom": "Floret",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Doublin",
+      "prix": 0,
+      "image": null,
+      "type": "Player Anthem"
+    },
+    {
+      "nom": "Dominus",
+      "prix": 0,
+      "image": null,
+      "type": "Exotic Body"
+    },
+    {
+      "nom": "Animus GP",
+      "prix": 0,
+      "image": null,
+      "type": "Import Body"
+    },
+    {
+      "nom": "Dominus: Tomato Titan",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Dominus: Neo-Star",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Dominus: Dragon Lord",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Animus GP: Snakeskin",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Breakout: Coy Koi",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Dominus GT: NNTR",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
     },
     {
       "nom": "MERCEDES-AMG G 63 + ONE PIECE",
