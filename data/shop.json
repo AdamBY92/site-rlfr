@@ -1,6 +1,6 @@
 {
-  "date_rotation": "2026-11-13T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-14T00:00:00.000Z",
+  "date_rotation": "2026-11-14T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-15T00:00:00.000Z",
   "items": [
     {
       "nom": "Fennec",
@@ -15,124 +15,124 @@
       "type": "Limited Animated Decal"
     },
     {
-      "nom": "Fennec: Hyperspace",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Shark Attack",
+      "nom": "Eyescore",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Fennec: Shinjuku",
+      "nom": "Standard",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Rocket Boost"
     },
     {
-      "nom": "Dimensionator",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Gravity Bomb",
+      "nom": "Air Strike",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Y.O.U.",
+      "nom": "Fennec: Fancy Formal",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Close Encounter",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Jak'd: Obverse",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Hellfire",
+      "nom": "Cosmosis",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Voltaic",
+      "nom": "Draco: Holographic",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Cityscape",
+      "nom": "Fennec: Tinted Formal",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
-      "nom": "Royal Crown: Frosted",
-      "prix": 0,
-      "image": null,
-      "type": "Topper"
-    },
-    {
-      "nom": "Floret",
+      "nom": "Hikari P5: Infinite",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Doublin",
-      "prix": 0,
-      "image": null,
-      "type": "Player Anthem"
-    },
-    {
-      "nom": "Dominus",
-      "prix": 0,
-      "image": null,
-      "type": "Exotic Body"
-    },
-    {
-      "nom": "Animus GP",
-      "prix": 0,
-      "image": null,
-      "type": "Import Body"
-    },
-    {
-      "nom": "Dominus: Tomato Titan",
+      "nom": "Fennec: Nitty-Gritty Huntress",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Dominus: Neo-Star",
+      "nom": "Interchiller: Radiant",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Octane",
+      "prix": 0,
+      "image": null,
+      "type": "Common Body"
+    },
+    {
+      "nom": "Scarab",
+      "prix": 0,
+      "image": null,
+      "type": "Very Rare Body"
+    },
+    {
+      "nom": "Octane: Chromagic",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Dominus: Dragon Lord",
+      "nom": "Octane: Ultraheat",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Octane: Flametress",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Animus GP: Snakeskin",
+      "nom": "Scarab: Ankylo",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Octane ZSR: Distortion",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Breakout: Coy Koi",
+      "nom": "Diestro: Agamid",
       "prix": 0,
       "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Dominus GT: NNTR",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
+      "type": "Animated Decal"
     },
     {
       "nom": "VOLKSWAGEN GOLF II GTI",
