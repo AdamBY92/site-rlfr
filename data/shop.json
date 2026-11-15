@@ -1,7 +1,91 @@
 {
-  "date_rotation": "2026-11-14T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-15T00:00:00.000Z",
+  "date_rotation": "2026-11-15T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-16T00:00:00.000Z",
   "items": [
+    {
+      "nom": "Ball 4 All",
+      "prix": 0,
+      "image": null,
+      "type": "Black Market Goal Explosion"
+    },
+    {
+      "nom": "Dueling Dragons: Yin & Yang",
+      "prix": 0,
+      "image": null,
+      "type": "Black Market Goal Explosion"
+    },
+    {
+      "nom": "Yeehaw",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Fire God: Multichrome",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Phoenix Fire",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Cristiano: Anodized",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Astro-CSX",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Z-Current",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Constella",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "OEM: Infinite",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Marred Shard",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Hypnotik",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Hot Cocoa",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "LUV U NEED U",
+      "prix": 0,
+      "image": null,
+      "type": "Player Anthem"
+    },
     {
       "nom": "Fennec",
       "prix": 0,
@@ -9,127 +93,43 @@
       "type": "Import Body"
     },
     {
-      "nom": "Affluenter",
-      "prix": 0,
-      "image": null,
-      "type": "Limited Animated Decal"
-    },
-    {
-      "nom": "Eyescore",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Standard",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Air Strike",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Fennec: Fancy Formal",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Close Encounter",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Jak'd: Obverse",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Cosmosis",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Draco: Holographic",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Fennec: Tinted Formal",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Hikari P5: Infinite",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Fennec: Nitty-Gritty Huntress",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Interchiller: Radiant",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Octane",
-      "prix": 0,
-      "image": null,
-      "type": "Common Body"
-    },
-    {
-      "nom": "Scarab",
+      "nom": "Aftershock",
       "prix": 0,
       "image": null,
       "type": "Very Rare Body"
     },
     {
-      "nom": "Octane: Chromagic",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Octane: Ultraheat",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Octane: Flametress",
+      "nom": "Fennec: Shinjuku: Remixed",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Scarab: Ankylo",
+      "nom": "Fennec: Araki",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Octane ZSR: Distortion",
+      "nom": "Fennec: Bug-Bite",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Aftershock: Huntress",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "X-Devil: Snakeskin",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Diestro: Agamid",
+      "nom": "Venom: Dot Matrix",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
