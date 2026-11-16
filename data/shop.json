@@ -1,6 +1,6 @@
 {
-  "date_rotation": "2026-11-15T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-16T00:00:00.000Z",
+  "date_rotation": "2026-11-16T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-17T00:00:00.000Z",
   "items": [
     {
       "nom": "Ball 4 All",
@@ -15,124 +15,124 @@
       "type": "Black Market Goal Explosion"
     },
     {
-      "nom": "Yeehaw",
+      "nom": "Dark Angel",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Fire God: Multichrome",
+      "nom": "Hanami",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Phoenix Fire",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Cristiano: Anodized",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Astro-CSX",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Z-Current",
+      "nom": "Heatwave",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Constella",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "OEM: Infinite",
+      "nom": "Doughnut",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Marred Shard",
+      "nom": "Deep Six",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Hypnotik",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Hot Cocoa",
+      "nom": "Ink",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
     },
     {
-      "nom": "LUV U NEED U",
+      "nom": "Sharpstorm",
       "prix": 0,
       "image": null,
-      "type": "Player Anthem"
+      "type": "Animated Decal"
     },
     {
-      "nom": "Fennec",
+      "nom": "Torque TX",
       "prix": 0,
       "image": null,
-      "type": "Import Body"
+      "type": "Wheels"
     },
     {
-      "nom": "Aftershock",
+      "nom": "Beastbox",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Dire Wolf",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Frostbite",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Glonex: Holographic",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Dominus",
+      "prix": 0,
+      "image": null,
+      "type": "Exotic Body"
+    },
+    {
+      "nom": "Triton",
       "prix": 0,
       "image": null,
       "type": "Very Rare Body"
     },
     {
-      "nom": "Fennec: Shinjuku: Remixed",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Fennec: Araki",
+      "nom": "Dominus: UAP",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Fennec: Bug-Bite",
+      "nom": "Dominus: Slice-Tag",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Aftershock: Huntress",
+      "nom": "Dominus: Beastly",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "X-Devil: Snakeskin",
+      "nom": "Triton: Tumbling Blocks",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Venom: Dot Matrix",
+      "nom": "Dominus GT: Distortion",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
+    },
+    {
+      "nom": "Diestro: Comic Carrot",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
     },
     {
       "nom": "VOLKSWAGEN GOLF II GTI",
