@@ -1,138 +1,138 @@
 {
-  "date_rotation": "2026-11-16T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-17T00:00:00.000Z",
+  "date_rotation": "2026-11-17T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-18T00:00:00.000Z",
   "items": [
     {
-      "nom": "Ball 4 All",
+      "nom": "Octane",
       "prix": 0,
       "image": null,
-      "type": "Black Market Goal Explosion"
+      "type": "Common Body"
     },
     {
-      "nom": "Dueling Dragons: Yin & Yang",
+      "nom": "Kilowut",
       "prix": 0,
       "image": null,
-      "type": "Black Market Goal Explosion"
+      "type": "Black Market Animated Decal"
     },
     {
-      "nom": "Dark Angel",
+      "nom": "Octane: MG-88",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Atomizer",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Hanami",
+      "nom": "Octane: Ultraheat",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
-      "nom": "Heatwave",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Doughnut",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Deep Six",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Ink",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Sharpstorm",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Torque TX",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Beastbox",
+      "nom": "Vol. 11",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Dire Wolf",
+      "nom": "Octane: Lone Wolf",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Glitch: Glitched",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Frostbite",
+      "nom": "Mic Drop",
       "prix": 0,
       "image": null,
-      "type": "Rocket Boost"
+      "type": "Goal Explosion"
     },
     {
-      "nom": "Glonex: Holographic",
+      "nom": "Piercer: Crystallized",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Dominus",
+      "nom": "Beach Party",
       "prix": 0,
       "image": null,
-      "type": "Exotic Body"
+      "type": "Goal Explosion"
     },
     {
-      "nom": "Triton",
+      "nom": "Photon",
       "prix": 0,
       "image": null,
-      "type": "Very Rare Body"
+      "type": "Wheels"
     },
     {
-      "nom": "Dominus: UAP",
+      "nom": "Pulsus",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "AGONIZE",
+      "prix": 0,
+      "image": null,
+      "type": "Player Anthem"
+    },
+    {
+      "nom": "Fennec",
+      "prix": 0,
+      "image": null,
+      "type": "Import Body"
+    },
+    {
+      "nom": "Breakout",
+      "prix": 0,
+      "image": null,
+      "type": "Common Body"
+    },
+    {
+      "nom": "Fennec: Flowrider",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Dominus: Slice-Tag",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Dominus: Beastly",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Triton: Tumbling Blocks",
+      "nom": "Fennec: Bodacious",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Dominus GT: Distortion",
+      "nom": "Fennec: Slimline",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Breakout: Best Coast",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Cyclone: Hyperspace",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Diestro: Comic Carrot",
+      "nom": "Masamune: Danpa",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Animated Decal"
     },
     {
       "nom": "VOLKSWAGEN GOLF II GTI",
