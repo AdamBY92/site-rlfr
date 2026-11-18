@@ -1,6 +1,6 @@
 {
-  "date_rotation": "2026-11-17T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-18T00:00:00.000Z",
+  "date_rotation": "2026-11-18T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-19T00:00:00.000Z",
   "items": [
     {
       "nom": "Octane",
@@ -15,121 +15,121 @@
       "type": "Black Market Animated Decal"
     },
     {
-      "nom": "Octane: MG-88",
+      "nom": "Octane: Chromagic",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Neuro-Agitator",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Octane: Polarity",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Atomizer",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Octane: Ultraheat",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Vol. 11",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Octane: Lone Wolf",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Glitch: Glitched",
+      "nom": "Sensei",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Mic Drop",
+      "nom": "Octane: Kana",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "So-Low",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "In-Finite",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Piercer: Crystallized",
+      "nom": "Forerunner: Roasted",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Beach Party",
+      "nom": "Skullfire",
+      "prix": 0,
+      "image": null,
+      "type": "Topper"
+    },
+    {
+      "nom": "Dark Matter",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Mandala",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Photon",
+      "nom": "Battle-Stars",
       "prix": 0,
       "image": null,
-      "type": "Wheels"
+      "type": "Rocket Boost"
     },
     {
-      "nom": "Pulsus",
+      "nom": "Dominus",
       "prix": 0,
       "image": null,
-      "type": "Wheels"
+      "type": "Exotic Body"
     },
     {
-      "nom": "AGONIZE",
-      "prix": 0,
-      "image": null,
-      "type": "Player Anthem"
-    },
-    {
-      "nom": "Fennec",
+      "nom": "Mantis",
       "prix": 0,
       "image": null,
       "type": "Import Body"
     },
     {
-      "nom": "Breakout",
-      "prix": 0,
-      "image": null,
-      "type": "Common Body"
-    },
-    {
-      "nom": "Fennec: Flowrider",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Fennec: Bodacious",
+      "nom": "Dominus: Migraine",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Fennec: Slimline",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Breakout: Best Coast",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Cyclone: Hyperspace",
+      "nom": "Dominus: Shinjuku: Remixed",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Masamune: Danpa",
+      "nom": "Dominus: Suji",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Mantis: Widow's Web",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Breakout: First Impression",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Endo: MG-88",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
