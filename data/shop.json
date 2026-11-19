@@ -1,7 +1,91 @@
 {
-  "date_rotation": "2026-11-18T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-19T00:00:00.000Z",
+  "date_rotation": "2026-11-19T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-20T00:00:00.000Z",
   "items": [
+    {
+      "nom": "Veloce",
+      "prix": 0,
+      "image": null,
+      "type": "Uncommon Wheels"
+    },
+    {
+      "nom": "Drippy",
+      "prix": 0,
+      "image": null,
+      "type": "Exotic Decal"
+    },
+    {
+      "nom": "Shattered",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Biomass",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Electroshock",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Starpower",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Puzzle Cube",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Cockroach",
+      "prix": 0,
+      "image": null,
+      "type": "Topper"
+    },
+    {
+      "nom": "Formal Four-Fours",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Timeline",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Ebb 'n Flow: Multichrome",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "TechnoFlow",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Pixelated Shades",
+      "prix": 0,
+      "image": null,
+      "type": "Topper"
+    },
+    {
+      "nom": "Gold",
+      "prix": 0,
+      "image": null,
+      "type": "Player Anthem"
+    },
     {
       "nom": "Octane",
       "prix": 0,
@@ -9,130 +93,46 @@
       "type": "Common Body"
     },
     {
-      "nom": "Kilowut",
-      "prix": 0,
-      "image": null,
-      "type": "Black Market Animated Decal"
-    },
-    {
-      "nom": "Octane: Chromagic",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Neuro-Agitator",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Octane: Polarity",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Sensei",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Octane: Kana",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "So-Low",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "In-Finite",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Forerunner: Roasted",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Skullfire",
-      "prix": 0,
-      "image": null,
-      "type": "Topper"
-    },
-    {
-      "nom": "Dark Matter",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Mandala",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Battle-Stars",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Dominus",
-      "prix": 0,
-      "image": null,
-      "type": "Exotic Body"
-    },
-    {
-      "nom": "Mantis",
+      "nom": "Road Hog XL",
       "prix": 0,
       "image": null,
       "type": "Import Body"
     },
     {
-      "nom": "Dominus: Migraine",
+      "nom": "Octane: Auto Aura",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Dominus: Shinjuku: Remixed",
+      "nom": "Octane: Hakkaa",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Octane: Linx",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Dominus: Suji",
+      "nom": "Road Hog XL: High Flier",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Mantis: Widow's Web",
+      "nom": "Scarab: Sea Trow",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Breakout: First Impression",
+      "nom": "Insidio: Sticker Bomb",
       "prix": 0,
       "image": null,
       "type": "Decal"
-    },
-    {
-      "nom": "Endo: MG-88",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
     },
     {
       "nom": "VOLKSWAGEN GOLF II GTI",
