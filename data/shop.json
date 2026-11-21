@@ -1,135 +1,135 @@
 {
-  "date_rotation": "2026-11-20T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-21T00:00:00.000Z",
+  "date_rotation": "2026-11-21T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-22T00:00:00.000Z",
   "items": [
     {
-      "nom": "Veloce",
+      "nom": "T. rex",
       "prix": 0,
       "image": null,
-      "type": "Uncommon Wheels"
+      "type": "Exotic Goal Explosion"
     },
     {
-      "nom": "Drippy",
+      "nom": "Zomba",
       "prix": 0,
       "image": null,
-      "type": "Exotic Decal"
+      "type": "Exotic Wheels"
     },
     {
-      "nom": "Chronosis",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Halo: Phased",
-      "prix": 0,
-      "image": null,
-      "type": "Topper"
-    },
-    {
-      "nom": "Butterflies: Gilded",
+      "nom": "Phrosgoth",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Chameleon",
+      "nom": "Likecraft",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Sweet Score",
+      "nom": "Lotus Bloom",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "YaddaYadda",
+      "nom": "Craynbow",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Virused",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Spineral",
+      "nom": "Hiro",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Pigeon: Anodized",
-      "prix": 0,
-      "image": null,
-      "type": "Topper"
-    },
-    {
-      "nom": "Ectoplasm",
+      "nom": "Stipple Gait",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Flamerate",
+      "nom": "Autoradic",
       "prix": 0,
       "image": null,
-      "type": "Rocket Boost"
+      "type": "Decal"
     },
     {
-      "nom": "Twirlwind: Schematized",
+      "nom": "Elemental",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Royal Crown: Roasted",
+      "prix": 0,
+      "image": null,
+      "type": "Topper"
+    },
+    {
+      "nom": "Cutter: Inverted",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Fennec",
+      "nom": "Del Rey",
       "prix": 0,
       "image": null,
-      "type": "Import Body"
+      "type": "Wheels"
     },
     {
-      "nom": "Sentinel",
+      "nom": "TREAT HIM LIKE A BABY",
       "prix": 0,
       "image": null,
-      "type": "Import Body"
+      "type": "Player Anthem"
     },
     {
-      "nom": "Fennec: Tinted Formal",
+      "nom": "Octane",
+      "prix": 0,
+      "image": null,
+      "type": "Common Body"
+    },
+    {
+      "nom": "Aftershock",
+      "prix": 0,
+      "image": null,
+      "type": "Very Rare Body"
+    },
+    {
+      "nom": "Octane: Lo Freq",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Octane: Oozy",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Octane: Dragon Lord",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Aftershock: Vector",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Cyclone: Araki",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Fennec: Fancy Formal",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Fennec: Pineapple Pinchi",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Sentinel: Faceted",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Jäger 619: Neo-Viral",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Jackal: Silencer",
+      "nom": "Mamba: Ombre",
       "prix": 0,
       "image": null,
       "type": "Decal"
