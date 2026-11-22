@@ -1,6 +1,6 @@
 {
-  "date_rotation": "2026-11-21T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-22T00:00:00.000Z",
+  "date_rotation": "2026-11-22T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-23T00:00:00.000Z",
   "items": [
     {
       "nom": "T. rex",
@@ -15,121 +15,121 @@
       "type": "Exotic Wheels"
     },
     {
-      "nom": "Phrosgoth",
+      "nom": "Sparkles",
       "prix": 0,
       "image": null,
-      "type": "Goal Explosion"
+      "type": "Rocket Boost"
     },
     {
-      "nom": "Likecraft",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Lotus Bloom",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Craynbow",
+      "nom": "Neural Network",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Hiro",
+      "nom": "OEM",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Stipple Gait",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Autoradic",
+      "nom": "Strongline",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Elemental",
+      "nom": "Zero's World",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Royal Crown: Roasted",
+      "nom": "Tidal Stream",
       "prix": 0,
       "image": null,
-      "type": "Topper"
+      "type": "Animated Decal"
     },
     {
-      "nom": "Cutter: Inverted",
+      "nom": "Aquarium",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Barouche",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Del Rey",
+      "nom": "Burnout",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Bubbly",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Party Time",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Gnome Light",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "TREAT HIM LIKE A BABY",
+      "nom": "Fennec",
       "prix": 0,
       "image": null,
-      "type": "Player Anthem"
+      "type": "Import Body"
     },
     {
-      "nom": "Octane",
+      "nom": "X-Devil Mk2",
       "prix": 0,
       "image": null,
-      "type": "Common Body"
+      "type": "Import Body"
     },
     {
-      "nom": "Aftershock",
-      "prix": 0,
-      "image": null,
-      "type": "Very Rare Body"
-    },
-    {
-      "nom": "Octane: Lo Freq",
+      "nom": "Fennec: Shinjuku",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Octane: Oozy",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Octane: Dragon Lord",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Aftershock: Vector",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Cyclone: Araki",
+      "nom": "Fennec: Nitty-Gritty Huntress",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Mamba: Ombre",
+      "nom": "Fennec: Hardline",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "X-Devil Mk2: Martian Wind",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Masamune: Kawaii",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "Breakout: Ripped Comic",
       "prix": 0,
       "image": null,
       "type": "Decal"
