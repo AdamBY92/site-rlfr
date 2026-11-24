@@ -1,6 +1,6 @@
 {
-  "date_rotation": "2026-11-23T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-24T00:00:00.000Z",
+  "date_rotation": "2026-11-24T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-25T00:00:00.000Z",
   "items": [
     {
       "nom": "Sugar High",
@@ -21,130 +21,130 @@
       "type": "Goal Explosion"
     },
     {
-      "nom": "Show-Cal",
+      "nom": "Flutterby: Multichrome",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Creeper",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Toon Sketch: Gilded",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Hamster: Holographic",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Candyfloss",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Shark Fin",
+      "nom": "Top Hat: Anniversary Edition",
       "prix": 0,
       "image": null,
       "type": "Topper"
     },
     {
-      "nom": "Blade Wave: Inverted",
+      "nom": "Fissure",
+      "prix": 0,
+      "image": null,
+      "type": "Rocket Boost"
+    },
+    {
+      "nom": "Filiformer",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Saptarishi: Inverted",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Reactor",
+      "nom": "Fireworks",
+      "prix": 0,
+      "image": null,
+      "type": "Goal Explosion"
+    },
+    {
+      "nom": "Propeller: Inverted",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Ochazuke",
+      "nom": "Monsoon",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Rocket Boost"
     },
     {
-      "nom": "Formal Fitter",
+      "nom": "Emojin",
       "prix": 0,
       "image": null,
-      "type": "Topper"
+      "type": "Wheels"
     },
     {
-      "nom": "ZERO200",
+      "nom": "Cold Front",
       "prix": 0,
       "image": null,
-      "type": "Player Anthem"
+      "type": "Goal Explosion"
     },
     {
-      "nom": "Dominus",
+      "nom": "Psycic",
       "prix": 0,
       "image": null,
-      "type": "Exotic Body"
+      "type": "Wheels"
     },
     {
-      "nom": "Sentinel",
+      "nom": "Octane",
       "prix": 0,
       "image": null,
-      "type": "Import Body"
+      "type": "Common Body"
     },
     {
-      "nom": "Dominus: Flametress",
+      "nom": "Breakout",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Common Body"
     },
     {
-      "nom": "Dominus: Meka",
+      "nom": "Octane: Bob's Rameness",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Dominus: Sovereignteeth",
+      "nom": "Octane: Kingtress",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Sentinel: Kana",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Cyclone: Migraine",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Road Hog: Wildfire",
+      "nom": "Octane: MG-88 Huntress",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "HATSUNE MIKU CYCLONE",
+      "nom": "Breakout: Dot Matrix",
       "prix": 0,
       "image": null,
-      "type": "16 items"
+      "type": "Animated Decal"
     },
     {
-      "nom": "HATSUNE MIKU",
+      "nom": "Diestro: Martian Wind",
       "prix": 0,
       "image": null,
-      "type": "3 items"
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "X-Devil Mk2: Agamid",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "FAST & FURIOUS",
+      "prix": 0,
+      "image": null,
+      "type": "5 items"
+    },
+    {
+      "nom": "FAST & FURIOUS",
+      "prix": 0,
+      "image": null,
+      "type": "2 items"
     }
   ]
 }
