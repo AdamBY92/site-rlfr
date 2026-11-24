@@ -1,150 +1,150 @@
 {
-  "date_rotation": "2026-11-22T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-23T00:00:00.000Z",
+  "date_rotation": "2026-11-23T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-24T00:00:00.000Z",
   "items": [
+    {
+      "nom": "Sugar High",
+      "prix": 0,
+      "image": null,
+      "type": "Black Market Animated Decal"
+    },
+    {
+      "nom": "Draco: Multichrome",
+      "prix": 0,
+      "image": null,
+      "type": "Black Market Animated Decal"
+    },
     {
       "nom": "T. rex",
       "prix": 0,
       "image": null,
-      "type": "Exotic Goal Explosion"
+      "type": "Goal Explosion"
     },
     {
-      "nom": "Zomba",
+      "nom": "Show-Cal",
       "prix": 0,
       "image": null,
-      "type": "Exotic Wheels"
+      "type": "Animated Decal"
     },
     {
-      "nom": "Sparkles",
+      "nom": "Creeper",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Toon Sketch: Gilded",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
     },
     {
-      "nom": "Neural Network",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "OEM",
+      "nom": "Hamster: Holographic",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Strongline",
-      "prix": 0,
-      "image": null,
-      "type": "Decal"
-    },
-    {
-      "nom": "Zero's World",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Tidal Stream",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Aquarium",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Barouche",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Burnout",
+      "nom": "Candyfloss",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
     },
     {
-      "nom": "Bubbly",
+      "nom": "Shark Fin",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Topper"
     },
     {
-      "nom": "Party Time",
-      "prix": 0,
-      "image": null,
-      "type": "Goal Explosion"
-    },
-    {
-      "nom": "Gnome Light",
+      "nom": "Blade Wave: Inverted",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Fennec",
+      "nom": "Reactor",
       "prix": 0,
       "image": null,
-      "type": "Import Body"
+      "type": "Wheels"
     },
     {
-      "nom": "X-Devil Mk2",
-      "prix": 0,
-      "image": null,
-      "type": "Import Body"
-    },
-    {
-      "nom": "Fennec: Shinjuku",
+      "nom": "Ochazuke",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Fennec: Nitty-Gritty Huntress",
+      "nom": "Formal Fitter",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Topper"
     },
     {
-      "nom": "Fennec: Hardline",
+      "nom": "ZERO200",
       "prix": 0,
       "image": null,
-      "type": "Decal"
+      "type": "Player Anthem"
     },
     {
-      "nom": "X-Devil Mk2: Martian Wind",
+      "nom": "Dominus",
+      "prix": 0,
+      "image": null,
+      "type": "Exotic Body"
+    },
+    {
+      "nom": "Sentinel",
+      "prix": 0,
+      "image": null,
+      "type": "Import Body"
+    },
+    {
+      "nom": "Dominus: Flametress",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Masamune: Kawaii",
+      "nom": "Dominus: Meka",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Breakout: Ripped Comic",
+      "nom": "Dominus: Sovereignteeth",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "VOLKSWAGEN GOLF II GTI",
+      "nom": "Sentinel: Kana",
       "prix": 0,
       "image": null,
-      "type": "17 items"
+      "type": "Animated Decal"
     },
     {
-      "nom": "MERCEDES-AMG G 63 + ONE PIECE",
+      "nom": "Cyclone: Migraine",
       "prix": 0,
       "image": null,
-      "type": "0 items"
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Road Hog: Wildfire",
+      "prix": 0,
+      "image": null,
+      "type": "Decal"
+    },
+    {
+      "nom": "HATSUNE MIKU CYCLONE",
+      "prix": 0,
+      "image": null,
+      "type": "16 items"
+    },
+    {
+      "nom": "HATSUNE MIKU",
+      "prix": 0,
+      "image": null,
+      "type": "3 items"
     }
   ]
 }
