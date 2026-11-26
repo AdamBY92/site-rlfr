@@ -1,15 +1,15 @@
 {
-  "date_rotation": "2026-11-24T00:00:00.000Z",
-  "prochaine_rotation": "2026-11-25T00:00:00.000Z",
+  "date_rotation": "2026-11-25T00:00:00.000Z",
+  "prochaine_rotation": "2026-11-26T00:00:00.000Z",
   "items": [
     {
-      "nom": "Sugar High",
+      "nom": "Breakout Type-S",
       "prix": 0,
       "image": null,
-      "type": "Black Market Animated Decal"
+      "type": "Import Body"
     },
     {
-      "nom": "Draco: Multichrome",
+      "nom": "Interstellar",
       "prix": 0,
       "image": null,
       "type": "Black Market Animated Decal"
@@ -21,130 +21,130 @@
       "type": "Goal Explosion"
     },
     {
-      "nom": "Flutterby: Multichrome",
+      "nom": "Storm Watch: Noire",
       "prix": 0,
       "image": null,
       "type": "Animated Decal"
     },
     {
-      "nom": "Top Hat: Anniversary Edition",
-      "prix": 0,
-      "image": null,
-      "type": "Topper"
-    },
-    {
-      "nom": "Fissure",
-      "prix": 0,
-      "image": null,
-      "type": "Rocket Boost"
-    },
-    {
-      "nom": "Filiformer",
-      "prix": 0,
-      "image": null,
-      "type": "Animated Decal"
-    },
-    {
-      "nom": "Saptarishi: Inverted",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Fireworks",
+      "nom": "Buffy-Sugo",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Propeller: Inverted",
+      "nom": "Zadeh S3: Inverted",
       "prix": 0,
       "image": null,
       "type": "Wheels"
     },
     {
-      "nom": "Monsoon",
+      "nom": "Leviathan",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Ultralex: Radiant",
+      "prix": 0,
+      "image": null,
+      "type": "Wheels"
+    },
+    {
+      "nom": "Neon Bomb",
+      "prix": 0,
+      "image": null,
+      "type": "Trail"
+    },
+    {
+      "nom": "Phase-R",
       "prix": 0,
       "image": null,
       "type": "Rocket Boost"
     },
     {
-      "nom": "Emojin",
+      "nom": "Nitrous",
       "prix": 0,
       "image": null,
-      "type": "Wheels"
+      "type": "Rocket Boost"
     },
     {
-      "nom": "Cold Front",
+      "nom": "Cosmic Overdrive",
       "prix": 0,
       "image": null,
       "type": "Goal Explosion"
     },
     {
-      "nom": "Psycic",
-      "prix": 0,
-      "image": null,
-      "type": "Wheels"
-    },
-    {
-      "nom": "Octane",
-      "prix": 0,
-      "image": null,
-      "type": "Common Body"
-    },
-    {
-      "nom": "Breakout",
-      "prix": 0,
-      "image": null,
-      "type": "Common Body"
-    },
-    {
-      "nom": "Octane: Bob's Rameness",
+      "nom": "Breakout Type-S: Funny Book",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Octane: Kingtress",
+      "nom": "BOUNCE",
+      "prix": 0,
+      "image": null,
+      "type": "Player Anthem"
+    },
+    {
+      "nom": "Dominus",
+      "prix": 0,
+      "image": null,
+      "type": "Exotic Body"
+    },
+    {
+      "nom": "Animus GP",
+      "prix": 0,
+      "image": null,
+      "type": "Import Body"
+    },
+    {
+      "nom": "Dominus: Lo Freq",
+      "prix": 0,
+      "image": null,
+      "type": "Animated Decal"
+    },
+    {
+      "nom": "Dominus: Balmy Boss",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Octane: MG-88 Huntress",
+      "nom": "Dominus: MDGA",
       "prix": 0,
       "image": null,
       "type": "Decal"
     },
     {
-      "nom": "Breakout: Dot Matrix",
+      "nom": "Animus GP: Rose King",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
-      "nom": "Diestro: Martian Wind",
+      "nom": "Peregrine TT: Ombre",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
     },
     {
-      "nom": "X-Devil Mk2: Agamid",
+      "nom": "Mamba: Sharpshooter",
       "prix": 0,
       "image": null,
-      "type": "Animated Decal"
+      "type": "Decal"
+    },
+    {
+      "nom": "HOLIDAY",
+      "prix": 0,
+      "image": null,
+      "type": "9 items"
     },
     {
       "nom": "FAST & FURIOUS",
       "prix": 0,
       "image": null,
       "type": "5 items"
-    },
-    {
-      "nom": "FAST & FURIOUS",
-      "prix": 0,
-      "image": null,
-      "type": "2 items"
     }
   ]
 }
